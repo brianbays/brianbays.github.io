@@ -1,24 +1,21 @@
-# Connect brianbays.com after purchase
+# brianbays.com domain configuration
 
-The domain is not yet registered by Brian. These are instructions, not completed DNS changes. The initial site can use https://brianbays.github.io.
+Connected September 20, 2026. Registrar and DNS provider: Porkbun. Website hosting: GitHub Pages, repository `brianbays/brianbays.github.io`. Canonical domain: `brianbays.com`.
 
-1. Purchase brianbays.com through your chosen registrar. Domain registration is separate from GitHub hosting.
-2. Verify domain ownership in your GitHub account's Settings → Pages → Add a domain. Enter brianbays.com. GitHub will supply a TXT record name and value. Add that exact TXT record at the registrar, return to GitHub, and verify. Keep the TXT record.
-3. In the website repository, Settings → Pages → Custom domain, enter `brianbays.com` and save. For this GitHub Actions deployment, the repository setting controls the domain; a CNAME file is not required.
-4. At your registrar's DNS editor, set these records:
+GitHub account Settings → Pages shows domain ownership as **Verified**. Keep the `_github-pages-challenge-brianbays` TXT record at Porkbun to retain ownership verification. Its value is available in the DNS editor.
+
+Repository Settings → Pages has `brianbays.com` saved as the custom domain. For this GitHub Actions deployment, that setting controls the domain; a CNAME file is not required.
+
+Saved website DNS records (TTL 600 seconds):
 
 | Type | Host | Value |
 | --- | --- | --- |
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
+| ALIAS | root / blank | brianbays.github.io |
 | CNAME | www | brianbays.github.io |
 
-Use the registrar's default TTL. Replace conflicting web/parking records for @ and www. Preserve unrelated email (MX), verification (TXT), and other service records. Avoid wildcard records. Some registrars use a blank host rather than @.
+Porkbun flattens the root ALIAS to GitHub's address records. This is an alternative to maintaining four A records manually. The original root parking destination was replaced, and the parking wildcard was changed to the explicit `www` record. Existing `_acme-challenge` TXT records were preserved. No email hosting is in use.
 
-5. Allow DNS propagation, potentially up to 24 hours. GitHub will provision a certificate. Once available, enable **Enforce HTTPS** in Pages settings.
-6. Check both `https://brianbays.com` and `https://www.brianbays.com`, navigation, the PDF, and the video links. With both DNS names configured, GitHub redirects the alternate hostname to the selected custom domain.
+GitHub manages the HTTPS certificate. Keep **Enforce HTTPS** enabled in repository Pages settings once certificate provisioning is complete. After any future DNS change, verify both `https://brianbays.com` and `https://www.brianbays.com`, navigation, the PDF, and video links. GitHub redirects the alternate hostname to the selected custom domain.
 
 PowerShell checks:
 

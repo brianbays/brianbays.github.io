@@ -45,4 +45,4 @@ Awards, audience metrics, and unverified credits have been omitted. The work is 
 
 ## Domain
 
-The domain has not been purchased. Start with the GitHub Pages URL. Follow [DOMAIN.md](DOMAIN.md) after registering brianbays.com. No CNAME or redirect is enabled before ownership is established.
+The custom domain is **brianbays.com**, registered at Porkbun and connected to GitHub Pages. Domain ownership is verified in Brian's GitHub account. See [DOMAIN.md](DOMAIN.md) for the saved DNS configuration and maintenance instructions.
