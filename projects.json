@@ -22,17 +22,6 @@
     "image": "https://i.ytimg.com/vi/iPXhJZWSIIc/maxresdefault.jpg"
   },
   {
-    "id": "the-test",
-    "title": "The Test",
-    "category": "Feature screenplay",
-    "role": "Screenwriter",
-    "description": "Optioned feature screenplay • PAGE Awards Semi-Finalist.",
-    "className": "the-test",
-    "url": "",
-    "linkLabel": "",
-    "image": ""
-  },
-  {
     "id": "short-form",
     "title": "Short-form & social",
     "category": "Editing samples",
@@ -41,6 +30,17 @@
     "className": "short-form",
     "url": "https://www.youtube.com/shorts/KzziLzQE5wU",
     "linkLabel": "Watch the parody",
+    "image": ""
+  },
+  {
+    "id": "the-test",
+    "title": "The Test",
+    "category": "Feature screenplay",
+    "role": "Screenwriter",
+    "description": "Optioned feature screenplay • PAGE Awards Semi-Finalist.",
+    "className": "the-test",
+    "url": "",
+    "linkLabel": "",
     "image": ""
   }
 ]
