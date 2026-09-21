@@ -3,3 +3,6 @@
 
 .project-art:has(img) .art-label{display:none}.project-art:has(img):before,.project-art:has(img):after{display:none}.project-art:has(img) .art-arrow{background:#171916df;border:1px solid #f1eee570;border-radius:50%;width:42px;height:42px;text-align:center;line-height:40px}.project-art img{z-index:0}.project-art:has(img){background:#171916}
 
+
+/* Shared brand headline keeps the full role statement readable on every screen. */
+.hero h1.brand-headline{font-size:clamp(34px,5.3vw,74px);line-height:1.16;max-width:1100px;text-wrap:balance}.the-test .project-art{background-color:#343b2c}
