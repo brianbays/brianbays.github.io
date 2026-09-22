@@ -32,6 +32,39 @@
     "linkLabel": "Watch the parody",
     "image": "assets/RFK - PSA_16x9 - THUMB.png"
   },
+    {
+    "id": "short-form2",
+    "title": "Short-form & social",
+    "category": "Editing samples",
+    "role": "Editorial",
+    "description": "Short-form editing and AI-assisted satire. Featured sample: RFK Social Media PSA — a parody video.",
+    "className": "short-form",
+    "url": "https://youtube.com/shorts/3DdK-r46IXs",
+    "linkLabel": "Watch the parody",
+    "image": "assets/00 - RFK - Drugs_16x9 - THUMB.png"
+  },
+    {
+    "id": "short-form3",
+    "title": "Short-form & social",
+    "category": "Editing samples",
+    "role": "Editorial",
+    "description": "A Private Converstaion Podcast teaser 1: What Happened?.",
+    "className": "short-form",
+    "url": "https://youtu.be/5793fdab200",
+    "linkLabel": "Watch the teaser",
+    "image": "assets/Private Conversation - Title Card 16x9.png"
+  },
+    {
+    "id": "short-form4",
+    "title": "Short-form & social",
+    "category": "Editing samples",
+    "role": "Editorial",
+    "description": "A Private Converstaion Podcast teaser 2: Failing.",
+    "className": "short-form",
+    "url": "https://youtu.be/acoIYTD-fSc",
+    "linkLabel": "Watch the teaser",
+    "image": "assets/Private Conversation - Title Card 16x9.png"
+  },
   {
     "id": "the-test",
     "title": "The Test",
