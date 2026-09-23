@@ -13,7 +13,18 @@ const linkTargets=html=>html.replace(/<a\b([^>]*?)href="([^"]+)"([^>]*)>/g,(tag,
   return external||/\.pdf$/i.test(url.pathname)?`<a${before}href="${href}"${after} target="_blank" rel="noopener noreferrer">`:tag;
 });
 const button=(href,text,secondary=false)=>`<a class="button${secondary?' secondary':''}" href="${esc(href)}">${text} <span aria-hidden="true">↗</span></a>`;
-function card(p,i,detail=false){return `<article class="project ${esc(p.className)}" id="${esc(p.id)}"><a class="project-art" href="${p.url?esc(p.url):(detail?'contact.html':'portfolio.html#'+esc(p.id))}" aria-label="${esc(p.url?p.linkLabel:(detail?'Ask about '+p.title:'Explore '+p.title))}">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.title)} project artwork" loading="lazy" width="1200" height="750">`:''}<div class="art-label"><span class="eyebrow">${esc(p.category)}</span><span class="art-title">${esc(p.title)}</span><span class="art-credit">A project by Brian Bays</span></div><span class="art-arrow" aria-hidden="true">↗</span></a><div class="project-meta"><div><p class="eyebrow">0${i+1} / ${esc(p.role)}</p><h${detail?'2':'3'}>${esc(p.title)}</h${detail?'2':'3'}></div>${!detail?'<span aria-hidden="true">↗</span>':''}</div>${detail?`<p class="project-description">${esc(p.description)}</p>${button(p.url||'mailto:'+email+'?subject='+encodeURIComponent(p.title+' — portfolio inquiry'),p.url?p.linkLabel:'Ask about this project',true)}`:''}</article>`;}
+function card(p,i,detail=false)
+  {return `<article class="project ${esc(p.className)}" id="${esc(p.id)}">
+  <a class="project-art" href="${p.url?esc(p.url):(detail?'contact.html':'portfolio.html#'+esc(p.id))}" aria-label="${esc(p.url?p.linkLabel:(detail?'Ask about '+p.title:'Explore '+p.title))}">${p.image?`
+  <img src="${esc(p.image)}" alt="${esc(p.title)} project artwork" loading="lazy" width="1200" height="750">`:''}
+  <div class="art-label">
+    <span class="eyebrow">${esc(p.category)}</span>
+    <span class="art-title">${esc(p.title)}</span>
+    <span class="art-credit">A project by Brian Bays</span></div><span class="art-arrow" aria-hidden="true">↗</span></a>
+  <div class="project-meta"><div>
+    <p class="eyebrow">0${i+1} / ${esc(p.role)}</p><h${detail?'2':'3'}>${esc(p.title)}</h${detail?'2':'3'}></div>${!detail?'
+    <span aria-hidden="true">↗</span>':''}</div>${detail?`
+    <p class="project-description">${esc(p.description)}</p>${button(p.url||'mailto:'+email+'?subject='+encodeURIComponent(p.title+' — portfolio inquiry'),p.url?  p.linkLabel:'Ask about this project',true)}`:''}</article>`;}
 const cta=`<section class="cta"><p class="eyebrow">Have a project in mind?</p><div><h2>Let’s make something<br><em>worth watching.</em></h2>${button('contact.html','Get in touch')}</div></section>`;
 const pages={
 
