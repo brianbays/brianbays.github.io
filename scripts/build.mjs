@@ -30,7 +30,7 @@ const pages={
 
 'index.html':{title:'Brian Bays — Creative Producer, Editor, Filmmaker & Post-Production Manager',description:'Film, trailers, and editorial work by Brian Bays. Creative producer, editor, filmmaker, and post-production manager based in Southern California.',body:`<section class="hero"><p class="eyebrow"><span class="dot"></span> Brian Bays / Southern California</p><h1 class="brand-headline">Creative Producer • Editor • Filmmaker • Post-Production Manager</h1><div class="hero-bottom"><p>Original storytelling. Hands-on editing.<br>Experience from idea to final delivery.</p>${button('portfolio.html','Explore my work')}</div><span class="hero-index" aria-hidden="true">BB / 01</span></section>
 <section class="work"><div class="section-heading"><h2>Selected work</h2><a href="portfolio.html">View full portfolio <span aria-hidden="true">↗</span></a></div>
-<div class="project-grid">${projects.slice(0,3).map((p,i)=>card(p,i)).join('')}</div></section>
+<div class="project-grid">${projects.slice(0,4).map((p,i)=>card(p,i)).join('')}</div></section>
 <section class="intro"><p class="eyebrow">Creative instincts. Production experience.</p><div><h2>From the first idea<br>to the final delivery.</h2>
 <p>I'm a creative producer, editor, filmmaker, and post-production manager with an MFA in Film Production and over two decades of post-production experience. I combine original storytelling and hands-on editing with global team leadership and studio delivery experience, bringing an end-to-end understanding of the production process from creative development through final delivery.</p><a class="text-link" href="about.html">More about me <span aria-hidden="true">↗</span></a></div></section>${cta}`},
 
