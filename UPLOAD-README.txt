@@ -13,3 +13,6 @@ node scripts/build.mjs
 node scripts/check.mjs
 
 The build preserves the Playground and quiz subdirectories; the checks validate their links and quiz configuration. A push to main triggers the Publish portfolio workflow. Wait for that deployment to finish before refreshing brianbays.com.
+
+IMPORTANT: The separate brianbays/world-capitals-quiz repository has its own GitHub Pages project site and takes precedence at /world-capitals-quiz/. Publish future quiz changes to that repository as well. This repository hosts the main portfolio and /playground/. The site/world-capitals-quiz copy is retained as a matching fallback.
+

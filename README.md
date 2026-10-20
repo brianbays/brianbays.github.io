@@ -51,3 +51,6 @@ The custom domain is **brianbays.com**, registered at Porkbun and connected to G
 
 The footer links to the games hub in site/playground/. The quiz and study key live in site/world-capitals-quiz/. These are maintained static files; the portfolio builder preserves them. See UPLOAD-README.txt for upload paths. The site checker includes both nested pages and verifies the quiz's 197-country / 245-entry configuration.
 
+
+The live /world-capitals-quiz/ URL is served by the separate brianbays/world-capitals-quiz project site. Update that repository when publishing quiz changes; its route takes precedence over the fallback files here.
+
