@@ -1,0 +1,2453 @@
+[
+  {
+    "country": "Afghanistan",
+    "capital": "Kabul",
+    "coordinates": [
+      34.52813,
+      69.17233
+    ],
+    "source": "https://www.geonames.org/1138958",
+    "matchedName": "Kabul"
+  },
+  {
+    "country": "Åland Islands",
+    "capital": "Mariehamn",
+    "coordinates": [
+      60.09726,
+      19.93481
+    ],
+    "source": "https://www.geonames.org/3041732",
+    "matchedName": "Mariehamn"
+  },
+  {
+    "country": "Albania",
+    "capital": "Tirana",
+    "coordinates": [
+      41.32744,
+      19.81866
+    ],
+    "source": "https://www.geonames.org/3183875",
+    "matchedName": "Tirana"
+  },
+  {
+    "country": "Algeria",
+    "capital": "Algiers",
+    "coordinates": [
+      36.73225,
+      3.08746
+    ],
+    "source": "https://www.geonames.org/2507480",
+    "matchedName": "Algiers"
+  },
+  {
+    "country": "American Samoa",
+    "capital": "Pago Pago",
+    "coordinates": [
+      -14.27806,
+      -170.7025
+    ],
+    "source": "https://www.geonames.org/5881576",
+    "matchedName": "Pago Pago"
+  },
+  {
+    "country": "Andorra",
+    "capital": "Andorra la Vella",
+    "coordinates": [
+      42.50779,
+      1.52109
+    ],
+    "source": "https://www.geonames.org/3041563",
+    "matchedName": "Andorra la Vella"
+  },
+  {
+    "country": "Angola",
+    "capital": "Luanda",
+    "coordinates": [
+      -8.83682,
+      13.23432
+    ],
+    "source": "https://www.geonames.org/2240449",
+    "matchedName": "Luanda"
+  },
+  {
+    "country": "Anguilla",
+    "capital": "The Valley",
+    "coordinates": [
+      18.21704,
+      -63.05783
+    ],
+    "source": "https://www.geonames.org/3573374",
+    "matchedName": "The Valley"
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "capital": "Saint John's",
+    "coordinates": [
+      17.12096,
+      -61.84329
+    ],
+    "source": "https://www.geonames.org/3576022",
+    "matchedName": "Saint John’s"
+  },
+  {
+    "country": "Argentina",
+    "capital": "Buenos Aires",
+    "coordinates": [
+      -34.61315,
+      -58.37723
+    ],
+    "source": "https://www.geonames.org/3435910",
+    "matchedName": "Buenos Aires"
+  },
+  {
+    "country": "Armenia",
+    "capital": "Yerevan",
+    "coordinates": [
+      40.17765,
+      44.5126
+    ],
+    "source": "https://www.geonames.org/616052",
+    "matchedName": "Yerevan"
+  },
+  {
+    "country": "Aruba",
+    "capital": "Oranjestad",
+    "coordinates": [
+      12.52398,
+      -70.02703
+    ],
+    "source": "https://www.geonames.org/3577154",
+    "matchedName": "Oranjestad"
+  },
+  {
+    "country": "Australia",
+    "capital": "Canberra",
+    "coordinates": [
+      -35.28346,
+      149.12807
+    ],
+    "source": "https://www.geonames.org/2172517",
+    "matchedName": "Canberra"
+  },
+  {
+    "country": "Austria",
+    "capital": "Vienna",
+    "coordinates": [
+      48.20849,
+      16.37208
+    ],
+    "source": "https://www.geonames.org/2761369",
+    "matchedName": "Vienna"
+  },
+  {
+    "country": "Azerbaijan",
+    "capital": "Baku",
+    "coordinates": [
+      40.37767,
+      49.89201
+    ],
+    "source": "https://www.geonames.org/587084",
+    "matchedName": "Baku"
+  },
+  {
+    "country": "Bahamas",
+    "capital": "Nassau",
+    "coordinates": [
+      25.05823,
+      -77.34306
+    ],
+    "source": "https://www.geonames.org/3571824",
+    "matchedName": "Nassau"
+  },
+  {
+    "country": "Bahrain",
+    "capital": "Manama",
+    "coordinates": [
+      26.22787,
+      50.58565
+    ],
+    "source": "https://www.geonames.org/290340",
+    "matchedName": "Manama"
+  },
+  {
+    "country": "Bangladesh",
+    "capital": "Dhaka",
+    "coordinates": [
+      23.7104,
+      90.40744
+    ],
+    "source": "https://www.geonames.org/1185241",
+    "matchedName": "Dhaka"
+  },
+  {
+    "country": "Barbados",
+    "capital": "Bridgetown",
+    "coordinates": [
+      13.10732,
+      -59.62021
+    ],
+    "source": "https://www.geonames.org/3374036",
+    "matchedName": "Bridgetown"
+  },
+  {
+    "country": "Belarus",
+    "capital": "Minsk",
+    "coordinates": [
+      53.90019,
+      27.56653
+    ],
+    "source": "https://www.geonames.org/625144",
+    "matchedName": "Minsk"
+  },
+  {
+    "country": "Belgium",
+    "capital": "Brussels",
+    "coordinates": [
+      50.85045,
+      4.34878
+    ],
+    "source": "https://www.geonames.org/2800866",
+    "matchedName": "Brussels"
+  },
+  {
+    "country": "Belize",
+    "capital": "Belmopan",
+    "coordinates": [
+      17.25376,
+      -88.76401
+    ],
+    "source": "https://www.geonames.org/3582672",
+    "matchedName": "Belmopan"
+  },
+  {
+    "country": "Benin",
+    "capital": "Porto-Novo",
+    "coordinates": [
+      6.49646,
+      2.60359
+    ],
+    "source": "https://www.geonames.org/2392087",
+    "matchedName": "Porto-Novo"
+  },
+  {
+    "country": "Bermuda",
+    "capital": "Hamilton",
+    "coordinates": [
+      32.2949,
+      -64.78303
+    ],
+    "source": "https://www.geonames.org/3573197",
+    "matchedName": "Hamilton"
+  },
+  {
+    "country": "Bhutan",
+    "capital": "Thimphu",
+    "coordinates": [
+      27.46609,
+      89.64191
+    ],
+    "source": "https://www.geonames.org/1252416",
+    "matchedName": "Thimphu"
+  },
+  {
+    "country": "Bolivia",
+    "capital": "Sucre",
+    "coordinates": [
+      -19.03332,
+      -65.26274
+    ],
+    "source": "https://www.geonames.org/3903987",
+    "matchedName": "Sucre"
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "capital": "Sarajevo",
+    "coordinates": [
+      43.84864,
+      18.35644
+    ],
+    "source": "https://www.geonames.org/3191281",
+    "matchedName": "Sarajevo"
+  },
+  {
+    "country": "Botswana",
+    "capital": "Gaborone",
+    "coordinates": [
+      -24.65451,
+      25.90859
+    ],
+    "source": "https://www.geonames.org/933773",
+    "matchedName": "Gaborone"
+  },
+  {
+    "country": "Brazil",
+    "capital": "Brasília",
+    "coordinates": [
+      -15.77972,
+      -47.92972
+    ],
+    "source": "https://www.geonames.org/3469058",
+    "matchedName": "Brasília"
+  },
+  {
+    "country": "British Indian Ocean Territory",
+    "capital": "Diego Garcia",
+    "coordinates": [
+      -7.26229,
+      72.37676
+    ],
+    "source": "https://www.geonames.org/7503195",
+    "matchedName": "Downtown"
+  },
+  {
+    "country": "British Virgin Islands",
+    "capital": "Road Town",
+    "coordinates": [
+      18.42693,
+      -64.62079
+    ],
+    "source": "https://www.geonames.org/3577430",
+    "matchedName": "Road Town"
+  },
+  {
+    "country": "Brunei",
+    "capital": "Bandar Seri Begawan",
+    "coordinates": [
+      4.89035,
+      114.94006
+    ],
+    "source": "https://www.geonames.org/1820906",
+    "matchedName": "Bandar Seri Begawan"
+  },
+  {
+    "country": "Bulgaria",
+    "capital": "Sofia",
+    "coordinates": [
+      42.69751,
+      23.32415
+    ],
+    "source": "https://www.geonames.org/727011",
+    "matchedName": "Sofia"
+  },
+  {
+    "country": "Burkina Faso",
+    "capital": "Ouagadougou",
+    "coordinates": [
+      12.36566,
+      -1.53388
+    ],
+    "source": "https://www.geonames.org/2357048",
+    "matchedName": "Ouagadougou"
+  },
+  {
+    "country": "Burundi",
+    "capital": "Gitega",
+    "coordinates": [
+      -3.42708,
+      29.92463
+    ],
+    "source": "https://www.geonames.org/426272",
+    "matchedName": "Gitega"
+  },
+  {
+    "country": "Cambodia",
+    "capital": "Phnom Penh",
+    "coordinates": [
+      11.56245,
+      104.91601
+    ],
+    "source": "https://www.geonames.org/1821306",
+    "matchedName": "Phnom Penh"
+  },
+  {
+    "country": "Cameroon",
+    "capital": "Yaoundé",
+    "coordinates": [
+      3.86667,
+      11.51667
+    ],
+    "source": "https://www.geonames.org/2220957",
+    "matchedName": "Yaoundé"
+  },
+  {
+    "country": "Canada",
+    "capital": "Ottawa",
+    "coordinates": [
+      45.41117,
+      -75.69812
+    ],
+    "source": "https://www.geonames.org/6094817",
+    "matchedName": "Ottawa"
+  },
+  {
+    "country": "Cape Verde",
+    "capital": "Praia",
+    "coordinates": [
+      14.93152,
+      -23.51254
+    ],
+    "source": "https://www.geonames.org/3374333",
+    "matchedName": "Praia"
+  },
+  {
+    "country": "Caribbean Netherlands",
+    "capital": "Kralendijk",
+    "coordinates": [
+      12.15,
+      -68.26667
+    ],
+    "source": "https://www.geonames.org/3513563",
+    "matchedName": "Kralendijk"
+  },
+  {
+    "country": "Cayman Islands",
+    "capital": "George Town",
+    "coordinates": [
+      19.2866,
+      -81.37436
+    ],
+    "source": "https://www.geonames.org/3580661",
+    "matchedName": "George Town"
+  },
+  {
+    "country": "Central African Republic",
+    "capital": "Bangui",
+    "coordinates": [
+      4.36122,
+      18.55496
+    ],
+    "source": "https://www.geonames.org/2389853",
+    "matchedName": "Bangui"
+  },
+  {
+    "country": "Chad",
+    "capital": "N'Djamena",
+    "coordinates": [
+      12.10672,
+      15.0444
+    ],
+    "source": "https://www.geonames.org/2427123",
+    "matchedName": "N'Djamena"
+  },
+  {
+    "country": "Chile",
+    "capital": "Santiago",
+    "coordinates": [
+      -33.45694,
+      -70.64827
+    ],
+    "source": "https://www.geonames.org/3871336",
+    "matchedName": "Santiago"
+  },
+  {
+    "country": "China",
+    "capital": "Beijing",
+    "coordinates": [
+      39.9075,
+      116.39723
+    ],
+    "source": "https://www.geonames.org/1816670",
+    "matchedName": "Beijing"
+  },
+  {
+    "country": "Christmas Island",
+    "capital": "Flying Fish Cove",
+    "coordinates": [
+      -10.42172,
+      105.67912
+    ],
+    "source": "https://www.geonames.org/2078127",
+    "matchedName": "Flying Fish Cove"
+  },
+  {
+    "country": "Cocos (Keeling) Islands",
+    "capital": "West Island",
+    "coordinates": [
+      -12.15681,
+      96.82251
+    ],
+    "source": "https://www.geonames.org/7304591",
+    "matchedName": "West Island"
+  },
+  {
+    "country": "Colombia",
+    "capital": "Bogotá",
+    "coordinates": [
+      4.60971,
+      -74.08175
+    ],
+    "source": "https://www.geonames.org/3688689",
+    "matchedName": "Bogotá"
+  },
+  {
+    "country": "Comoros",
+    "capital": "Moroni",
+    "coordinates": [
+      -11.70216,
+      43.25506
+    ],
+    "source": "https://www.geonames.org/921772",
+    "matchedName": "Moroni"
+  },
+  {
+    "country": "Congo",
+    "capital": "Brazzaville",
+    "coordinates": [
+      -4.26613,
+      15.28318
+    ],
+    "source": "https://www.geonames.org/2260535",
+    "matchedName": "Brazzaville"
+  },
+  {
+    "country": "Cook Islands",
+    "capital": "Avarua",
+    "coordinates": [
+      -21.2075,
+      -159.77546
+    ],
+    "source": "https://www.geonames.org/4035715",
+    "matchedName": "Avarua"
+  },
+  {
+    "country": "Costa Rica",
+    "capital": "San José",
+    "coordinates": [
+      9.93388,
+      -84.08489
+    ],
+    "source": "https://www.geonames.org/3621849",
+    "matchedName": "San José"
+  },
+  {
+    "country": "Croatia",
+    "capital": "Zagreb",
+    "coordinates": [
+      45.81444,
+      15.97798
+    ],
+    "source": "https://www.geonames.org/3186886",
+    "matchedName": "Zagreb"
+  },
+  {
+    "country": "Cuba",
+    "capital": "Havana",
+    "coordinates": [
+      23.13302,
+      -82.38304
+    ],
+    "source": "https://www.geonames.org/3553478",
+    "matchedName": "Havana"
+  },
+  {
+    "country": "Curaçao",
+    "capital": "Willemstad",
+    "coordinates": [
+      12.12246,
+      -68.88641
+    ],
+    "source": "https://www.geonames.org/3513090",
+    "matchedName": "Willemstad"
+  },
+  {
+    "country": "Cyprus",
+    "capital": "Nicosia",
+    "coordinates": [
+      35.17284,
+      33.35397
+    ],
+    "source": "https://www.geonames.org/146268",
+    "matchedName": "Nicosia"
+  },
+  {
+    "country": "Czechia",
+    "capital": "Prague",
+    "coordinates": [
+      50.08804,
+      14.42076
+    ],
+    "source": "https://www.geonames.org/3067696",
+    "matchedName": "Prague"
+  },
+  {
+    "country": "Denmark",
+    "capital": "Copenhagen",
+    "coordinates": [
+      55.67594,
+      12.56553
+    ],
+    "source": "https://www.geonames.org/2618425",
+    "matchedName": "Copenhagen"
+  },
+  {
+    "country": "Djibouti",
+    "capital": "Djibouti",
+    "coordinates": [
+      11.58901,
+      43.14503
+    ],
+    "source": "https://www.geonames.org/223817",
+    "matchedName": "Djibouti"
+  },
+  {
+    "country": "Dominica",
+    "capital": "Roseau",
+    "coordinates": [
+      15.30174,
+      -61.38808
+    ],
+    "source": "https://www.geonames.org/3575635",
+    "matchedName": "Roseau"
+  },
+  {
+    "country": "Dominican Republic",
+    "capital": "Santo Domingo",
+    "coordinates": [
+      18.47186,
+      -69.89232
+    ],
+    "source": "https://www.geonames.org/3492908",
+    "matchedName": "Santo Domingo"
+  },
+  {
+    "country": "DR Congo",
+    "capital": "Kinshasa",
+    "coordinates": [
+      -4.32758,
+      15.31357
+    ],
+    "source": "https://www.geonames.org/2314302",
+    "matchedName": "Kinshasa"
+  },
+  {
+    "country": "Ecuador",
+    "capital": "Quito",
+    "coordinates": [
+      -0.22985,
+      -78.52495
+    ],
+    "source": "https://www.geonames.org/3652462",
+    "matchedName": "Quito"
+  },
+  {
+    "country": "Egypt",
+    "capital": "Cairo",
+    "coordinates": [
+      30.06263,
+      31.24967
+    ],
+    "source": "https://www.geonames.org/360630",
+    "matchedName": "Cairo"
+  },
+  {
+    "country": "El Salvador",
+    "capital": "San Salvador",
+    "coordinates": [
+      13.68935,
+      -89.18718
+    ],
+    "source": "https://www.geonames.org/3583361",
+    "matchedName": "San Salvador"
+  },
+  {
+    "country": "Equatorial Guinea",
+    "capital": "Malabo",
+    "coordinates": [
+      3.75578,
+      8.78166
+    ],
+    "source": "https://www.geonames.org/2309527",
+    "matchedName": "Malabo"
+  },
+  {
+    "country": "Eritrea",
+    "capital": "Asmara",
+    "coordinates": [
+      15.33805,
+      38.93184
+    ],
+    "source": "https://www.geonames.org/343300",
+    "matchedName": "Asmara"
+  },
+  {
+    "country": "Estonia",
+    "capital": "Tallinn",
+    "coordinates": [
+      59.43696,
+      24.75353
+    ],
+    "source": "https://www.geonames.org/588409",
+    "matchedName": "Tallinn"
+  },
+  {
+    "country": "Eswatini",
+    "capital": "Lobamba",
+    "coordinates": [
+      -26.46667,
+      31.2
+    ],
+    "source": "https://www.geonames.org/935048",
+    "matchedName": "Lobamba"
+  },
+  {
+    "country": "Ethiopia",
+    "capital": "Addis Ababa",
+    "coordinates": [
+      9.02497,
+      38.74689
+    ],
+    "source": "https://www.geonames.org/344979",
+    "matchedName": "Addis Ababa"
+  },
+  {
+    "country": "Falkland Islands",
+    "capital": "Stanley",
+    "coordinates": [
+      -51.69382,
+      -57.85701
+    ],
+    "source": "https://www.geonames.org/3426691",
+    "matchedName": "Stanley"
+  },
+  {
+    "country": "Faroe Islands",
+    "capital": "Tórshavn",
+    "coordinates": [
+      62.00973,
+      -6.77164
+    ],
+    "source": "https://www.geonames.org/2611396",
+    "matchedName": "Tórshavn"
+  },
+  {
+    "country": "Fiji",
+    "capital": "Suva",
+    "coordinates": [
+      -18.13683,
+      178.42531
+    ],
+    "source": "https://www.geonames.org/2198148",
+    "matchedName": "Suva"
+  },
+  {
+    "country": "Finland",
+    "capital": "Helsinki",
+    "coordinates": [
+      60.16952,
+      24.93545
+    ],
+    "source": "https://www.geonames.org/658225",
+    "matchedName": "Helsinki"
+  },
+  {
+    "country": "France",
+    "capital": "Paris",
+    "coordinates": [
+      48.85341,
+      2.3488
+    ],
+    "source": "https://www.geonames.org/2988507",
+    "matchedName": "Paris"
+  },
+  {
+    "country": "French Guiana",
+    "capital": "Cayenne",
+    "coordinates": [
+      4.9381,
+      -52.33455
+    ],
+    "source": "https://www.geonames.org/3382160",
+    "matchedName": "Cayenne"
+  },
+  {
+    "country": "French Polynesia",
+    "capital": "Papeetē",
+    "coordinates": [
+      -17.5347,
+      -149.56843
+    ],
+    "source": "https://www.geonames.org/4033936",
+    "matchedName": "Papeete"
+  },
+  {
+    "country": "French Southern and Antarctic Lands",
+    "capital": "Port-aux-Français",
+    "coordinates": [
+      -49.34916,
+      70.21937
+    ],
+    "source": "https://www.geonames.org/1546102",
+    "matchedName": "Port-aux-Français"
+  },
+  {
+    "country": "Gabon",
+    "capital": "Libreville",
+    "coordinates": [
+      0.39241,
+      9.45356
+    ],
+    "source": "https://www.geonames.org/2399697",
+    "matchedName": "Libreville"
+  },
+  {
+    "country": "Gambia",
+    "capital": "Banjul",
+    "coordinates": [
+      13.45274,
+      -16.57803
+    ],
+    "source": "https://www.geonames.org/2413876",
+    "matchedName": "Banjul"
+  },
+  {
+    "country": "Georgia",
+    "capital": "Tbilisi",
+    "coordinates": [
+      41.69143,
+      44.83412
+    ],
+    "source": "https://www.geonames.org/611717",
+    "matchedName": "Tbilisi"
+  },
+  {
+    "country": "Germany",
+    "capital": "Berlin",
+    "coordinates": [
+      52.52437,
+      13.41053
+    ],
+    "source": "https://www.geonames.org/2950159",
+    "matchedName": "Berlin"
+  },
+  {
+    "country": "Ghana",
+    "capital": "Accra",
+    "coordinates": [
+      5.55602,
+      -0.1969
+    ],
+    "source": "https://www.geonames.org/2306104",
+    "matchedName": "Accra"
+  },
+  {
+    "country": "Gibraltar",
+    "capital": "Gibraltar",
+    "coordinates": [
+      36.14474,
+      -5.35257
+    ],
+    "source": "https://www.geonames.org/2411585",
+    "matchedName": "Gibraltar"
+  },
+  {
+    "country": "Greece",
+    "capital": "Athens",
+    "coordinates": [
+      37.98376,
+      23.72784
+    ],
+    "source": "https://www.geonames.org/264371",
+    "matchedName": "Athens"
+  },
+  {
+    "country": "Greenland",
+    "capital": "Nuuk",
+    "coordinates": [
+      64.18347,
+      -51.72157
+    ],
+    "source": "https://www.geonames.org/3421319",
+    "matchedName": "Nuuk"
+  },
+  {
+    "country": "Grenada",
+    "capital": "St. George's",
+    "coordinates": [
+      12.05288,
+      -61.75226
+    ],
+    "source": "https://www.geonames.org/3579925",
+    "matchedName": "Saint George's"
+  },
+  {
+    "country": "Guadeloupe",
+    "capital": "Basse-Terre",
+    "coordinates": [
+      15.99714,
+      -61.73214
+    ],
+    "source": "https://www.geonames.org/3579732",
+    "matchedName": "Basse-Terre"
+  },
+  {
+    "country": "Guam",
+    "capital": "Hagåtña",
+    "coordinates": [
+      13.47567,
+      144.74886
+    ],
+    "source": "https://www.geonames.org/4044012",
+    "matchedName": "Hagåtña"
+  },
+  {
+    "country": "Guatemala",
+    "capital": "Guatemala City",
+    "coordinates": [
+      14.64072,
+      -90.51327
+    ],
+    "source": "https://www.geonames.org/3598132",
+    "matchedName": "Guatemala City"
+  },
+  {
+    "country": "Guernsey",
+    "capital": "St. Peter Port",
+    "coordinates": [
+      49.45981,
+      -2.53527
+    ],
+    "source": "https://www.geonames.org/3042287",
+    "matchedName": "Saint Peter Port"
+  },
+  {
+    "country": "Guinea",
+    "capital": "Conakry",
+    "coordinates": [
+      9.53795,
+      -13.67729
+    ],
+    "source": "https://www.geonames.org/2422465",
+    "matchedName": "Conakry"
+  },
+  {
+    "country": "Guinea-Bissau",
+    "capital": "Bissau",
+    "coordinates": [
+      11.86357,
+      -15.59767
+    ],
+    "source": "https://www.geonames.org/2374775",
+    "matchedName": "Bissau"
+  },
+  {
+    "country": "Guyana",
+    "capital": "Georgetown",
+    "coordinates": [
+      6.80448,
+      -58.15527
+    ],
+    "source": "https://www.geonames.org/3378644",
+    "matchedName": "Georgetown"
+  },
+  {
+    "country": "Haiti",
+    "capital": "Port-au-Prince",
+    "coordinates": [
+      18.54349,
+      -72.33881
+    ],
+    "source": "https://www.geonames.org/3718426",
+    "matchedName": "Port-au-Prince"
+  },
+  {
+    "country": "Honduras",
+    "capital": "Tegucigalpa",
+    "coordinates": [
+      14.0818,
+      -87.20681
+    ],
+    "source": "https://www.geonames.org/3600949",
+    "matchedName": "Tegucigalpa"
+  },
+  {
+    "country": "Hong Kong",
+    "capital": "City of Victoria",
+    "coordinates": [
+      22.28299,
+      114.15846
+    ],
+    "source": "https://www.geonames.org/8223932",
+    "matchedName": "Central"
+  },
+  {
+    "country": "Hungary",
+    "capital": "Budapest",
+    "coordinates": [
+      47.49835,
+      19.04045
+    ],
+    "source": "https://www.geonames.org/3054643",
+    "matchedName": "Budapest"
+  },
+  {
+    "country": "Iceland",
+    "capital": "Reykjavik",
+    "coordinates": [
+      64.13548,
+      -21.89541
+    ],
+    "source": "https://www.geonames.org/3413829",
+    "matchedName": "Reykjavík"
+  },
+  {
+    "country": "India",
+    "capital": "New Delhi",
+    "coordinates": [
+      28.62137,
+      77.2148
+    ],
+    "source": "https://www.geonames.org/1261481",
+    "matchedName": "New Delhi"
+  },
+  {
+    "country": "Indonesia",
+    "capital": "Jakarta",
+    "coordinates": [
+      -6.21462,
+      106.84513
+    ],
+    "source": "https://www.geonames.org/1642911",
+    "matchedName": "Jakarta"
+  },
+  {
+    "country": "Iran",
+    "capital": "Tehran",
+    "coordinates": [
+      35.69439,
+      51.42151
+    ],
+    "source": "https://www.geonames.org/112931",
+    "matchedName": "Tehran"
+  },
+  {
+    "country": "Iraq",
+    "capital": "Baghdad",
+    "coordinates": [
+      33.34058,
+      44.40088
+    ],
+    "source": "https://www.geonames.org/98182",
+    "matchedName": "Baghdad"
+  },
+  {
+    "country": "Ireland",
+    "capital": "Dublin",
+    "coordinates": [
+      53.33306,
+      -6.24889
+    ],
+    "source": "https://www.geonames.org/2964574",
+    "matchedName": "Dublin"
+  },
+  {
+    "country": "Isle of Man",
+    "capital": "Douglas",
+    "coordinates": [
+      54.15,
+      -4.48333
+    ],
+    "source": "https://www.geonames.org/3042237",
+    "matchedName": "Douglas"
+  },
+  {
+    "country": "Israel",
+    "capital": "Jerusalem",
+    "coordinates": [
+      31.76904,
+      35.21633
+    ],
+    "source": "https://www.geonames.org/281184",
+    "matchedName": "Jerusalem"
+  },
+  {
+    "country": "Italy",
+    "capital": "Rome",
+    "coordinates": [
+      41.89193,
+      12.51133
+    ],
+    "source": "https://www.geonames.org/3169070",
+    "matchedName": "Rome"
+  },
+  {
+    "country": "Ivory Coast",
+    "capital": "Yamoussoukro",
+    "coordinates": [
+      6.82055,
+      -5.27674
+    ],
+    "source": "https://www.geonames.org/2279755",
+    "matchedName": "Yamoussoukro"
+  },
+  {
+    "country": "Jamaica",
+    "capital": "Kingston",
+    "coordinates": [
+      17.99702,
+      -76.79358
+    ],
+    "source": "https://www.geonames.org/3489854",
+    "matchedName": "Kingston"
+  },
+  {
+    "country": "Japan",
+    "capital": "Tokyo",
+    "coordinates": [
+      35.6895,
+      139.69171
+    ],
+    "source": "https://www.geonames.org/1850147",
+    "matchedName": "Tokyo"
+  },
+  {
+    "country": "Jersey",
+    "capital": "Saint Helier",
+    "coordinates": [
+      49.18804,
+      -2.10491
+    ],
+    "source": "https://www.geonames.org/3042091",
+    "matchedName": "Saint Helier"
+  },
+  {
+    "country": "Jordan",
+    "capital": "Amman",
+    "coordinates": [
+      31.95522,
+      35.94503
+    ],
+    "source": "https://www.geonames.org/250441",
+    "matchedName": "Amman"
+  },
+  {
+    "country": "Kazakhstan",
+    "capital": "Astana",
+    "coordinates": [
+      51.1801,
+      71.44598
+    ],
+    "source": "https://www.geonames.org/1526273",
+    "matchedName": "Astana"
+  },
+  {
+    "country": "Kenya",
+    "capital": "Nairobi",
+    "coordinates": [
+      -1.28333,
+      36.81667
+    ],
+    "source": "https://www.geonames.org/184745",
+    "matchedName": "Nairobi"
+  },
+  {
+    "country": "Kiribati",
+    "capital": "South Tarawa",
+    "coordinates": [
+      1.3278,
+      172.97696
+    ],
+    "source": "https://www.geonames.org/2110257",
+    "matchedName": "Tarawa"
+  },
+  {
+    "country": "Kosovo",
+    "capital": "Pristina",
+    "coordinates": [
+      42.67272,
+      21.16688
+    ],
+    "source": "https://www.geonames.org/786714",
+    "matchedName": "Pristina"
+  },
+  {
+    "country": "Kuwait",
+    "capital": "Kuwait City",
+    "coordinates": [
+      29.367,
+      47.97429
+    ],
+    "source": "https://www.geonames.org/285787",
+    "matchedName": "Kuwait City"
+  },
+  {
+    "country": "Kyrgyzstan",
+    "capital": "Bishkek",
+    "coordinates": [
+      42.87,
+      74.59
+    ],
+    "source": "https://www.geonames.org/1528675",
+    "matchedName": "Bishkek"
+  },
+  {
+    "country": "Laos",
+    "capital": "Vientiane",
+    "coordinates": [
+      17.96667,
+      102.6
+    ],
+    "source": "https://www.geonames.org/1651944",
+    "matchedName": "Vientiane"
+  },
+  {
+    "country": "Latvia",
+    "capital": "Riga",
+    "coordinates": [
+      56.946,
+      24.10589
+    ],
+    "source": "https://www.geonames.org/456172",
+    "matchedName": "Riga"
+  },
+  {
+    "country": "Lebanon",
+    "capital": "Beirut",
+    "coordinates": [
+      33.89332,
+      35.50157
+    ],
+    "source": "https://www.geonames.org/276781",
+    "matchedName": "Beirut"
+  },
+  {
+    "country": "Lesotho",
+    "capital": "Maseru",
+    "coordinates": [
+      -29.31667,
+      27.48333
+    ],
+    "source": "https://www.geonames.org/932505",
+    "matchedName": "Maseru"
+  },
+  {
+    "country": "Liberia",
+    "capital": "Monrovia",
+    "coordinates": [
+      6.30054,
+      -10.7969
+    ],
+    "source": "https://www.geonames.org/2274895",
+    "matchedName": "Monrovia"
+  },
+  {
+    "country": "Libya",
+    "capital": "Tripoli",
+    "coordinates": [
+      32.88743,
+      13.18733
+    ],
+    "source": "https://www.geonames.org/2210247",
+    "matchedName": "Tripoli"
+  },
+  {
+    "country": "Liechtenstein",
+    "capital": "Vaduz",
+    "coordinates": [
+      47.14151,
+      9.52154
+    ],
+    "source": "https://www.geonames.org/3042030",
+    "matchedName": "Vaduz"
+  },
+  {
+    "country": "Lithuania",
+    "capital": "Vilnius",
+    "coordinates": [
+      54.68916,
+      25.2798
+    ],
+    "source": "https://www.geonames.org/593116",
+    "matchedName": "Vilnius"
+  },
+  {
+    "country": "Luxembourg",
+    "capital": "Luxembourg",
+    "coordinates": [
+      49.60982,
+      6.13268
+    ],
+    "source": "https://www.geonames.org/2960316",
+    "matchedName": "Luxembourg"
+  },
+  {
+    "country": "Madagascar",
+    "capital": "Antananarivo",
+    "coordinates": [
+      -18.91368,
+      47.53613
+    ],
+    "source": "https://www.geonames.org/1070940",
+    "matchedName": "Antananarivo"
+  },
+  {
+    "country": "Malawi",
+    "capital": "Lilongwe",
+    "coordinates": [
+      -13.96692,
+      33.78725
+    ],
+    "source": "https://www.geonames.org/927967",
+    "matchedName": "Lilongwe"
+  },
+  {
+    "country": "Malaysia",
+    "capital": "Kuala Lumpur",
+    "coordinates": [
+      3.1412,
+      101.68653
+    ],
+    "source": "https://www.geonames.org/1735161",
+    "matchedName": "Kuala Lumpur"
+  },
+  {
+    "country": "Maldives",
+    "capital": "Malé",
+    "coordinates": [
+      4.17521,
+      73.50916
+    ],
+    "source": "https://www.geonames.org/1282027",
+    "matchedName": "Male"
+  },
+  {
+    "country": "Mali",
+    "capital": "Bamako",
+    "coordinates": [
+      12.60915,
+      -7.97522
+    ],
+    "source": "https://www.geonames.org/2460596",
+    "matchedName": "Bamako"
+  },
+  {
+    "country": "Malta",
+    "capital": "Valletta",
+    "coordinates": [
+      35.89968,
+      14.5148
+    ],
+    "source": "https://www.geonames.org/2562305",
+    "matchedName": "Valletta"
+  },
+  {
+    "country": "Marshall Islands",
+    "capital": "Majuro",
+    "coordinates": [
+      7.08971,
+      171.38027
+    ],
+    "source": "https://www.geonames.org/2113779",
+    "matchedName": "Majuro"
+  },
+  {
+    "country": "Martinique",
+    "capital": "Fort-de-France",
+    "coordinates": [
+      14.60365,
+      -61.07418
+    ],
+    "source": "https://www.geonames.org/3570675",
+    "matchedName": "Fort-de-France"
+  },
+  {
+    "country": "Mauritania",
+    "capital": "Nouakchott",
+    "coordinates": [
+      18.08581,
+      -15.9785
+    ],
+    "source": "https://www.geonames.org/2377450",
+    "matchedName": "Nouakchott"
+  },
+  {
+    "country": "Mauritius",
+    "capital": "Port Louis",
+    "coordinates": [
+      -20.16194,
+      57.49889
+    ],
+    "source": "https://www.geonames.org/934154",
+    "matchedName": "Port Louis"
+  },
+  {
+    "country": "Mayotte",
+    "capital": "Mamoudzou",
+    "coordinates": [
+      -12.78234,
+      45.22878
+    ],
+    "source": "https://www.geonames.org/921815",
+    "matchedName": "Mamoudzou"
+  },
+  {
+    "country": "Mexico",
+    "capital": "Mexico City",
+    "coordinates": [
+      19.42847,
+      -99.12766
+    ],
+    "source": "https://www.geonames.org/3530597",
+    "matchedName": "Mexico City"
+  },
+  {
+    "country": "Micronesia",
+    "capital": "Palikir",
+    "coordinates": [
+      6.92477,
+      158.16109
+    ],
+    "source": "https://www.geonames.org/2081986",
+    "matchedName": "Palikir"
+  },
+  {
+    "country": "Moldova",
+    "capital": "Chișinău",
+    "coordinates": [
+      47.00902,
+      28.85938
+    ],
+    "source": "https://www.geonames.org/618426",
+    "matchedName": "Chisinau"
+  },
+  {
+    "country": "Monaco",
+    "capital": "Monaco",
+    "coordinates": [
+      43.73718,
+      7.42145
+    ],
+    "source": "https://www.geonames.org/2993458",
+    "matchedName": "Monaco"
+  },
+  {
+    "country": "Mongolia",
+    "capital": "Ulan Bator",
+    "coordinates": [
+      47.90771,
+      106.88324
+    ],
+    "source": "https://www.geonames.org/2028462",
+    "matchedName": "Ulan Bator"
+  },
+  {
+    "country": "Montenegro",
+    "capital": "Podgorica",
+    "coordinates": [
+      42.44124,
+      19.26309
+    ],
+    "source": "https://www.geonames.org/3193044",
+    "matchedName": "Podgorica"
+  },
+  {
+    "country": "Montserrat",
+    "capital": "Plymouth",
+    "coordinates": [
+      16.70555,
+      -62.21292
+    ],
+    "source": "https://www.geonames.org/3578069",
+    "matchedName": "Plymouth"
+  },
+  {
+    "country": "Morocco",
+    "capital": "Rabat",
+    "coordinates": [
+      34.01325,
+      -6.83255
+    ],
+    "source": "https://www.geonames.org/2538475",
+    "matchedName": "Rabat"
+  },
+  {
+    "country": "Mozambique",
+    "capital": "Maputo",
+    "coordinates": [
+      -25.96553,
+      32.58322
+    ],
+    "source": "https://www.geonames.org/1040652",
+    "matchedName": "Maputo"
+  },
+  {
+    "country": "Myanmar",
+    "capital": "Naypyidaw",
+    "coordinates": [
+      19.745,
+      96.12972
+    ],
+    "source": "https://www.geonames.org/6611854",
+    "matchedName": "Nay Pyi Taw"
+  },
+  {
+    "country": "Namibia",
+    "capital": "Windhoek",
+    "coordinates": [
+      -22.55941,
+      17.08323
+    ],
+    "source": "https://www.geonames.org/3352136",
+    "matchedName": "Windhoek"
+  },
+  {
+    "country": "Nauru",
+    "capital": "Yaren",
+    "coordinates": [
+      -0.55085,
+      166.9252
+    ],
+    "source": "https://www.geonames.org/7626461",
+    "matchedName": "Yaren"
+  },
+  {
+    "country": "Nepal",
+    "capital": "Kathmandu",
+    "coordinates": [
+      27.70169,
+      85.3206
+    ],
+    "source": "https://www.geonames.org/1283240",
+    "matchedName": "Kathmandu"
+  },
+  {
+    "country": "Netherlands",
+    "capital": "Amsterdam",
+    "coordinates": [
+      52.37403,
+      4.88969
+    ],
+    "source": "https://www.geonames.org/2759794",
+    "matchedName": "Amsterdam"
+  },
+  {
+    "country": "New Caledonia",
+    "capital": "Nouméa",
+    "coordinates": [
+      -22.27407,
+      166.44884
+    ],
+    "source": "https://www.geonames.org/2139521",
+    "matchedName": "Nouméa"
+  },
+  {
+    "country": "New Zealand",
+    "capital": "Wellington",
+    "coordinates": [
+      -41.28664,
+      174.77557
+    ],
+    "source": "https://www.geonames.org/2179537",
+    "matchedName": "Wellington"
+  },
+  {
+    "country": "Nicaragua",
+    "capital": "Managua",
+    "coordinates": [
+      12.13282,
+      -86.2504
+    ],
+    "source": "https://www.geonames.org/3617763",
+    "matchedName": "Managua"
+  },
+  {
+    "country": "Niger",
+    "capital": "Niamey",
+    "coordinates": [
+      13.51366,
+      2.1098
+    ],
+    "source": "https://www.geonames.org/2440485",
+    "matchedName": "Niamey"
+  },
+  {
+    "country": "Nigeria",
+    "capital": "Abuja",
+    "coordinates": [
+      9.05785,
+      7.49508
+    ],
+    "source": "https://www.geonames.org/2352778",
+    "matchedName": "Abuja"
+  },
+  {
+    "country": "Niue",
+    "capital": "Alofi",
+    "coordinates": [
+      -19.05294,
+      -169.91957
+    ],
+    "source": "https://www.geonames.org/4036284",
+    "matchedName": "Alofi"
+  },
+  {
+    "country": "Norfolk Island",
+    "capital": "Kingston",
+    "coordinates": [
+      -29.05459,
+      167.96628
+    ],
+    "source": "https://www.geonames.org/2161314",
+    "matchedName": "Kingston"
+  },
+  {
+    "country": "North Korea",
+    "capital": "Pyongyang",
+    "coordinates": [
+      39.03385,
+      125.75432
+    ],
+    "source": "https://www.geonames.org/1871859",
+    "matchedName": "Pyongyang"
+  },
+  {
+    "country": "North Macedonia",
+    "capital": "Skopje",
+    "coordinates": [
+      41.99646,
+      21.43141
+    ],
+    "source": "https://www.geonames.org/785842",
+    "matchedName": "Skopje"
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "capital": "Saipan",
+    "coordinates": [
+      15.21233,
+      145.7545
+    ],
+    "source": "https://www.geonames.org/7828758",
+    "matchedName": "Saipan"
+  },
+  {
+    "country": "Norway",
+    "capital": "Oslo",
+    "coordinates": [
+      59.91273,
+      10.74609
+    ],
+    "source": "https://www.geonames.org/3143244",
+    "matchedName": "Oslo"
+  },
+  {
+    "country": "Oman",
+    "capital": "Muscat",
+    "coordinates": [
+      23.58413,
+      58.40778
+    ],
+    "source": "https://www.geonames.org/287286",
+    "matchedName": "Muscat"
+  },
+  {
+    "country": "Pakistan",
+    "capital": "Islamabad",
+    "coordinates": [
+      33.72148,
+      73.04329
+    ],
+    "source": "https://www.geonames.org/1176615",
+    "matchedName": "Islamabad"
+  },
+  {
+    "country": "Palau",
+    "capital": "Ngerulmud",
+    "coordinates": [
+      7.50077,
+      134.6238
+    ],
+    "source": "https://www.geonames.org/8063361",
+    "matchedName": "Ngerulmud"
+  },
+  {
+    "country": "Palestine",
+    "capital": "Ramallah",
+    "coordinates": [
+      31.89964,
+      35.20422
+    ],
+    "source": "https://www.geonames.org/282239",
+    "matchedName": "Ramallah"
+  },
+  {
+    "country": "Panama",
+    "capital": "Panama City",
+    "coordinates": [
+      8.9936,
+      -79.51973
+    ],
+    "source": "https://www.geonames.org/3703443",
+    "matchedName": "Panama City"
+  },
+  {
+    "country": "Papua New Guinea",
+    "capital": "Port Moresby",
+    "coordinates": [
+      -9.47723,
+      147.15089
+    ],
+    "source": "https://www.geonames.org/2088122",
+    "matchedName": "Port Moresby"
+  },
+  {
+    "country": "Paraguay",
+    "capital": "Asunción",
+    "coordinates": [
+      -25.28646,
+      -57.647
+    ],
+    "source": "https://www.geonames.org/3439389",
+    "matchedName": "Asunción"
+  },
+  {
+    "country": "Peru",
+    "capital": "Lima",
+    "coordinates": [
+      -12.04318,
+      -77.02824
+    ],
+    "source": "https://www.geonames.org/3936456",
+    "matchedName": "Lima"
+  },
+  {
+    "country": "Philippines",
+    "capital": "Manila",
+    "coordinates": [
+      14.6042,
+      120.9822
+    ],
+    "source": "https://www.geonames.org/1701668",
+    "matchedName": "Manila"
+  },
+  {
+    "country": "Pitcairn Islands",
+    "capital": "Adamstown",
+    "coordinates": [
+      -25.06597,
+      -130.10147
+    ],
+    "source": "https://www.geonames.org/4030723",
+    "matchedName": "Adamstown"
+  },
+  {
+    "country": "Poland",
+    "capital": "Warsaw",
+    "coordinates": [
+      52.22977,
+      21.01178
+    ],
+    "source": "https://www.geonames.org/756135",
+    "matchedName": "Warsaw"
+  },
+  {
+    "country": "Portugal",
+    "capital": "Lisbon",
+    "coordinates": [
+      38.72509,
+      -9.1498
+    ],
+    "source": "https://www.geonames.org/2267057",
+    "matchedName": "Lisbon"
+  },
+  {
+    "country": "Puerto Rico",
+    "capital": "San Juan",
+    "coordinates": [
+      18.46633,
+      -66.10572
+    ],
+    "source": "https://www.geonames.org/4568127",
+    "matchedName": "San Juan"
+  },
+  {
+    "country": "Qatar",
+    "capital": "Doha",
+    "coordinates": [
+      25.28545,
+      51.53096
+    ],
+    "source": "https://www.geonames.org/290030",
+    "matchedName": "Doha"
+  },
+  {
+    "country": "Réunion",
+    "capital": "Saint-Denis",
+    "coordinates": [
+      -20.88231,
+      55.4504
+    ],
+    "source": "https://www.geonames.org/935264",
+    "matchedName": "Saint-Denis"
+  },
+  {
+    "country": "Romania",
+    "capital": "Bucharest",
+    "coordinates": [
+      44.43225,
+      26.10626
+    ],
+    "source": "https://www.geonames.org/683506",
+    "matchedName": "Bucharest"
+  },
+  {
+    "country": "Russia",
+    "capital": "Moscow",
+    "coordinates": [
+      55.75204,
+      37.61781
+    ],
+    "source": "https://www.geonames.org/524901",
+    "matchedName": "Moscow"
+  },
+  {
+    "country": "Rwanda",
+    "capital": "Kigali",
+    "coordinates": [
+      -1.94995,
+      30.05885
+    ],
+    "source": "https://www.geonames.org/202061",
+    "matchedName": "Kigali"
+  },
+  {
+    "country": "Saint Barthélemy",
+    "capital": "Gustavia",
+    "coordinates": [
+      17.89618,
+      -62.84978
+    ],
+    "source": "https://www.geonames.org/3579132",
+    "matchedName": "Gustavia"
+  },
+  {
+    "country": "Saint Helena, Ascension and Tristan da Cunha",
+    "capital": "Jamestown",
+    "coordinates": [
+      -15.92488,
+      -5.71816
+    ],
+    "source": "https://www.geonames.org/3370903",
+    "matchedName": "Jamestown"
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "capital": "Basseterre",
+    "coordinates": [
+      17.2955,
+      -62.72499
+    ],
+    "source": "https://www.geonames.org/3575551",
+    "matchedName": "Basseterre"
+  },
+  {
+    "country": "Saint Lucia",
+    "capital": "Castries",
+    "coordinates": [
+      13.9957,
+      -61.00614
+    ],
+    "source": "https://www.geonames.org/3576812",
+    "matchedName": "Castries"
+  },
+  {
+    "country": "Saint Martin",
+    "capital": "Marigot",
+    "coordinates": [
+      18.06819,
+      -63.08302
+    ],
+    "source": "https://www.geonames.org/3578851",
+    "matchedName": "Marigot"
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "capital": "Saint-Pierre",
+    "coordinates": [
+      46.77914,
+      -56.1773
+    ],
+    "source": "https://www.geonames.org/3424934",
+    "matchedName": "Saint-Pierre"
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "capital": "Kingstown",
+    "coordinates": [
+      13.15527,
+      -61.22742
+    ],
+    "source": "https://www.geonames.org/3577887",
+    "matchedName": "Kingstown"
+  },
+  {
+    "country": "Samoa",
+    "capital": "Apia",
+    "coordinates": [
+      -13.83333,
+      -171.76666
+    ],
+    "source": "https://www.geonames.org/4035413",
+    "matchedName": "Apia"
+  },
+  {
+    "country": "San Marino",
+    "capital": "City of San Marino",
+    "coordinates": [
+      43.93667,
+      12.44639
+    ],
+    "source": "https://www.geonames.org/3168070",
+    "matchedName": "San Marino"
+  },
+  {
+    "country": "São Tomé and Príncipe",
+    "capital": "São Tomé",
+    "coordinates": [
+      0.33756,
+      6.7299
+    ],
+    "source": "https://www.geonames.org/2410763",
+    "matchedName": "São Tomé"
+  },
+  {
+    "country": "Saudi Arabia",
+    "capital": "Riyadh",
+    "coordinates": [
+      24.68773,
+      46.72185
+    ],
+    "source": "https://www.geonames.org/108410",
+    "matchedName": "Riyadh"
+  },
+  {
+    "country": "Senegal",
+    "capital": "Dakar",
+    "coordinates": [
+      14.6937,
+      -17.44406
+    ],
+    "source": "https://www.geonames.org/2253354",
+    "matchedName": "Dakar"
+  },
+  {
+    "country": "Serbia",
+    "capital": "Belgrade",
+    "coordinates": [
+      44.80401,
+      20.46513
+    ],
+    "source": "https://www.geonames.org/792680",
+    "matchedName": "Belgrade"
+  },
+  {
+    "country": "Seychelles",
+    "capital": "Victoria",
+    "coordinates": [
+      -4.62001,
+      55.45501
+    ],
+    "source": "https://www.geonames.org/241131",
+    "matchedName": "Victoria"
+  },
+  {
+    "country": "Sierra Leone",
+    "capital": "Freetown",
+    "coordinates": [
+      8.48714,
+      -13.2356
+    ],
+    "source": "https://www.geonames.org/2409306",
+    "matchedName": "Freetown"
+  },
+  {
+    "country": "Singapore",
+    "capital": "Singapore",
+    "coordinates": [
+      1.28967,
+      103.85007
+    ],
+    "source": "https://www.geonames.org/1880252",
+    "matchedName": "Singapore"
+  },
+  {
+    "country": "Sint Maarten",
+    "capital": "Philipsburg",
+    "coordinates": [
+      18.026,
+      -63.04582
+    ],
+    "source": "https://www.geonames.org/3513392",
+    "matchedName": "Philipsburg"
+  },
+  {
+    "country": "Slovakia",
+    "capital": "Bratislava",
+    "coordinates": [
+      48.14816,
+      17.10674
+    ],
+    "source": "https://www.geonames.org/3060972",
+    "matchedName": "Bratislava"
+  },
+  {
+    "country": "Slovenia",
+    "capital": "Ljubljana",
+    "coordinates": [
+      46.05108,
+      14.50513
+    ],
+    "source": "https://www.geonames.org/3196359",
+    "matchedName": "Ljubljana"
+  },
+  {
+    "country": "Solomon Islands",
+    "capital": "Honiara",
+    "coordinates": [
+      -9.43333,
+      159.95
+    ],
+    "source": "https://www.geonames.org/2108502",
+    "matchedName": "Honiara"
+  },
+  {
+    "country": "Somalia",
+    "capital": "Mogadishu",
+    "coordinates": [
+      2.03711,
+      45.34375
+    ],
+    "source": "https://www.geonames.org/53654",
+    "matchedName": "Mogadishu"
+  },
+  {
+    "country": "South Africa",
+    "capital": "Pretoria",
+    "coordinates": [
+      -25.74486,
+      28.18783
+    ],
+    "source": "https://www.geonames.org/964137",
+    "matchedName": "Pretoria"
+  },
+  {
+    "country": "South Georgia",
+    "capital": "King Edward Point",
+    "coordinates": [
+      -54.28298,
+      -36.49398
+    ],
+    "source": "https://www.geonames.org/3426414",
+    "matchedName": "King Edward Point"
+  },
+  {
+    "country": "South Korea",
+    "capital": "Seoul",
+    "coordinates": [
+      37.566,
+      126.9784
+    ],
+    "source": "https://www.geonames.org/1835848",
+    "matchedName": "Seoul"
+  },
+  {
+    "country": "South Sudan",
+    "capital": "Juba",
+    "coordinates": [
+      4.85165,
+      31.58247
+    ],
+    "source": "https://www.geonames.org/373303",
+    "matchedName": "Juba"
+  },
+  {
+    "country": "Spain",
+    "capital": "Madrid",
+    "coordinates": [
+      40.4165,
+      -3.70256
+    ],
+    "source": "https://www.geonames.org/3117735",
+    "matchedName": "Madrid"
+  },
+  {
+    "country": "Sri Lanka",
+    "capital": "Colombo",
+    "coordinates": [
+      6.93548,
+      79.84868
+    ],
+    "source": "https://www.geonames.org/1248991",
+    "matchedName": "Colombo"
+  },
+  {
+    "country": "Sudan",
+    "capital": "Khartoum",
+    "coordinates": [
+      15.55177,
+      32.53241
+    ],
+    "source": "https://www.geonames.org/379252",
+    "matchedName": "Khartoum"
+  },
+  {
+    "country": "Suriname",
+    "capital": "Paramaribo",
+    "coordinates": [
+      5.86638,
+      -55.16682
+    ],
+    "source": "https://www.geonames.org/3383330",
+    "matchedName": "Paramaribo"
+  },
+  {
+    "country": "Svalbard and Jan Mayen",
+    "capital": "Longyearbyen",
+    "coordinates": [
+      78.22334,
+      15.64689
+    ],
+    "source": "https://www.geonames.org/2729907",
+    "matchedName": "Longyearbyen"
+  },
+  {
+    "country": "Sweden",
+    "capital": "Stockholm",
+    "coordinates": [
+      59.32938,
+      18.06871
+    ],
+    "source": "https://www.geonames.org/2673730",
+    "matchedName": "Stockholm"
+  },
+  {
+    "country": "Switzerland",
+    "capital": "Bern",
+    "coordinates": [
+      46.94809,
+      7.44744
+    ],
+    "source": "https://www.geonames.org/2661552",
+    "matchedName": "Bern"
+  },
+  {
+    "country": "Syria",
+    "capital": "Damascus",
+    "coordinates": [
+      33.5102,
+      36.29128
+    ],
+    "source": "https://www.geonames.org/170654",
+    "matchedName": "Damascus"
+  },
+  {
+    "country": "Taiwan",
+    "capital": "Taipei",
+    "coordinates": [
+      25.05306,
+      121.52639
+    ],
+    "source": "https://www.geonames.org/1668341",
+    "matchedName": "Taipei"
+  },
+  {
+    "country": "Tajikistan",
+    "capital": "Dushanbe",
+    "coordinates": [
+      38.53575,
+      68.77905
+    ],
+    "source": "https://www.geonames.org/1221874",
+    "matchedName": "Dushanbe"
+  },
+  {
+    "country": "Tanzania",
+    "capital": "Dodoma",
+    "coordinates": [
+      -6.17221,
+      35.73947
+    ],
+    "source": "https://www.geonames.org/160196",
+    "matchedName": "Dodoma"
+  },
+  {
+    "country": "Thailand",
+    "capital": "Bangkok",
+    "coordinates": [
+      13.75398,
+      100.50144
+    ],
+    "source": "https://www.geonames.org/1609350",
+    "matchedName": "Bangkok"
+  },
+  {
+    "country": "Timor-Leste",
+    "capital": "Dili",
+    "coordinates": [
+      -8.55861,
+      125.57361
+    ],
+    "source": "https://www.geonames.org/1645457",
+    "matchedName": "Dili"
+  },
+  {
+    "country": "Togo",
+    "capital": "Lomé",
+    "coordinates": [
+      6.12874,
+      1.22154
+    ],
+    "source": "https://www.geonames.org/2365267",
+    "matchedName": "Lomé"
+  },
+  {
+    "country": "Tonga",
+    "capital": "Nuku'alofa",
+    "coordinates": [
+      -21.13683,
+      -175.20114
+    ],
+    "source": "https://www.geonames.org/4032402",
+    "matchedName": "Nuku‘alofa"
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "capital": "Port of Spain",
+    "coordinates": [
+      10.66668,
+      -61.51889
+    ],
+    "source": "https://www.geonames.org/3573890",
+    "matchedName": "Port of Spain"
+  },
+  {
+    "country": "Tunisia",
+    "capital": "Tunis",
+    "coordinates": [
+      36.81897,
+      10.16579
+    ],
+    "source": "https://www.geonames.org/2464470",
+    "matchedName": "Tunis"
+  },
+  {
+    "country": "Türkiye",
+    "capital": "Ankara",
+    "coordinates": [
+      39.91987,
+      32.85427
+    ],
+    "source": "https://www.geonames.org/323786",
+    "matchedName": "Ankara"
+  },
+  {
+    "country": "Turkmenistan",
+    "capital": "Ashgabat",
+    "coordinates": [
+      37.95,
+      58.38333
+    ],
+    "source": "https://www.geonames.org/162183",
+    "matchedName": "Ashgabat"
+  },
+  {
+    "country": "Turks and Caicos Islands",
+    "capital": "Cockburn Town",
+    "coordinates": [
+      21.46122,
+      -71.14188
+    ],
+    "source": "https://www.geonames.org/3576994",
+    "matchedName": "Cockburn Town"
+  },
+  {
+    "country": "Tuvalu",
+    "capital": "Funafuti",
+    "coordinates": [
+      -8.52425,
+      179.19417
+    ],
+    "source": "https://www.geonames.org/2110394",
+    "matchedName": "Funafuti"
+  },
+  {
+    "country": "Uganda",
+    "capital": "Kampala",
+    "coordinates": [
+      0.31628,
+      32.58219
+    ],
+    "source": "https://www.geonames.org/232422",
+    "matchedName": "Kampala"
+  },
+  {
+    "country": "Ukraine",
+    "capital": "Kyiv",
+    "coordinates": [
+      50.45466,
+      30.5238
+    ],
+    "source": "https://www.geonames.org/703448",
+    "matchedName": "Kyiv"
+  },
+  {
+    "country": "United Arab Emirates",
+    "capital": "Abu Dhabi",
+    "coordinates": [
+      24.45118,
+      54.39696
+    ],
+    "source": "https://www.geonames.org/292968",
+    "matchedName": "Abu Dhabi"
+  },
+  {
+    "country": "United Kingdom",
+    "capital": "London",
+    "coordinates": [
+      51.50853,
+      -0.12574
+    ],
+    "source": "https://www.geonames.org/2643743",
+    "matchedName": "London"
+  },
+  {
+    "country": "United States",
+    "capital": "Washington D.C.",
+    "coordinates": [
+      38.89511,
+      -77.03637
+    ],
+    "source": "https://www.geonames.org/4140963",
+    "matchedName": "Washington"
+  },
+  {
+    "country": "United States Virgin Islands",
+    "capital": "Charlotte Amalie",
+    "coordinates": [
+      18.3419,
+      -64.9307
+    ],
+    "source": "https://www.geonames.org/4795467",
+    "matchedName": "Charlotte Amalie"
+  },
+  {
+    "country": "Uruguay",
+    "capital": "Montevideo",
+    "coordinates": [
+      -34.90328,
+      -56.18816
+    ],
+    "source": "https://www.geonames.org/3441575",
+    "matchedName": "Montevideo"
+  },
+  {
+    "country": "Uzbekistan",
+    "capital": "Tashkent",
+    "coordinates": [
+      41.26465,
+      69.21627
+    ],
+    "source": "https://www.geonames.org/1512569",
+    "matchedName": "Tashkent"
+  },
+  {
+    "country": "Vanuatu",
+    "capital": "Port Vila",
+    "coordinates": [
+      -17.73648,
+      168.31366
+    ],
+    "source": "https://www.geonames.org/2135171",
+    "matchedName": "Port-Vila"
+  },
+  {
+    "country": "Vatican City",
+    "capital": "Vatican City",
+    "coordinates": [
+      41.90268,
+      12.45414
+    ],
+    "source": "https://www.geonames.org/6691831",
+    "matchedName": "Vatican City"
+  },
+  {
+    "country": "Venezuela",
+    "capital": "Caracas",
+    "coordinates": [
+      10.48801,
+      -66.87919
+    ],
+    "source": "https://www.geonames.org/3646738",
+    "matchedName": "Caracas"
+  },
+  {
+    "country": "Vietnam",
+    "capital": "Hanoi",
+    "coordinates": [
+      21.0245,
+      105.84117
+    ],
+    "source": "https://www.geonames.org/1581130",
+    "matchedName": "Hanoi"
+  },
+  {
+    "country": "Wallis and Futuna",
+    "capital": "Mata-Utu",
+    "coordinates": [
+      -13.28163,
+      -176.17453
+    ],
+    "source": "https://www.geonames.org/4034821",
+    "matchedName": "Mata-Utu"
+  },
+  {
+    "country": "Western Sahara",
+    "capital": "El Aaiún",
+    "coordinates": [
+      27.1418,
+      -13.18797
+    ],
+    "source": "https://www.geonames.org/2462881",
+    "matchedName": "Laayoune"
+  },
+  {
+    "country": "Yemen",
+    "capital": "Sana'a",
+    "coordinates": [
+      15.35452,
+      44.20646
+    ],
+    "source": "https://www.geonames.org/71137",
+    "matchedName": "Sanaa"
+  },
+  {
+    "country": "Zambia",
+    "capital": "Lusaka",
+    "coordinates": [
+      -15.40669,
+      28.28713
+    ],
+    "source": "https://www.geonames.org/909137",
+    "matchedName": "Lusaka"
+  },
+  {
+    "country": "Zimbabwe",
+    "capital": "Harare",
+    "coordinates": [
+      -17.82772,
+      31.05337
+    ],
+    "source": "https://www.geonames.org/890299",
+    "matchedName": "Harare"
+  },
+  {
+    "country": "Tokelau",
+    "capital": "Fakaofo",
+    "coordinates": [
+      -9.376,
+      -171.233
+    ],
+    "source": "https://www.geonames.org/4031112",
+    "matchedName": "Fakaofo",
+    "note": "Administrative atoll; matches the existing study-key entry, not a national capital."
+  }
+]

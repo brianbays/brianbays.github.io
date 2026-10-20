@@ -1,0 +1,4796 @@
+[
+  {
+    "country": "Afghanistan",
+    "capitals": [
+      "Kabul"
+    ],
+    "region": "Asia",
+    "center": [
+      33,
+      65
+    ],
+    "capCenter": [
+      34.52813,
+      69.17233
+    ],
+    "area": 652230,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Åland Islands",
+    "capitals": [
+      "Mariehamn"
+    ],
+    "region": "Europe",
+    "center": [
+      60.116667,
+      19.9
+    ],
+    "capCenter": [
+      60.09726,
+      19.93481
+    ],
+    "area": 1580,
+    "isTerritory": true,
+    "inset": [
+      199.489329,
+      29.45175584,
+      0.9459239999999998,
+      0.6432283199999999
+    ]
+  },
+  {
+    "country": "Albania",
+    "capitals": [
+      "Tirana"
+    ],
+    "region": "Europe",
+    "center": [
+      41,
+      20
+    ],
+    "capCenter": [
+      41.32744,
+      19.81866
+    ],
+    "area": 28748,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Algeria",
+    "capitals": [
+      "Algiers"
+    ],
+    "region": "Africa",
+    "center": [
+      28,
+      3
+    ],
+    "capCenter": [
+      36.73225,
+      3.08746
+    ],
+    "area": 2381741,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "American Samoa",
+    "capitals": [
+      "Pago Pago"
+    ],
+    "region": "Oceania",
+    "center": [
+      -14.33333333,
+      -170
+    ],
+    "capCenter": [
+      -14.27806,
+      -170.7025
+    ],
+    "area": 199,
+    "isTerritory": true,
+    "inset": [
+      9.102752500000001,
+      104.17889202,
+      0.39599699999997995,
+      0.2692779599999864
+    ]
+  },
+  {
+    "country": "Andorra",
+    "capitals": [
+      "Andorra la Vella"
+    ],
+    "region": "Europe",
+    "center": [
+      42.5,
+      1.5
+    ],
+    "capCenter": [
+      42.50779,
+      1.52109
+    ],
+    "area": 468,
+    "isTerritory": false,
+    "inset": [
+      181.31679724999998,
+      47.278076649999996,
+      0.5379525000000001,
+      0.36580770000000007
+    ]
+  },
+  {
+    "country": "Angola",
+    "capitals": [
+      "Luanda"
+    ],
+    "region": "Africa",
+    "center": [
+      -12.5,
+      18.5
+    ],
+    "capCenter": [
+      -8.83682,
+      13.23432
+    ],
+    "area": 1246700,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Anguilla",
+    "capitals": [
+      "The Valley"
+    ],
+    "region": "Americas",
+    "center": [
+      18.25,
+      -63.16666666
+    ],
+    "capCenter": [
+      18.21704,
+      -63.05783
+    ],
+    "area": 91,
+    "isTerritory": true,
+    "inset": [
+      116.7833665,
+      71.6776886,
+      0.2927850000000056,
+      0.19909380000000385
+    ]
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "capitals": [
+      "Saint John's"
+    ],
+    "region": "Americas",
+    "center": [
+      17.05,
+      -61.8
+    ],
+    "capCenter": [
+      17.12096,
+      -61.84329
+    ],
+    "area": 442,
+    "isTerritory": false,
+    "inset": [
+      118.0216495,
+      72.78670880000001,
+      0.3949550000000038,
+      0.26856940000000257
+    ]
+  },
+  {
+    "country": "Argentina",
+    "capitals": [
+      "Buenos Aires"
+    ],
+    "region": "Americas",
+    "center": [
+      -34,
+      -64
+    ],
+    "capCenter": [
+      -34.61315,
+      -58.37723
+    ],
+    "area": 2780400,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Armenia",
+    "capitals": [
+      "Yerevan"
+    ],
+    "region": "Asia",
+    "center": [
+      40,
+      45
+    ],
+    "capCenter": [
+      40.17765,
+      44.5126
+    ],
+    "area": 29743,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Aruba",
+    "capitals": [
+      "Oranjestad"
+    ],
+    "region": "Americas",
+    "center": [
+      12.5,
+      -69.96666666
+    ],
+    "capCenter": [
+      12.52398,
+      -70.02703
+    ],
+    "area": 180,
+    "isTerritory": true,
+    "inset": [
+      109.79446019999999,
+      77.314661456,
+      0.4718516000000033,
+      0.3208590880000023
+    ]
+  },
+  {
+    "country": "Australia",
+    "capitals": [
+      "Canberra"
+    ],
+    "region": "Oceania",
+    "center": [
+      -27,
+      133
+    ],
+    "capCenter": [
+      -35.28346,
+      149.12807
+    ],
+    "area": 7692024,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Austria",
+    "capitals": [
+      "Vienna"
+    ],
+    "region": "Europe",
+    "center": [
+      47.33333333,
+      13.33333333
+    ],
+    "capCenter": [
+      48.20849,
+      16.37208
+    ],
+    "area": 83871,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Azerbaijan",
+    "capitals": [
+      "Baku"
+    ],
+    "region": "Asia",
+    "center": [
+      40.5,
+      47.5
+    ],
+    "capCenter": [
+      40.37767,
+      49.89201
+    ],
+    "area": 86600,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Bahamas",
+    "capitals": [
+      "Nassau"
+    ],
+    "region": "Americas",
+    "center": [
+      24.25,
+      -76
+    ],
+    "capCenter": [
+      25.05823,
+      -77.34306
+    ],
+    "area": 13943,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Bahrain",
+    "capitals": [
+      "Manama"
+    ],
+    "region": "Asia",
+    "center": [
+      26,
+      50.55
+    ],
+    "capCenter": [
+      26.22787,
+      50.58565
+    ],
+    "area": 765,
+    "isTerritory": false,
+    "inset": [
+      230.0489347,
+      63.645065336,
+      0.9966946000000022,
+      0.6777523280000015
+    ]
+  },
+  {
+    "country": "Bangladesh",
+    "capitals": [
+      "Dhaka"
+    ],
+    "region": "Asia",
+    "center": [
+      24,
+      90
+    ],
+    "capCenter": [
+      23.7104,
+      90.40744
+    ],
+    "area": 147570,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Barbados",
+    "capitals": [
+      "Bridgetown"
+    ],
+    "region": "Americas",
+    "center": [
+      13.16666666,
+      -59.53333333
+    ],
+    "capCenter": [
+      13.10732,
+      -59.62021
+    ],
+    "area": 430,
+    "isTerritory": false,
+    "inset": [
+      120.1367289,
+      76.582692752,
+      0.6454272000000008,
+      0.4388904960000005
+    ]
+  },
+  {
+    "country": "Belarus",
+    "capitals": [
+      "Minsk"
+    ],
+    "region": "Europe",
+    "center": [
+      53,
+      28
+    ],
+    "capCenter": [
+      53.90019,
+      27.56653
+    ],
+    "area": 207600,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Belgium",
+    "capitals": [
+      "Brussels"
+    ],
+    "region": "Europe",
+    "center": [
+      50.83333333,
+      4
+    ],
+    "capCenter": [
+      50.85045,
+      4.34878
+    ],
+    "area": 30528,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Belize",
+    "capitals": [
+      "Belmopan"
+    ],
+    "region": "Americas",
+    "center": [
+      17.25,
+      -88.75
+    ],
+    "capCenter": [
+      17.25376,
+      -88.76401
+    ],
+    "area": 22966,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Benin",
+    "capitals": [
+      "Porto-Novo"
+    ],
+    "region": "Africa",
+    "center": [
+      9.5,
+      2.25
+    ],
+    "capCenter": [
+      6.49646,
+      2.60359
+    ],
+    "area": 112622,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Bermuda",
+    "capitals": [
+      "Hamilton"
+    ],
+    "region": "Americas",
+    "center": [
+      32.33333333,
+      -64.75
+    ],
+    "capCenter": [
+      32.2949,
+      -64.78303
+    ],
+    "area": 54,
+    "isTerritory": true,
+    "inset": [
+      115.05441525,
+      57.560067370000006,
+      0.35754449999998883,
+      0.2431302599999924
+    ]
+  },
+  {
+    "country": "Bhutan",
+    "capitals": [
+      "Thimphu"
+    ],
+    "region": "Asia",
+    "center": [
+      27.5,
+      90.5
+    ],
+    "capCenter": [
+      27.46609,
+      89.64191
+    ],
+    "area": 38394,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Bolivia",
+    "capitals": [
+      "Sucre"
+    ],
+    "region": "Americas",
+    "center": [
+      -17,
+      -65
+    ],
+    "capCenter": [
+      -19.03332,
+      -65.26274
+    ],
+    "area": 1098581,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "capitals": [
+      "Sarajevo"
+    ],
+    "region": "Europe",
+    "center": [
+      44,
+      18
+    ],
+    "capCenter": [
+      43.84864,
+      18.35644
+    ],
+    "area": 51209,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Botswana",
+    "capitals": [
+      "Gaborone"
+    ],
+    "region": "Africa",
+    "center": [
+      -22,
+      24
+    ],
+    "capCenter": [
+      -24.65451,
+      25.90859
+    ],
+    "area": 582000,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Brazil",
+    "capitals": [
+      "Brasília"
+    ],
+    "region": "Americas",
+    "center": [
+      -10,
+      -55
+    ],
+    "capCenter": [
+      -15.77972,
+      -47.92972
+    ],
+    "area": 8515767,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "British Indian Ocean Territory",
+    "capitals": [
+      "Diego Garcia"
+    ],
+    "region": "Africa",
+    "center": [
+      -6,
+      71.5
+    ],
+    "capCenter": [
+      -7.26229,
+      72.37676
+    ],
+    "area": 60,
+    "isTerritory": true,
+    "inset": [
+      252.2342261,
+      97.220146368,
+      0.3738547999999991,
+      0.2542212639999994
+    ]
+  },
+  {
+    "country": "British Virgin Islands",
+    "capitals": [
+      "Road Town"
+    ],
+    "region": "Americas",
+    "center": [
+      18.431383,
+      -64.62305
+    ],
+    "capCenter": [
+      18.42693,
+      -64.62079
+    ],
+    "area": 151,
+    "isTerritory": true,
+    "inset": [
+      115.23655124999999,
+      71.48079817,
+      0.29592449999999815,
+      0.20122865999999875
+    ]
+  },
+  {
+    "country": "Brunei",
+    "capitals": [
+      "Bandar Seri Begawan"
+    ],
+    "region": "Asia",
+    "center": [
+      4.5,
+      114.66666666
+    ],
+    "capCenter": [
+      4.89035,
+      114.94006
+    ],
+    "area": 5765,
+    "isTerritory": false,
+    "inset": [
+      293.406429,
+      84.68475627999999,
+      2.2891330000000005,
+      1.5566104400000005
+    ]
+  },
+  {
+    "country": "Bulgaria",
+    "capitals": [
+      "Sofia"
+    ],
+    "region": "Europe",
+    "center": [
+      43,
+      25
+    ],
+    "capCenter": [
+      42.69751,
+      23.32415
+    ],
+    "area": 110879,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Burkina Faso",
+    "capitals": [
+      "Ouagadougou"
+    ],
+    "region": "Africa",
+    "center": [
+      13,
+      -2
+    ],
+    "capCenter": [
+      12.36566,
+      -1.53388
+    ],
+    "area": 272967,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Burundi",
+    "capitals": [
+      "Gitega"
+    ],
+    "region": "Africa",
+    "center": [
+      -3.5,
+      30
+    ],
+    "capCenter": [
+      -3.42708,
+      29.92463
+    ],
+    "area": 27834,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Cambodia",
+    "capitals": [
+      "Phnom Penh"
+    ],
+    "region": "Asia",
+    "center": [
+      13,
+      105
+    ],
+    "capCenter": [
+      11.56245,
+      104.91601
+    ],
+    "area": 181035,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Cameroon",
+    "capitals": [
+      "Yaoundé"
+    ],
+    "region": "Africa",
+    "center": [
+      6,
+      12
+    ],
+    "capCenter": [
+      3.86667,
+      11.51667
+    ],
+    "area": 475442,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Canada",
+    "capitals": [
+      "Ottawa"
+    ],
+    "region": "Americas",
+    "center": [
+      60,
+      -95
+    ],
+    "capCenter": [
+      45.41117,
+      -75.69812
+    ],
+    "area": 9984670,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Cape Verde",
+    "capitals": [
+      "Praia"
+    ],
+    "region": "Africa",
+    "center": [
+      16,
+      -24
+    ],
+    "capCenter": [
+      14.93152,
+      -23.51254
+    ],
+    "area": 4033,
+    "isTerritory": false,
+    "inset": [
+      155.91450849999998,
+      74.56181776000001,
+      0.9352860000000025,
+      0.6359944800000017
+    ]
+  },
+  {
+    "country": "Caribbean Netherlands",
+    "capitals": [
+      "Kralendijk",
+      "Oranjestad",
+      "The Bottom"
+    ],
+    "region": "Americas",
+    "center": [
+      12.18,
+      -68.25
+    ],
+    "capCenter": [
+      12.15,
+      -68.26667
+    ],
+    "area": 328,
+    "isTerritory": true,
+    "inset": [
+      111.37931630000001,
+      77.618327584,
+      0.6339673999999992,
+      0.43109783199999946
+    ]
+  },
+  {
+    "country": "Cayman Islands",
+    "capitals": [
+      "George Town"
+    ],
+    "region": "Americas",
+    "center": [
+      19.5,
+      -80.5
+    ],
+    "capCenter": [
+      19.2866,
+      -81.37436
+    ],
+    "area": 264,
+    "isTerritory": true,
+    "inset": [
+      98.500969,
+      70.50240993999999,
+      0.49493400000001486,
+      0.33655512000001014
+    ]
+  },
+  {
+    "country": "Central African Republic",
+    "capitals": [
+      "Bangui"
+    ],
+    "region": "Africa",
+    "center": [
+      7,
+      21
+    ],
+    "capCenter": [
+      4.36122,
+      18.55496
+    ],
+    "area": 622984,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Chad",
+    "capitals": [
+      "N'Djamena"
+    ],
+    "region": "Africa",
+    "center": [
+      15,
+      19
+    ],
+    "capCenter": [
+      12.10672,
+      15.0444
+    ],
+    "area": 1284000,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Chile",
+    "capitals": [
+      "Santiago"
+    ],
+    "region": "Americas",
+    "center": [
+      -30,
+      -71
+    ],
+    "capCenter": [
+      -33.45694,
+      -70.64827
+    ],
+    "area": 756102,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "China",
+    "capitals": [
+      "Beijing"
+    ],
+    "region": "Asia",
+    "center": [
+      35,
+      105
+    ],
+    "capCenter": [
+      39.9075,
+      116.39723
+    ],
+    "area": 9706961,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Christmas Island",
+    "capitals": [
+      "Flying Fish Cove"
+    ],
+    "region": "Oceania",
+    "center": [
+      -10.5,
+      105.66666666
+    ],
+    "capCenter": [
+      -10.42172,
+      105.67912
+    ],
+    "area": 135,
+    "isTerritory": true,
+    "inset": [
+      285.48952269999995,
+      100.385935336,
+      0.3174445999999986,
+      0.21586232799999905
+    ]
+  },
+  {
+    "country": "Cocos (Keeling) Islands",
+    "capitals": [
+      "West Island"
+    ],
+    "region": "Oceania",
+    "center": [
+      -12.5,
+      96.83333333
+    ],
+    "capCenter": [
+      -12.15681,
+      96.82251
+    ],
+    "area": 14,
+    "isTerritory": true,
+    "inset": [
+      276.7672309,
+      102.10892075199999,
+      0.1564771999999991,
+      0.10640449599999939
+    ]
+  },
+  {
+    "country": "Colombia",
+    "capitals": [
+      "Bogotá"
+    ],
+    "region": "Americas",
+    "center": [
+      4,
+      -72
+    ],
+    "capCenter": [
+      4.60971,
+      -74.08175
+    ],
+    "area": 1141748,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Comoros",
+    "capitals": [
+      "Moroni"
+    ],
+    "region": "Africa",
+    "center": [
+      -12.16666666,
+      44.25
+    ],
+    "capCenter": [
+      -11.70216,
+      43.25506
+    ],
+    "area": 1862,
+    "isTerritory": false,
+    "inset": [
+      222.7272331,
+      101.219500728,
+      1.2575507999999969,
+      0.8551345439999979
+    ]
+  },
+  {
+    "country": "Congo",
+    "capitals": [
+      "Brazzaville"
+    ],
+    "region": "Africa",
+    "center": [
+      -1,
+      15
+    ],
+    "capCenter": [
+      -4.26613,
+      15.28318
+    ],
+    "area": 342000,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Cook Islands",
+    "capitals": [
+      "Avarua"
+    ],
+    "region": "Oceania",
+    "center": [
+      -21.23333333,
+      -159.76666666
+    ],
+    "capCenter": [
+      -21.2075,
+      -159.77546
+    ],
+    "area": 236,
+    "isTerritory": true,
+    "inset": [
+      20.126180750000003,
+      111.16401170999998,
+      0.16534350000000586,
+      0.11243358000000399
+    ]
+  },
+  {
+    "country": "Costa Rica",
+    "capitals": [
+      "San José"
+    ],
+    "region": "Americas",
+    "center": [
+      10,
+      -84
+    ],
+    "capCenter": [
+      9.93388,
+      -84.08489
+    ],
+    "area": 51100,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Croatia",
+    "capitals": [
+      "Zagreb"
+    ],
+    "region": "Europe",
+    "center": [
+      45.16666666,
+      15.5
+    ],
+    "capCenter": [
+      45.81444,
+      15.97798
+    ],
+    "area": 56594,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Cuba",
+    "capitals": [
+      "Havana"
+    ],
+    "region": "Americas",
+    "center": [
+      21.5,
+      -80
+    ],
+    "capCenter": [
+      23.13302,
+      -82.38304
+    ],
+    "area": 109884,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Curaçao",
+    "capitals": [
+      "Willemstad"
+    ],
+    "region": "Americas",
+    "center": [
+      12.116667,
+      -68.933333
+    ],
+    "capCenter": [
+      12.12246,
+      -68.88641
+    ],
+    "area": 444,
+    "isTerritory": true,
+    "inset": [
+      110.65906460000001,
+      77.52164960799999,
+      0.7703937999999977,
+      0.5238677839999984
+    ]
+  },
+  {
+    "country": "Cyprus",
+    "capitals": [
+      "Nicosia"
+    ],
+    "region": "Europe",
+    "center": [
+      35,
+      33
+    ],
+    "capCenter": [
+      35.17284,
+      33.35397
+    ],
+    "area": 9251,
+    "isTerritory": false,
+    "inset": [
+      211.91394,
+      54.36403954,
+      2.146794,
+      1.45981992
+    ]
+  },
+  {
+    "country": "Czechia",
+    "capitals": [
+      "Prague"
+    ],
+    "region": "Europe",
+    "center": [
+      49.75,
+      15.5
+    ],
+    "capCenter": [
+      50.08804,
+      14.42076
+    ],
+    "area": 78865,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Denmark",
+    "capitals": [
+      "Copenhagen"
+    ],
+    "region": "Europe",
+    "center": [
+      56,
+      10
+    ],
+    "capCenter": [
+      55.67594,
+      12.56553
+    ],
+    "area": 43094,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Djibouti",
+    "capitals": [
+      "Djibouti"
+    ],
+    "region": "Africa",
+    "center": [
+      11.5,
+      43
+    ],
+    "capCenter": [
+      11.58901,
+      43.14503
+    ],
+    "area": 23200,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Dominica",
+    "capitals": [
+      "Roseau"
+    ],
+    "region": "Americas",
+    "center": [
+      15.41666666,
+      -61.33333333
+    ],
+    "capCenter": [
+      15.30174,
+      -61.38808
+    ],
+    "area": 751,
+    "isTerritory": false,
+    "inset": [
+      118.15565769999999,
+      74.25899509599999,
+      0.9505056000000001,
+      0.6463438080000001
+    ]
+  },
+  {
+    "country": "Dominican Republic",
+    "capitals": [
+      "Santo Domingo"
+    ],
+    "region": "Americas",
+    "center": [
+      19,
+      -70.66666666
+    ],
+    "capCenter": [
+      18.47186,
+      -69.89232
+    ],
+    "area": 48671,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "DR Congo",
+    "capitals": [
+      "Kinshasa"
+    ],
+    "region": "Africa",
+    "center": [
+      0,
+      25
+    ],
+    "capCenter": [
+      -4.32758,
+      15.31357
+    ],
+    "area": 2344858,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Ecuador",
+    "capitals": [
+      "Quito"
+    ],
+    "region": "Americas",
+    "center": [
+      -2,
+      -77.5
+    ],
+    "capCenter": [
+      -0.22985,
+      -78.52495
+    ],
+    "area": 276841,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Egypt",
+    "capitals": [
+      "Cairo"
+    ],
+    "region": "Africa",
+    "center": [
+      27,
+      30
+    ],
+    "capCenter": [
+      30.06263,
+      31.24967
+    ],
+    "area": 1002450,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "El Salvador",
+    "capitals": [
+      "San Salvador"
+    ],
+    "region": "Americas",
+    "center": [
+      13.83333333,
+      -88.91666666
+    ],
+    "capCenter": [
+      13.68935,
+      -89.18718
+    ],
+    "area": 21041,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Equatorial Guinea",
+    "capitals": [
+      "Malabo"
+    ],
+    "region": "Africa",
+    "center": [
+      2,
+      10
+    ],
+    "capCenter": [
+      3.75578,
+      8.78166
+    ],
+    "area": 28051,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Eritrea",
+    "capitals": [
+      "Asmara"
+    ],
+    "region": "Africa",
+    "center": [
+      15,
+      39
+    ],
+    "capCenter": [
+      15.33805,
+      38.93184
+    ],
+    "area": 117600,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Estonia",
+    "capitals": [
+      "Tallinn"
+    ],
+    "region": "Europe",
+    "center": [
+      59,
+      26
+    ],
+    "capCenter": [
+      59.43696,
+      24.75353
+    ],
+    "area": 45227,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Eswatini",
+    "capitals": [
+      "Lobamba"
+    ],
+    "region": "Africa",
+    "center": [
+      -26.5,
+      31.5
+    ],
+    "capCenter": [
+      -26.46667,
+      31.2
+    ],
+    "area": 17364,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Ethiopia",
+    "capitals": [
+      "Addis Ababa"
+    ],
+    "region": "Africa",
+    "center": [
+      8,
+      38
+    ],
+    "capCenter": [
+      9.02497,
+      38.74689
+    ],
+    "area": 1104300,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Falkland Islands",
+    "capitals": [
+      "Stanley"
+    ],
+    "region": "Americas",
+    "center": [
+      -51.75,
+      -59
+    ],
+    "capCenter": [
+      -51.69382,
+      -57.85701
+    ],
+    "area": 12173,
+    "isTerritory": true,
+    "inset": null
+  },
+  {
+    "country": "Faroe Islands",
+    "capitals": [
+      "Tórshavn"
+    ],
+    "region": "Europe",
+    "center": [
+      62,
+      -7
+    ],
+    "capCenter": [
+      62.00973,
+      -6.77164
+    ],
+    "area": 1393,
+    "isTerritory": true,
+    "inset": [
+      172.6183976,
+      27.592054768,
+      0.8280448000000036,
+      0.5630704640000025
+    ]
+  },
+  {
+    "country": "Fiji",
+    "capitals": [
+      "Suva"
+    ],
+    "region": "Oceania",
+    "center": [
+      -18,
+      175
+    ],
+    "capCenter": [
+      -18.13683,
+      178.42531
+    ],
+    "area": 18272,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Finland",
+    "capitals": [
+      "Helsinki"
+    ],
+    "region": "Europe",
+    "center": [
+      64,
+      26
+    ],
+    "capCenter": [
+      60.16952,
+      24.93545
+    ],
+    "area": 338424,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "France",
+    "capitals": [
+      "Paris"
+    ],
+    "region": "Europe",
+    "center": [
+      46,
+      2
+    ],
+    "capCenter": [
+      48.85341,
+      2.3488
+    ],
+    "area": 551695,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "French Guiana",
+    "capitals": [
+      "Cayenne"
+    ],
+    "region": "Americas",
+    "center": [
+      4,
+      -53
+    ],
+    "capCenter": [
+      4.9381,
+      -52.33455
+    ],
+    "area": 83534,
+    "isTerritory": true,
+    "inset": null
+  },
+  {
+    "country": "French Polynesia",
+    "capitals": [
+      "Papeetē"
+    ],
+    "region": "Oceania",
+    "center": [
+      -15,
+      -140
+    ],
+    "capCenter": [
+      -17.5347,
+      -149.56843
+    ],
+    "area": 4167,
+    "isTerritory": true,
+    "inset": [
+      30.191859999999984,
+      107.401073,
+      0.8250000000000001,
+      0.561
+    ]
+  },
+  {
+    "country": "French Southern and Antarctic Lands",
+    "capitals": [
+      "Port-aux-Français"
+    ],
+    "region": "Antarctic",
+    "center": [
+      -49.25,
+      69.167
+    ],
+    "capCenter": [
+      -49.34916,
+      70.21937
+    ],
+    "area": 7747,
+    "isTerritory": true,
+    "inset": [
+      248.29385424999998,
+      138.26001457,
+      2.729614500000004,
+      1.8561378600000027
+    ]
+  },
+  {
+    "country": "Gabon",
+    "capitals": [
+      "Libreville"
+    ],
+    "region": "Africa",
+    "center": [
+      -1,
+      11.75
+    ],
+    "capCenter": [
+      0.39241,
+      9.45356
+    ],
+    "area": 267668,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Gambia",
+    "capitals": [
+      "Banjul"
+    ],
+    "region": "Africa",
+    "center": [
+      13.46666666,
+      -16.56666666
+    ],
+    "capCenter": [
+      13.45274,
+      -16.57803
+    ],
+    "area": 10689,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Georgia",
+    "capitals": [
+      "Tbilisi"
+    ],
+    "region": "Asia",
+    "center": [
+      42,
+      43.5
+    ],
+    "capCenter": [
+      41.69143,
+      44.83412
+    ],
+    "area": 69700,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Germany",
+    "capitals": [
+      "Berlin"
+    ],
+    "region": "Europe",
+    "center": [
+      51,
+      9
+    ],
+    "capCenter": [
+      52.52437,
+      13.41053
+    ],
+    "area": 357114,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Ghana",
+    "capitals": [
+      "Accra"
+    ],
+    "region": "Africa",
+    "center": [
+      8,
+      -2
+    ],
+    "capCenter": [
+      5.55602,
+      -0.1969
+    ],
+    "area": 238533,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Gibraltar",
+    "capitals": [
+      "Gibraltar"
+    ],
+    "region": "Europe",
+    "center": [
+      36.13333333,
+      -5.35
+    ],
+    "capCenter": [
+      36.14474,
+      -5.35257
+    ],
+    "area": 6,
+    "isTerritory": true,
+    "inset": [
+      174.613756,
+      53.84676848,
+      0.07532799999999328,
+      0.05122303999999543
+    ]
+  },
+  {
+    "country": "Greece",
+    "capitals": [
+      "Athens"
+    ],
+    "region": "Europe",
+    "center": [
+      39,
+      22
+    ],
+    "capCenter": [
+      37.98376,
+      23.72784
+    ],
+    "area": 131990,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Greenland",
+    "capitals": [
+      "Nuuk"
+    ],
+    "region": "Americas",
+    "center": [
+      72,
+      -40
+    ],
+    "capCenter": [
+      64.18347,
+      -51.72157
+    ],
+    "area": 2166086,
+    "isTerritory": true,
+    "inset": null
+  },
+  {
+    "country": "Grenada",
+    "capitals": [
+      "St. George's"
+    ],
+    "region": "Americas",
+    "center": [
+      12.11666666,
+      -61.66666666
+    ],
+    "capCenter": [
+      12.05288,
+      -61.75226
+    ],
+    "area": 344,
+    "isTerritory": false,
+    "inset": [
+      118.0427672,
+      77.70151729599999,
+      0.5211756000000002,
+      0.35439940800000014
+    ]
+  },
+  {
+    "country": "Guadeloupe",
+    "capitals": [
+      "Basse-Terre"
+    ],
+    "region": "Americas",
+    "center": [
+      16.25,
+      -61.583333
+    ],
+    "capCenter": [
+      15.99714,
+      -61.73214
+    ],
+    "area": 1628,
+    "isTerritory": true,
+    "inset": [
+      117.86934620000001,
+      73.53149577600001,
+      0.9155036000000003,
+      0.6225424480000002
+    ]
+  },
+  {
+    "country": "Guam",
+    "capitals": [
+      "Hagåtña"
+    ],
+    "region": "Oceania",
+    "center": [
+      13.46666666,
+      144.78333333
+    ],
+    "capCenter": [
+      13.47567,
+      144.74886
+    ],
+    "area": 549,
+    "isTerritory": true,
+    "inset": [
+      324.3337834,
+      76.243434672,
+      0.9087891999999997,
+      0.6179766559999998
+    ]
+  },
+  {
+    "country": "Guatemala",
+    "capitals": [
+      "Guatemala City"
+    ],
+    "region": "Americas",
+    "center": [
+      15.5,
+      -90.25
+    ],
+    "capCenter": [
+      14.64072,
+      -90.51327
+    ],
+    "area": 108889,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Guernsey",
+    "capitals": [
+      "St. Peter Port"
+    ],
+    "region": "Europe",
+    "center": [
+      49.46666666,
+      -2.58333333
+    ],
+    "capCenter": [
+      49.45981,
+      -2.53527
+    ],
+    "area": 78,
+    "isTerritory": true,
+    "inset": [
+      177.28361075,
+      40.44128947,
+      0.25762949999999973,
+      0.17518805999999984
+    ]
+  },
+  {
+    "country": "Guinea",
+    "capitals": [
+      "Conakry"
+    ],
+    "region": "Africa",
+    "center": [
+      11,
+      -10
+    ],
+    "capCenter": [
+      9.53795,
+      -13.67729
+    ],
+    "area": 245857,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Guinea-Bissau",
+    "capitals": [
+      "Bissau"
+    ],
+    "region": "Africa",
+    "center": [
+      12,
+      -15
+    ],
+    "capCenter": [
+      11.86357,
+      -15.59767
+    ],
+    "area": 36125,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Guyana",
+    "capitals": [
+      "Georgetown"
+    ],
+    "region": "Americas",
+    "center": [
+      5,
+      -59
+    ],
+    "capCenter": [
+      6.80448,
+      -58.15527
+    ],
+    "area": 214969,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Haiti",
+    "capitals": [
+      "Port-au-Prince"
+    ],
+    "region": "Americas",
+    "center": [
+      19,
+      -72.41666666
+    ],
+    "capCenter": [
+      18.54349,
+      -72.33881
+    ],
+    "area": 27750,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Honduras",
+    "capitals": [
+      "Tegucigalpa"
+    ],
+    "region": "Americas",
+    "center": [
+      15,
+      -86.5
+    ],
+    "capCenter": [
+      14.0818,
+      -87.20681
+    ],
+    "area": 112492,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Hong Kong",
+    "capitals": [
+      "City of Victoria"
+    ],
+    "region": "Asia",
+    "center": [
+      22.267,
+      114.188
+    ],
+    "capCenter": [
+      22.28299,
+      114.15846
+    ],
+    "area": 1104,
+    "isTerritory": true,
+    "inset": [
+      293.77090475,
+      67.33168387,
+      0.7564694999999944,
+      0.5143992599999963
+    ]
+  },
+  {
+    "country": "Hungary",
+    "capitals": [
+      "Budapest"
+    ],
+    "region": "Europe",
+    "center": [
+      47,
+      20
+    ],
+    "capCenter": [
+      47.49835,
+      19.04045
+    ],
+    "area": 93028,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Iceland",
+    "capitals": [
+      "Reykjavik"
+    ],
+    "region": "Europe",
+    "center": [
+      65,
+      -18
+    ],
+    "capCenter": [
+      64.13548,
+      -21.89541
+    ],
+    "area": 103000,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "India",
+    "capitals": [
+      "New Delhi"
+    ],
+    "region": "Asia",
+    "center": [
+      20,
+      77
+    ],
+    "capCenter": [
+      28.62137,
+      77.2148
+    ],
+    "area": 3287590,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Indonesia",
+    "capitals": [
+      "Jakarta"
+    ],
+    "region": "Asia",
+    "center": [
+      -5,
+      120
+    ],
+    "capCenter": [
+      -6.21462,
+      106.84513
+    ],
+    "area": 1904569,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Iran",
+    "capitals": [
+      "Tehran"
+    ],
+    "region": "Asia",
+    "center": [
+      32,
+      53
+    ],
+    "capCenter": [
+      35.69439,
+      51.42151
+    ],
+    "area": 1648195,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Iraq",
+    "capitals": [
+      "Baghdad"
+    ],
+    "region": "Asia",
+    "center": [
+      33,
+      44
+    ],
+    "capCenter": [
+      33.34058,
+      44.40088
+    ],
+    "area": 438317,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Ireland",
+    "capitals": [
+      "Dublin"
+    ],
+    "region": "Europe",
+    "center": [
+      53,
+      -8
+    ],
+    "capCenter": [
+      53.33306,
+      -6.24889
+    ],
+    "area": 70273,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Isle of Man",
+    "capitals": [
+      "Douglas"
+    ],
+    "region": "Europe",
+    "center": [
+      54.25,
+      -4.5
+    ],
+    "capCenter": [
+      54.15,
+      -4.48333
+    ],
+    "area": 572,
+    "isTerritory": true,
+    "inset": [
+      175.0506974,
+      35.491195872,
+      0.7965341999999936,
+      0.5416432559999957
+    ]
+  },
+  {
+    "country": "Israel",
+    "capitals": [
+      "Jerusalem"
+    ],
+    "region": "Asia",
+    "center": [
+      31.47,
+      35.13
+    ],
+    "capCenter": [
+      31.76904,
+      35.21633
+    ],
+    "area": 20770,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Italy",
+    "capitals": [
+      "Rome"
+    ],
+    "region": "Europe",
+    "center": [
+      42.83333333,
+      12.83333333
+    ],
+    "capCenter": [
+      41.89193,
+      12.51133
+    ],
+    "area": 301336,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Ivory Coast",
+    "capitals": [
+      "Yamoussoukro"
+    ],
+    "region": "Africa",
+    "center": [
+      8,
+      -5
+    ],
+    "capCenter": [
+      6.82055,
+      -5.27674
+    ],
+    "area": 322463,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Jamaica",
+    "capitals": [
+      "Kingston"
+    ],
+    "region": "Americas",
+    "center": [
+      18.25,
+      -77.5
+    ],
+    "capCenter": [
+      17.99702,
+      -76.79358
+    ],
+    "area": 10991,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Japan",
+    "capitals": [
+      "Tokyo"
+    ],
+    "region": "Asia",
+    "center": [
+      36,
+      138
+    ],
+    "capCenter": [
+      35.6895,
+      139.69171
+    ],
+    "area": 377930,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Jersey",
+    "capitals": [
+      "Saint Helier"
+    ],
+    "region": "Europe",
+    "center": [
+      49.25,
+      -2.16666666
+    ],
+    "capCenter": [
+      49.18804,
+      -2.10491
+    ],
+    "area": 116,
+    "isTerritory": true,
+    "inset": [
+      177.69955499999998,
+      40.66161726,
+      0.35058600000000006,
+      0.23839848000000005
+    ]
+  },
+  {
+    "country": "Jordan",
+    "capitals": [
+      "Amman"
+    ],
+    "region": "Asia",
+    "center": [
+      31,
+      36
+    ],
+    "capCenter": [
+      31.95522,
+      35.94503
+    ],
+    "area": 89342,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Kazakhstan",
+    "capitals": [
+      "Astana"
+    ],
+    "region": "Asia",
+    "center": [
+      48,
+      68
+    ],
+    "capCenter": [
+      51.1801,
+      71.44598
+    ],
+    "area": 2724900,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Kenya",
+    "capitals": [
+      "Nairobi"
+    ],
+    "region": "Africa",
+    "center": [
+      1,
+      38
+    ],
+    "capCenter": [
+      -1.28333,
+      36.81667
+    ],
+    "area": 580367,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Kiribati",
+    "capitals": [
+      "South Tarawa"
+    ],
+    "region": "Oceania",
+    "center": [
+      1.41666666,
+      173
+    ],
+    "capCenter": [
+      1.3278,
+      172.97696
+    ],
+    "area": 811,
+    "isTerritory": false,
+    "inset": [
+      352.92826925,
+      88.54349987,
+      0.29214449999999204,
+      0.1986582599999946
+    ]
+  },
+  {
+    "country": "Kosovo",
+    "capitals": [
+      "Pristina"
+    ],
+    "region": "Europe",
+    "center": [
+      42.666667,
+      21.166667
+    ],
+    "capCenter": [
+      42.67272,
+      21.16688
+    ],
+    "area": 10908,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Kuwait",
+    "capitals": [
+      "Kuwait City"
+    ],
+    "region": "Asia",
+    "center": [
+      29.5,
+      45.75
+    ],
+    "capCenter": [
+      29.367,
+      47.97429
+    ],
+    "area": 17818,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Kyrgyzstan",
+    "capitals": [
+      "Bishkek"
+    ],
+    "region": "Asia",
+    "center": [
+      41,
+      75
+    ],
+    "capCenter": [
+      42.87,
+      74.59
+    ],
+    "area": 199951,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Laos",
+    "capitals": [
+      "Vientiane"
+    ],
+    "region": "Asia",
+    "center": [
+      18,
+      105
+    ],
+    "capCenter": [
+      17.96667,
+      102.6
+    ],
+    "area": 236800,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Latvia",
+    "capitals": [
+      "Riga"
+    ],
+    "region": "Europe",
+    "center": [
+      57,
+      25
+    ],
+    "capCenter": [
+      56.946,
+      24.10589
+    ],
+    "area": 64559,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Lebanon",
+    "capitals": [
+      "Beirut"
+    ],
+    "region": "Asia",
+    "center": [
+      33.83333333,
+      35.83333333
+    ],
+    "capCenter": [
+      33.89332,
+      35.50157
+    ],
+    "area": 10452,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Lesotho",
+    "capitals": [
+      "Maseru"
+    ],
+    "region": "Africa",
+    "center": [
+      -29.5,
+      28.5
+    ],
+    "capCenter": [
+      -29.31667,
+      27.48333
+    ],
+    "area": 30355,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Liberia",
+    "capitals": [
+      "Monrovia"
+    ],
+    "region": "Africa",
+    "center": [
+      6.5,
+      -9.5
+    ],
+    "capCenter": [
+      6.30054,
+      -10.7969
+    ],
+    "area": 111369,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Libya",
+    "capitals": [
+      "Tripoli"
+    ],
+    "region": "Africa",
+    "center": [
+      25,
+      17
+    ],
+    "capCenter": [
+      32.88743,
+      13.18733
+    ],
+    "area": 1759540,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Liechtenstein",
+    "capitals": [
+      "Vaduz"
+    ],
+    "region": "Europe",
+    "center": [
+      47.26666666,
+      9.53333333
+    ],
+    "capCenter": [
+      47.14151,
+      9.52154
+    ],
+    "area": 160,
+    "isTerritory": false,
+    "inset": [
+      189.3143634,
+      42.68501955199999,
+      0.46288220000000996,
+      0.3147598960000068
+    ]
+  },
+  {
+    "country": "Lithuania",
+    "capitals": [
+      "Vilnius"
+    ],
+    "region": "Europe",
+    "center": [
+      56,
+      24
+    ],
+    "capCenter": [
+      54.68916,
+      25.2798
+    ],
+    "area": 65300,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Luxembourg",
+    "capitals": [
+      "Luxembourg"
+    ],
+    "region": "Europe",
+    "center": [
+      49.75,
+      6.16666666
+    ],
+    "capCenter": [
+      49.60982,
+      6.13268
+    ],
+    "area": 2586,
+    "isTerritory": false,
+    "inset": [
+      185.3017369,
+      39.643079551999996,
+      1.6140322000000042,
+      1.097541896000003
+    ]
+  },
+  {
+    "country": "Madagascar",
+    "capitals": [
+      "Antananarivo"
+    ],
+    "region": "Africa",
+    "center": [
+      -20,
+      47
+    ],
+    "capCenter": [
+      -18.91368,
+      47.53613
+    ],
+    "area": 587041,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Malawi",
+    "capitals": [
+      "Lilongwe"
+    ],
+    "region": "Africa",
+    "center": [
+      -13.5,
+      34
+    ],
+    "capCenter": [
+      -13.96692,
+      33.78725
+    ],
+    "area": 118484,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Malaysia",
+    "capitals": [
+      "Kuala Lumpur"
+    ],
+    "region": "Asia",
+    "center": [
+      2.5,
+      112.5
+    ],
+    "capCenter": [
+      3.1412,
+      101.68653
+    ],
+    "area": 330803,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Maldives",
+    "capitals": [
+      "Malé"
+    ],
+    "region": "Asia",
+    "center": [
+      3.25,
+      73
+    ],
+    "capCenter": [
+      4.17521,
+      73.50916
+    ],
+    "area": 300,
+    "isTerritory": false,
+    "inset": [
+      253.4007805,
+      85.73537918000001,
+      0.1825229999999891,
+      0.1241156399999926
+    ]
+  },
+  {
+    "country": "Mali",
+    "capitals": [
+      "Bamako"
+    ],
+    "region": "Africa",
+    "center": [
+      17,
+      -4
+    ],
+    "capCenter": [
+      12.60915,
+      -7.97522
+    ],
+    "area": 1240192,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Malta",
+    "capitals": [
+      "Valletta"
+    ],
+    "region": "Europe",
+    "center": [
+      35.83333333,
+      14.58333333
+    ],
+    "capCenter": [
+      35.89968,
+      14.5148
+    ],
+    "area": 316,
+    "isTerritory": false,
+    "inset": [
+      194.2329252,
+      53.95864109600001,
+      0.42333059999999567,
+      0.2878648079999971
+    ]
+  },
+  {
+    "country": "Marshall Islands",
+    "capitals": [
+      "Majuro"
+    ],
+    "region": "Oceania",
+    "center": [
+      9,
+      168
+    ],
+    "capCenter": [
+      7.08971,
+      171.38027
+    ],
+    "area": 181,
+    "isTerritory": false,
+    "inset": [
+      350.9461775,
+      82.6982579,
+      0.5368650000000059,
+      0.36506820000000406
+    ]
+  },
+  {
+    "country": "Martinique",
+    "capitals": [
+      "Fort-de-France"
+    ],
+    "region": "Americas",
+    "center": [
+      14.666667,
+      -61
+    ],
+    "capCenter": [
+      14.60365,
+      -61.07418
+    ],
+    "area": 1128,
+    "isTerritory": true,
+    "inset": [
+      118.46470740000001,
+      75.006840832,
+      1.031340199999999,
+      0.7013113359999993
+    ]
+  },
+  {
+    "country": "Mauritania",
+    "capitals": [
+      "Nouakchott"
+    ],
+    "region": "Africa",
+    "center": [
+      20,
+      -12
+    ],
+    "capCenter": [
+      18.08581,
+      -15.9785
+    ],
+    "area": 1030700,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Mauritius",
+    "capitals": [
+      "Port Louis"
+    ],
+    "region": "Africa",
+    "center": [
+      -20.28333333,
+      57.55
+    ],
+    "capCenter": [
+      -20.16194,
+      57.49889
+    ],
+    "area": 2040,
+    "isTerritory": false,
+    "inset": [
+      236.9578962,
+      109.84602009599999,
+      1.1834305999999986,
+      0.804732807999999
+    ]
+  },
+  {
+    "country": "Mayotte",
+    "capitals": [
+      "Mamoudzou"
+    ],
+    "region": "Africa",
+    "center": [
+      -12.83333333,
+      45.16666666
+    ],
+    "capCenter": [
+      -12.78234,
+      45.22878
+    ],
+    "area": 374,
+    "isTerritory": true,
+    "inset": [
+      224.75948060000002,
+      102.56242516799999,
+      0.7523098000000022,
+      0.5115706640000016
+    ]
+  },
+  {
+    "country": "Mexico",
+    "capitals": [
+      "Mexico City"
+    ],
+    "region": "Americas",
+    "center": [
+      23,
+      -102
+    ],
+    "capCenter": [
+      19.42847,
+      -99.12766
+    ],
+    "area": 1964375,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Micronesia",
+    "capitals": [
+      "Palikir"
+    ],
+    "region": "Oceania",
+    "center": [
+      6.91666666,
+      158.25
+    ],
+    "capCenter": [
+      6.92477,
+      158.16109
+    ],
+    "area": 702,
+    "isTerritory": false,
+    "inset": [
+      338.02248760000003,
+      82.973763848,
+      0.41948280000000104,
+      0.28524830400000073
+    ]
+  },
+  {
+    "country": "Moldova",
+    "capitals": [
+      "Chișinău"
+    ],
+    "region": "Europe",
+    "center": [
+      47,
+      29
+    ],
+    "capCenter": [
+      47.00902,
+      28.85938
+    ],
+    "area": 33846,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Monaco",
+    "capitals": [
+      "Monaco"
+    ],
+    "region": "Europe",
+    "center": [
+      43.73333333,
+      7.4
+    ],
+    "capCenter": [
+      43.73718,
+      7.42145
+    ],
+    "area": 2.02,
+    "isTerritory": false,
+    "inset": [
+      187.347824,
+      46.22269346000001,
+      0.10755599999999932,
+      0.07313807999999954
+    ]
+  },
+  {
+    "country": "Mongolia",
+    "capitals": [
+      "Ulan Bator"
+    ],
+    "region": "Asia",
+    "center": [
+      46,
+      105
+    ],
+    "capCenter": [
+      47.90771,
+      106.88324
+    ],
+    "area": 1564110,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Montenegro",
+    "capitals": [
+      "Podgorica"
+    ],
+    "region": "Europe",
+    "center": [
+      42.5,
+      19.3
+    ],
+    "capCenter": [
+      42.44124,
+      19.26309
+    ],
+    "area": 13812,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Montserrat",
+    "capitals": [
+      "Plymouth"
+    ],
+    "region": "Americas",
+    "center": [
+      16.75,
+      -62.2
+    ],
+    "capCenter": [
+      16.70555,
+      -62.21292
+    ],
+    "area": 102,
+    "isTerritory": true,
+    "inset": [
+      117.6563088,
+      73.144975424,
+      0.31671639999999646,
+      0.21536715199999762
+    ]
+  },
+  {
+    "country": "Morocco",
+    "capitals": [
+      "Rabat"
+    ],
+    "region": "Africa",
+    "center": [
+      32,
+      -5
+    ],
+    "capCenter": [
+      34.01325,
+      -6.83255
+    ],
+    "area": 446550,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Mozambique",
+    "capitals": [
+      "Maputo"
+    ],
+    "region": "Africa",
+    "center": [
+      -18.25,
+      35
+    ],
+    "capCenter": [
+      -25.96553,
+      32.58322
+    ],
+    "area": 801590,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Myanmar",
+    "capitals": [
+      "Naypyidaw"
+    ],
+    "region": "Asia",
+    "center": [
+      22,
+      98
+    ],
+    "capCenter": [
+      19.745,
+      96.12972
+    ],
+    "area": 676578,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Namibia",
+    "capitals": [
+      "Windhoek"
+    ],
+    "region": "Africa",
+    "center": [
+      -22,
+      17
+    ],
+    "capCenter": [
+      -22.55941,
+      17.08323
+    ],
+    "area": 825615,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Nauru",
+    "capitals": [
+      "Yaren"
+    ],
+    "region": "Oceania",
+    "center": [
+      -0.53333333,
+      166.91666666
+    ],
+    "capCenter": [
+      -0.55085,
+      166.9252
+    ],
+    "area": 21,
+    "isTerritory": false,
+    "inset": [
+      346.86504180000003,
+      90.475173384,
+      0.13517240000000014,
+      0.0919172320000001
+    ]
+  },
+  {
+    "country": "Nepal",
+    "capitals": [
+      "Kathmandu"
+    ],
+    "region": "Asia",
+    "center": [
+      28,
+      84
+    ],
+    "capCenter": [
+      27.70169,
+      85.3206
+    ],
+    "area": 147181,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Netherlands",
+    "capitals": [
+      "Amsterdam"
+    ],
+    "region": "Europe",
+    "center": [
+      52.5,
+      5.75
+    ],
+    "capCenter": [
+      52.37403,
+      4.88969
+    ],
+    "area": 41850,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "New Caledonia",
+    "capitals": [
+      "Nouméa"
+    ],
+    "region": "Oceania",
+    "center": [
+      -21.5,
+      165.5
+    ],
+    "capCenter": [
+      -22.27407,
+      166.44884
+    ],
+    "area": 18575,
+    "isTerritory": true,
+    "inset": null
+  },
+  {
+    "country": "New Zealand",
+    "capitals": [
+      "Wellington"
+    ],
+    "region": "Oceania",
+    "center": [
+      -41,
+      174
+    ],
+    "capCenter": [
+      -41.28664,
+      174.77557
+    ],
+    "area": 270467,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Nicaragua",
+    "capitals": [
+      "Managua"
+    ],
+    "region": "Americas",
+    "center": [
+      13,
+      -85
+    ],
+    "capCenter": [
+      12.13282,
+      -86.2504
+    ],
+    "area": 130373,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Niger",
+    "capitals": [
+      "Niamey"
+    ],
+    "region": "Africa",
+    "center": [
+      16,
+      8
+    ],
+    "capCenter": [
+      13.51366,
+      2.1098
+    ],
+    "area": 1267000,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Nigeria",
+    "capitals": [
+      "Abuja"
+    ],
+    "region": "Africa",
+    "center": [
+      10,
+      8
+    ],
+    "capCenter": [
+      9.05785,
+      7.49508
+    ],
+    "area": 923768,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Niue",
+    "capitals": [
+      "Alofi"
+    ],
+    "region": "Oceania",
+    "center": [
+      -19.03333333,
+      -169.86666666
+    ],
+    "capCenter": [
+      -19.05294,
+      -169.91957
+    ],
+    "area": 260,
+    "isTerritory": true,
+    "inset": [
+      9.936749399999997,
+      108.919723672,
+      0.3931641999999997,
+      0.2673516559999998
+    ]
+  },
+  {
+    "country": "Norfolk Island",
+    "capitals": [
+      "Kingston"
+    ],
+    "region": "Oceania",
+    "center": [
+      -29.03333333,
+      167.95
+    ],
+    "capCenter": [
+      -29.05459,
+      167.96628
+    ],
+    "area": 36,
+    "isTerritory": true,
+    "inset": [
+      347.86346249999997,
+      118.97702604,
+      0.1815439999999974,
+      0.12344991999999824
+    ]
+  },
+  {
+    "country": "North Korea",
+    "capitals": [
+      "Pyongyang"
+    ],
+    "region": "Asia",
+    "center": [
+      40,
+      127
+    ],
+    "capCenter": [
+      39.03385,
+      125.75432
+    ],
+    "area": 120538,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "North Macedonia",
+    "capitals": [
+      "Skopje"
+    ],
+    "region": "Europe",
+    "center": [
+      41.83333333,
+      22
+    ],
+    "capCenter": [
+      41.99646,
+      21.43141
+    ],
+    "area": 25713,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "capitals": [
+      "Saipan"
+    ],
+    "region": "Oceania",
+    "center": [
+      15.2,
+      145.75
+    ],
+    "capCenter": [
+      15.21233,
+      145.7545
+    ],
+    "area": 464,
+    "isTerritory": true,
+    "inset": [
+      325.55917880000004,
+      74.684153544,
+      0.38752340000000063,
+      0.26351591200000046
+    ]
+  },
+  {
+    "country": "Norway",
+    "capitals": [
+      "Oslo"
+    ],
+    "region": "Europe",
+    "center": [
+      62,
+      10
+    ],
+    "capCenter": [
+      59.91273,
+      10.74609
+    ],
+    "area": 323802,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Oman",
+    "capitals": [
+      "Muscat"
+    ],
+    "region": "Asia",
+    "center": [
+      21,
+      57
+    ],
+    "capCenter": [
+      23.58413,
+      58.40778
+    ],
+    "area": 309500,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Pakistan",
+    "capitals": [
+      "Islamabad"
+    ],
+    "region": "Asia",
+    "center": [
+      30,
+      70
+    ],
+    "capCenter": [
+      33.72148,
+      73.04329
+    ],
+    "area": 881912,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Palau",
+    "capitals": [
+      "Ngerulmud"
+    ],
+    "region": "Oceania",
+    "center": [
+      7.5,
+      134.5
+    ],
+    "capCenter": [
+      7.50077,
+      134.6238
+    ],
+    "area": 459,
+    "isTerritory": false,
+    "inset": [
+      314.1569163,
+      82.17208650399999,
+      0.832429399999999,
+      0.5660519919999993
+    ]
+  },
+  {
+    "country": "Palestine",
+    "capitals": [
+      "Ramallah"
+    ],
+    "region": "Asia",
+    "center": [
+      31.9,
+      35.2
+    ],
+    "capCenter": [
+      31.89964,
+      35.20422
+    ],
+    "area": 6220,
+    "isTerritory": false,
+    "inset": [
+      213.9023415,
+      57.160322959999995,
+      2.635006,
+      1.7918040800000004
+    ]
+  },
+  {
+    "country": "Panama",
+    "capitals": [
+      "Panama City"
+    ],
+    "region": "Americas",
+    "center": [
+      9,
+      -80
+    ],
+    "capCenter": [
+      8.9936,
+      -79.51973
+    ],
+    "area": 75417,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Papua New Guinea",
+    "capitals": [
+      "Port Moresby"
+    ],
+    "region": "Oceania",
+    "center": [
+      -6,
+      147
+    ],
+    "capCenter": [
+      -9.47723,
+      147.15089
+    ],
+    "area": 462840,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Paraguay",
+    "capitals": [
+      "Asunción"
+    ],
+    "region": "Americas",
+    "center": [
+      -23,
+      -58
+    ],
+    "capCenter": [
+      -25.28646,
+      -57.647
+    ],
+    "area": 406752,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Peru",
+    "capitals": [
+      "Lima"
+    ],
+    "region": "Americas",
+    "center": [
+      -10,
+      -76
+    ],
+    "capCenter": [
+      -12.04318,
+      -77.02824
+    ],
+    "area": 1285216,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Philippines",
+    "capitals": [
+      "Manila"
+    ],
+    "region": "Asia",
+    "center": [
+      13,
+      122
+    ],
+    "capCenter": [
+      14.6042,
+      120.9822
+    ],
+    "area": 342353,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Pitcairn Islands",
+    "capitals": [
+      "Adamstown"
+    ],
+    "region": "Oceania",
+    "center": [
+      -25.06666666,
+      -130.1
+    ],
+    "capCenter": [
+      -25.06597,
+      -130.10147
+    ],
+    "area": 47,
+    "isTerritory": true,
+    "inset": [
+      49.86669850000001,
+      115.05033350000001,
+      0.06,
+      0.0408
+    ]
+  },
+  {
+    "country": "Poland",
+    "capitals": [
+      "Warsaw"
+    ],
+    "region": "Europe",
+    "center": [
+      52,
+      20
+    ],
+    "capCenter": [
+      52.22977,
+      21.01178
+    ],
+    "area": 312679,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Portugal",
+    "capitals": [
+      "Lisbon"
+    ],
+    "region": "Europe",
+    "center": [
+      39.5,
+      -8
+    ],
+    "capCenter": [
+      38.72509,
+      -9.1498
+    ],
+    "area": 92090,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Puerto Rico",
+    "capitals": [
+      "San Juan"
+    ],
+    "region": "Americas",
+    "center": [
+      18.25,
+      -66.5
+    ],
+    "capCenter": [
+      18.46633,
+      -66.10572
+    ],
+    "area": 8870,
+    "isTerritory": true,
+    "inset": [
+      112.3093885,
+      70.92082422,
+      2.518617000000006,
+      1.7126595600000043
+    ]
+  },
+  {
+    "country": "Qatar",
+    "capitals": [
+      "Doha"
+    ],
+    "region": "Asia",
+    "center": [
+      25.5,
+      51.25
+    ],
+    "capCenter": [
+      25.28545,
+      51.53096
+    ],
+    "area": 11586,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Réunion",
+    "capitals": [
+      "Saint-Denis"
+    ],
+    "region": "Africa",
+    "center": [
+      -21.15,
+      55.5
+    ],
+    "capCenter": [
+      -20.88231,
+      55.4504
+    ],
+    "area": 2511,
+    "isTerritory": true,
+    "inset": [
+      234.97967359999998,
+      110.735101968,
+      1.1205897999999999,
+      0.762001064
+    ]
+  },
+  {
+    "country": "Romania",
+    "capitals": [
+      "Bucharest"
+    ],
+    "region": "Europe",
+    "center": [
+      46,
+      25
+    ],
+    "capCenter": [
+      44.43225,
+      26.10626
+    ],
+    "area": 238391,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Russia",
+    "capitals": [
+      "Moscow"
+    ],
+    "region": "Europe",
+    "center": [
+      60,
+      100
+    ],
+    "capCenter": [
+      55.75204,
+      37.61781
+    ],
+    "area": 17098242,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Rwanda",
+    "capitals": [
+      "Kigali"
+    ],
+    "region": "Africa",
+    "center": [
+      -2,
+      30
+    ],
+    "capCenter": [
+      -1.94995,
+      30.05885
+    ],
+    "area": 26338,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Saint Barthélemy",
+    "capitals": [
+      "Gustavia"
+    ],
+    "region": "Americas",
+    "center": [
+      18.5,
+      -63.41666666
+    ],
+    "capCenter": [
+      17.89618,
+      -62.84978
+    ],
+    "area": 21,
+    "isTerritory": true,
+    "inset": [
+      117.11373900000001,
+      72.05583616000001,
+      0.11352599999999313,
+      0.07719767999999534
+    ]
+  },
+  {
+    "country": "Saint Helena, Ascension and Tristan da Cunha",
+    "capitals": [
+      "Jamestown"
+    ],
+    "region": "Africa",
+    "center": [
+      -15.95,
+      -5.72
+    ],
+    "capCenter": [
+      -15.92488,
+      -5.71816
+    ],
+    "area": 394,
+    "isTerritory": true,
+    "inset": [
+      174.1550734,
+      105.873939712,
+      0.2499332000000056,
+      0.16995457600000383
+    ]
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "capitals": [
+      "Basseterre"
+    ],
+    "region": "Americas",
+    "center": [
+      17.33333333,
+      -62.75
+    ],
+    "capCenter": [
+      17.2955,
+      -62.72499
+    ],
+    "area": 261,
+    "isTerritory": false,
+    "inset": [
+      117.0385771,
+      72.53489604800001,
+      0.43702779999999924,
+      0.2971789039999995
+    ]
+  },
+  {
+    "country": "Saint Lucia",
+    "capitals": [
+      "Castries"
+    ],
+    "region": "Americas",
+    "center": [
+      13.88333333,
+      -60.96666666
+    ],
+    "capCenter": [
+      13.9957,
+      -61.00614
+    ],
+    "area": 616,
+    "isTerritory": false,
+    "inset": [
+      118.5823183,
+      75.78960618400001,
+      0.8738773999999989,
+      0.5942366319999993
+    ]
+  },
+  {
+    "country": "Saint Martin",
+    "capitals": [
+      "Marigot"
+    ],
+    "region": "Americas",
+    "center": [
+      18.08333333,
+      -63.95
+    ],
+    "capCenter": [
+      18.06819,
+      -63.08302
+    ],
+    "area": 53,
+    "isTerritory": true,
+    "inset": [
+      116.81913300000001,
+      71.85282042,
+      0.20416200000000018,
+      0.13883016000000012
+    ]
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "capitals": [
+      "Saint-Pierre"
+    ],
+    "region": "Americas",
+    "center": [
+      46.83333333,
+      -56.33333333
+    ],
+    "capCenter": [
+      46.77914,
+      -56.1773
+    ],
+    "area": 242,
+    "isTerritory": true,
+    "inset": [
+      123.73581000000001,
+      43.169102599999995,
+      0.1433099999999996,
+      0.09745079999999974
+    ]
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "capitals": [
+      "Kingstown"
+    ],
+    "region": "Americas",
+    "center": [
+      13.25,
+      -61.2
+    ],
+    "capCenter": [
+      13.15527,
+      -61.22742
+    ],
+    "area": 389,
+    "isTerritory": false,
+    "inset": [
+      118.52527549999999,
+      76.55766999999999,
+      0.5461499999999972,
+      0.37138199999999816
+    ]
+  },
+  {
+    "country": "Samoa",
+    "capitals": [
+      "Apia"
+    ],
+    "region": "Oceania",
+    "center": [
+      -13.58333333,
+      -172.33333333
+    ],
+    "capCenter": [
+      -13.83333,
+      -171.76666
+    ],
+    "area": 2842,
+    "isTerritory": false,
+    "inset": [
+      7.779837000000008,
+      103.60984323999999,
+      0.9389640000000128,
+      0.6384955200000088
+    ]
+  },
+  {
+    "country": "San Marino",
+    "capitals": [
+      "City of San Marino"
+    ],
+    "region": "Europe",
+    "center": [
+      43.76666666,
+      12.41666666
+    ],
+    "capCenter": [
+      43.93667,
+      12.44639
+    ],
+    "area": 61,
+    "isTerritory": false,
+    "inset": [
+      192.33944839999998,
+      45.994986272,
+      0.1991242000000142,
+      0.13540445600000967
+    ]
+  },
+  {
+    "country": "São Tomé and Príncipe",
+    "capitals": [
+      "São Tomé"
+    ],
+    "region": "Africa",
+    "center": [
+      1,
+      7
+    ],
+    "capCenter": [
+      0.33756,
+      6.7299
+    ],
+    "area": 964,
+    "isTerritory": false,
+    "inset": [
+      186.1859527,
+      89.493310856,
+      0.8506916000000001,
+      0.5784702880000001
+    ]
+  },
+  {
+    "country": "Saudi Arabia",
+    "capitals": [
+      "Riyadh"
+    ],
+    "region": "Asia",
+    "center": [
+      25,
+      45
+    ],
+    "capCenter": [
+      24.68773,
+      46.72185
+    ],
+    "area": 2149690,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Senegal",
+    "capitals": [
+      "Dakar"
+    ],
+    "region": "Africa",
+    "center": [
+      14,
+      -14
+    ],
+    "capCenter": [
+      14.6937,
+      -17.44406
+    ],
+    "area": 196722,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Serbia",
+    "capitals": [
+      "Belgrade"
+    ],
+    "region": "Europe",
+    "center": [
+      44,
+      21
+    ],
+    "capCenter": [
+      44.80401,
+      20.46513
+    ],
+    "area": 88361,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Seychelles",
+    "capitals": [
+      "Victoria"
+    ],
+    "region": "Africa",
+    "center": [
+      -4.58333333,
+      55.66666666
+    ],
+    "capCenter": [
+      -4.62001,
+      55.45501
+    ],
+    "area": 452,
+    "isTerritory": false,
+    "inset": [
+      235.1841827,
+      94.50018301600001,
+      0.5351676,
+      0.363913968
+    ]
+  },
+  {
+    "country": "Sierra Leone",
+    "capitals": [
+      "Freetown"
+    ],
+    "region": "Africa",
+    "center": [
+      8.5,
+      -11.5
+    ],
+    "capCenter": [
+      8.48714,
+      -13.2356
+    ],
+    "area": 71740,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Singapore",
+    "capitals": [
+      "Singapore"
+    ],
+    "region": "Asia",
+    "center": [
+      1.36666666,
+      103.8
+    ],
+    "capCenter": [
+      1.28967,
+      103.85007
+    ],
+    "area": 710,
+    "isTerritory": false,
+    "inset": [
+      283.5496315,
+      88.45837862,
+      0.5445570000000046,
+      0.37029876000000317
+    ]
+  },
+  {
+    "country": "Sint Maarten",
+    "capitals": [
+      "Philipsburg"
+    ],
+    "region": "Americas",
+    "center": [
+      18.033333,
+      -63.05
+    ],
+    "capCenter": [
+      18.026,
+      -63.04582
+    ],
+    "area": 34,
+    "isTerritory": true,
+    "inset": [
+      116.85578475,
+      71.90771332999999,
+      0.15197550000000248,
+      0.1033433400000017
+    ]
+  },
+  {
+    "country": "Slovakia",
+    "capitals": [
+      "Bratislava"
+    ],
+    "region": "Europe",
+    "center": [
+      48.66666666,
+      19.5
+    ],
+    "capCenter": [
+      48.14816,
+      17.10674
+    ],
+    "area": 49037,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Slovenia",
+    "capitals": [
+      "Ljubljana"
+    ],
+    "region": "Europe",
+    "center": [
+      46.11666666,
+      14.81666666
+    ],
+    "capCenter": [
+      46.05108,
+      14.50513
+    ],
+    "area": 20273,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Solomon Islands",
+    "capitals": [
+      "Honiara"
+    ],
+    "region": "Oceania",
+    "center": [
+      -8,
+      159
+    ],
+    "capCenter": [
+      -9.43333,
+      159.95
+    ],
+    "area": 28896,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Somalia",
+    "capitals": [
+      "Mogadishu"
+    ],
+    "region": "Africa",
+    "center": [
+      10,
+      49
+    ],
+    "capCenter": [
+      2.03711,
+      45.34375
+    ],
+    "area": 637657,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "South Africa",
+    "capitals": [
+      "Pretoria",
+      "Bloemfontein",
+      "Cape Town"
+    ],
+    "region": "Africa",
+    "center": [
+      -29,
+      24
+    ],
+    "capCenter": [
+      -25.74486,
+      28.18783
+    ],
+    "area": 1221037,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "South Georgia",
+    "capitals": [
+      "King Edward Point"
+    ],
+    "region": "Antarctic",
+    "center": [
+      -54.5,
+      -37
+    ],
+    "capCenter": [
+      -54.28298,
+      -36.49398
+    ],
+    "area": 3903,
+    "isTerritory": true,
+    "inset": [
+      141.405599,
+      143.28342062000002,
+      3.3721319999999935,
+      2.2930497599999957
+    ]
+  },
+  {
+    "country": "South Korea",
+    "capitals": [
+      "Seoul"
+    ],
+    "region": "Asia",
+    "center": [
+      37,
+      127.5
+    ],
+    "capCenter": [
+      37.566,
+      126.9784
+    ],
+    "area": 100210,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "South Sudan",
+    "capitals": [
+      "Juba"
+    ],
+    "region": "Africa",
+    "center": [
+      7,
+      30
+    ],
+    "capCenter": [
+      4.85165,
+      31.58247
+    ],
+    "area": 619745,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Spain",
+    "capitals": [
+      "Madrid"
+    ],
+    "region": "Europe",
+    "center": [
+      40,
+      -4
+    ],
+    "capCenter": [
+      40.4165,
+      -3.70256
+    ],
+    "area": 505992,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Sri Lanka",
+    "capitals": [
+      "Colombo"
+    ],
+    "region": "Asia",
+    "center": [
+      7,
+      81
+    ],
+    "capCenter": [
+      6.93548,
+      79.84868
+    ],
+    "area": 65610,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Sudan",
+    "capitals": [
+      "Khartoum"
+    ],
+    "region": "Africa",
+    "center": [
+      15,
+      30
+    ],
+    "capCenter": [
+      15.55177,
+      32.53241
+    ],
+    "area": 1886068,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Suriname",
+    "capitals": [
+      "Paramaribo"
+    ],
+    "region": "Americas",
+    "center": [
+      4,
+      -56
+    ],
+    "capCenter": [
+      5.86638,
+      -55.16682
+    ],
+    "area": 163820,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Svalbard and Jan Mayen",
+    "capitals": [
+      "Longyearbyen"
+    ],
+    "region": "Europe",
+    "center": [
+      78,
+      20
+    ],
+    "capCenter": [
+      78.22334,
+      15.64689
+    ],
+    "area": -1,
+    "isTerritory": true,
+    "inset": null
+  },
+  {
+    "country": "Sweden",
+    "capitals": [
+      "Stockholm"
+    ],
+    "region": "Europe",
+    "center": [
+      62,
+      15
+    ],
+    "capCenter": [
+      59.32938,
+      18.06871
+    ],
+    "area": 450295,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Switzerland",
+    "capitals": [
+      "Bern"
+    ],
+    "region": "Europe",
+    "center": [
+      47,
+      8
+    ],
+    "capCenter": [
+      46.94809,
+      7.44744
+    ],
+    "area": 41284,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Syria",
+    "capitals": [
+      "Damascus"
+    ],
+    "region": "Asia",
+    "center": [
+      35,
+      38
+    ],
+    "capCenter": [
+      33.5102,
+      36.29128
+    ],
+    "area": 185180,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Taiwan",
+    "capitals": [
+      "Taipei"
+    ],
+    "region": "Asia",
+    "center": [
+      23.5,
+      121
+    ],
+    "capCenter": [
+      25.05306,
+      121.52639
+    ],
+    "area": 36193,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Tajikistan",
+    "capitals": [
+      "Dushanbe"
+    ],
+    "region": "Asia",
+    "center": [
+      39,
+      71
+    ],
+    "capCenter": [
+      38.53575,
+      68.77905
+    ],
+    "area": 143100,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Tanzania",
+    "capitals": [
+      "Dodoma"
+    ],
+    "region": "Africa",
+    "center": [
+      -6,
+      35
+    ],
+    "capCenter": [
+      -6.17221,
+      35.73947
+    ],
+    "area": 945087,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Thailand",
+    "capitals": [
+      "Bangkok"
+    ],
+    "region": "Asia",
+    "center": [
+      15,
+      100
+    ],
+    "capCenter": [
+      13.75398,
+      100.50144
+    ],
+    "area": 513120,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Timor-Leste",
+    "capitals": [
+      "Dili"
+    ],
+    "region": "Asia",
+    "center": [
+      -8.83333333,
+      125.91666666
+    ],
+    "capCenter": [
+      -8.55861,
+      125.57361
+    ],
+    "area": 14874,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Togo",
+    "capitals": [
+      "Lomé"
+    ],
+    "region": "Africa",
+    "center": [
+      8,
+      1.16666666
+    ],
+    "capCenter": [
+      6.12874,
+      1.22154
+    ],
+    "area": 56785,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Tokelau",
+    "capitals": [
+      "Fakaofo"
+    ],
+    "region": "Oceania",
+    "center": [
+      -9,
+      -172
+    ],
+    "capCenter": [
+      -9.376,
+      -171.233
+    ],
+    "area": 12,
+    "isTerritory": true,
+    "inset": [
+      8.741156700000005,
+      99.31982377599999,
+      0.09902859999999798,
+      0.06733944799999864
+    ]
+  },
+  {
+    "country": "Tonga",
+    "capitals": [
+      "Nuku'alofa"
+    ],
+    "region": "Oceania",
+    "center": [
+      -20,
+      -175
+    ],
+    "capCenter": [
+      -21.13683,
+      -175.20114
+    ],
+    "area": 747,
+    "isTerritory": false,
+    "inset": [
+      4.556702000000016,
+      111.00519576000002,
+      0.4708859999999788,
+      0.32020247999998563
+    ]
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "capitals": [
+      "Port of Spain"
+    ],
+    "region": "Americas",
+    "center": [
+      11,
+      -61
+    ],
+    "capCenter": [
+      10.66668,
+      -61.51889
+    ],
+    "area": 5130,
+    "isTerritory": false,
+    "inset": [
+      117.6984573,
+      78.955518944,
+      1.7670883999999998,
+      1.2016201119999999
+    ]
+  },
+  {
+    "country": "Tunisia",
+    "capitals": [
+      "Tunis"
+    ],
+    "region": "Africa",
+    "center": [
+      34,
+      9
+    ],
+    "capCenter": [
+      36.81897,
+      10.16579
+    ],
+    "area": 163610,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Türkiye",
+    "capitals": [
+      "Ankara"
+    ],
+    "region": "Asia",
+    "center": [
+      39,
+      35
+    ],
+    "capCenter": [
+      39.91987,
+      32.85427
+    ],
+    "area": 783562,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Turkmenistan",
+    "capitals": [
+      "Ashgabat"
+    ],
+    "region": "Asia",
+    "center": [
+      40,
+      60
+    ],
+    "capCenter": [
+      37.95,
+      58.38333
+    ],
+    "area": 488100,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Turks and Caicos Islands",
+    "capitals": [
+      "Cockburn Town"
+    ],
+    "region": "Americas",
+    "center": [
+      21.75,
+      -71.58333333
+    ],
+    "capCenter": [
+      21.46122,
+      -71.14188
+    ],
+    "area": 948,
+    "isTerritory": true,
+    "inset": [
+      108.76952200000001,
+      68.46604948,
+      0.18037800000000248,
+      0.1226570400000017
+    ]
+  },
+  {
+    "country": "Tuvalu",
+    "capitals": [
+      "Funafuti"
+    ],
+    "region": "Oceania",
+    "center": [
+      -8,
+      178
+    ],
+    "capCenter": [
+      -8.52425,
+      179.19417
+    ],
+    "area": 26,
+    "isTerritory": false,
+    "inset": [
+      359.11478989999995,
+      98.440423672,
+      0.179214200000002,
+      0.12186565600000136
+    ]
+  },
+  {
+    "country": "Uganda",
+    "capitals": [
+      "Kampala"
+    ],
+    "region": "Africa",
+    "center": [
+      1,
+      32
+    ],
+    "capCenter": [
+      0.31628,
+      32.58219
+    ],
+    "area": 241550,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Ukraine",
+    "capitals": [
+      "Kyiv"
+    ],
+    "region": "Europe",
+    "center": [
+      49,
+      32
+    ],
+    "capCenter": [
+      50.45466,
+      30.5238
+    ],
+    "area": 603500,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "United Arab Emirates",
+    "capitals": [
+      "Abu Dhabi"
+    ],
+    "region": "Asia",
+    "center": [
+      24,
+      54
+    ],
+    "capCenter": [
+      24.45118,
+      54.39696
+    ],
+    "area": 83600,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "United Kingdom",
+    "capitals": [
+      "London"
+    ],
+    "region": "Europe",
+    "center": [
+      54,
+      -2
+    ],
+    "capCenter": [
+      51.50853,
+      -0.12574
+    ],
+    "area": 242900,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "United States",
+    "capitals": [
+      "Washington D.C."
+    ],
+    "region": "Americas",
+    "center": [
+      38,
+      -97
+    ],
+    "capCenter": [
+      38.89511,
+      -77.03637
+    ],
+    "area": 9372610,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "United States Virgin Islands",
+    "capitals": [
+      "Charlotte Amalie"
+    ],
+    "region": "Americas",
+    "center": [
+      18.35,
+      -64.933333
+    ],
+    "capCenter": [
+      18.3419,
+      -64.9307
+    ],
+    "area": 347,
+    "isTerritory": true,
+    "inset": [
+      114.90815375,
+      71.55175937,
+      0.3021195000000034,
+      0.20544126000000235
+    ]
+  },
+  {
+    "country": "Uruguay",
+    "capitals": [
+      "Montevideo"
+    ],
+    "region": "Americas",
+    "center": [
+      -33,
+      -56
+    ],
+    "capCenter": [
+      -34.90328,
+      -56.18816
+    ],
+    "area": 181034,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Uzbekistan",
+    "capitals": [
+      "Tashkent"
+    ],
+    "region": "Asia",
+    "center": [
+      41,
+      64
+    ],
+    "capCenter": [
+      41.26465,
+      69.21627
+    ],
+    "area": 447400,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Vanuatu",
+    "capitals": [
+      "Port Vila"
+    ],
+    "region": "Oceania",
+    "center": [
+      -16,
+      167
+    ],
+    "capCenter": [
+      -17.73648,
+      168.31366
+    ],
+    "area": 12189,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Vatican City",
+    "capitals": [
+      "Vatican City"
+    ],
+    "region": "Europe",
+    "center": [
+      41.9,
+      12.45
+    ],
+    "capCenter": [
+      41.90268,
+      12.45414
+    ],
+    "area": 0.44,
+    "isTerritory": false,
+    "inset": [
+      192.423427,
+      48.076302500000004,
+      0.06,
+      0.0408
+    ]
+  },
+  {
+    "country": "Venezuela",
+    "capitals": [
+      "Caracas"
+    ],
+    "region": "Americas",
+    "center": [
+      8,
+      -66
+    ],
+    "capCenter": [
+      10.48801,
+      -66.87919
+    ],
+    "area": 916445,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Vietnam",
+    "capitals": [
+      "Hanoi"
+    ],
+    "region": "Asia",
+    "center": [
+      16.16666666,
+      107.83333333
+    ],
+    "capCenter": [
+      21.0245,
+      105.84117
+    ],
+    "area": 331212,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Wallis and Futuna",
+    "capitals": [
+      "Mata-Utu"
+    ],
+    "region": "Oceania",
+    "center": [
+      -13.3,
+      -176.2
+    ],
+    "capCenter": [
+      -13.28163,
+      -176.17453
+    ],
+    "area": 142,
+    "isTerritory": true,
+    "inset": [
+      3.6819202999999967,
+      103.173860464,
+      0.31098540000000235,
+      0.21147007200000162
+    ]
+  },
+  {
+    "country": "Western Sahara",
+    "capitals": [
+      "El Aaiún"
+    ],
+    "region": "Africa",
+    "center": [
+      24.5,
+      -13
+    ],
+    "capCenter": [
+      27.1418,
+      -13.18797
+    ],
+    "area": 266000,
+    "isTerritory": true,
+    "inset": null
+  },
+  {
+    "country": "Yemen",
+    "capitals": [
+      "Sana'a"
+    ],
+    "region": "Asia",
+    "center": [
+      15,
+      48
+    ],
+    "capCenter": [
+      15.35452,
+      44.20646
+    ],
+    "area": 527968,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Zambia",
+    "capitals": [
+      "Lusaka"
+    ],
+    "region": "Africa",
+    "center": [
+      -15,
+      30
+    ],
+    "capCenter": [
+      -15.40669,
+      28.28713
+    ],
+    "area": 752612,
+    "isTerritory": false,
+    "inset": null
+  },
+  {
+    "country": "Zimbabwe",
+    "capitals": [
+      "Harare"
+    ],
+    "region": "Africa",
+    "center": [
+      -20,
+      30
+    ],
+    "capCenter": [
+      -17.82772,
+      31.05337
+    ],
+    "area": 390757,
+    "isTerritory": false,
+    "inset": null
+  }
+]

@@ -1,0 +1,5 @@
+Capital and administrative-center coordinates: GeoNames (https://www.geonames.org/).
+Source downloads: https://download.geonames.org/export/dump/cities500.zip, TK.zip, GS.zip.
+License: Creative Commons Attribution 4.0 International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+Adaptation: matched city names and alternate names by country code to the quiz's primary study-key entry; selected coordinates embedded in the quiz. Fakaofo uses the administrative-atoll record. Individual source links are included in capital-locations.json.
+These coordinates match the existing quiz entries; this update does not redefine capital status or territorial claims.
