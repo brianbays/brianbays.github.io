@@ -327,14 +327,36 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
         updateMapState();
         els.input.placeholder=countryQuiz()?'Type the country or territory…':'Type the capital…';
       });
+      let incomingChallenge=null, roundChallenge=null;
+      const settingKeys=['mode','region','count','timer','mapMode','mapZoom'];
+      function lockSettings(locked){ settingKeys.forEach(k=>els[k].disabled=locked); quizType.disabled=locked; document.getElementById('includeTerritories').disabled=locked; if(!locked) els.mapMode.disabled=countryQuiz(); }
+      function dataVersion(){ let h=2166136261; for(const c of DATA.map(d=>d.country).join('|')) h=Math.imul(h^c.charCodeAt(0),16777619); return (h>>>0).toString(36); }
+      function captureChallenge(){ return {v:1,data:dataVersion(),questions:queue.map(d=>DATA.indexOf(d)),quiz:quizType.value,territories:document.getElementById('includeTerritories').checked,settings:Object.fromEntries(settingKeys.map(k=>[k,els[k].value])),seed:Math.floor(Math.random()*4294967296)}; }
+      function challengeRandom(){ let state=(roundChallenge.seed+qIndex)>>>0; return ()=>{state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;}; }
+      function readChallenge(){
+        if(!location.hash.startsWith('#challenge=')) return;
+        try {
+          if(location.hash.length>12000) throw Error();
+          const c=JSON.parse(decodeURIComponent(location.hash.slice(11)));
+          if(c.v!==1||c.data!==dataVersion()||!['capital','country'].includes(c.quiz)||typeof c.territories!=='boolean'||!Number.isInteger(c.seed)||c.seed<0||c.seed>4294967295||!Array.isArray(c.questions)||!c.questions.length||c.questions.length>DATA.length||new Set(c.questions).size!==c.questions.length) throw Error();
+          for(const k of settingKeys){const val=c.settings[k];if(typeof val!=='string')throw Error();const el=els[k];if(el.tagName==='SELECT'&&![...el.options].some(o=>o.value===val))throw Error();}
+          if(!/^\d+$/.test(c.settings.timer)||+c.settings.timer>120||!/^\d+$/.test(c.settings.mapZoom)||+c.settings.mapZoom<2||+c.settings.mapZoom>8)throw Error();
+          if(c.questions.some(i=>!Number.isInteger(i)||!DATA[i]||(!c.territories&&DATA[i].isTerritory)||(c.settings.region!=='All'&&DATA[i].region!==c.settings.region)))throw Error();
+          quizType.value=c.quiz;document.title=c.quiz==='country'?'World Country Quiz':'World Capital Quiz';els.input.placeholder=c.quiz==='country'?'Type the country or territory…':'Type the capital…';
+          settingKeys.forEach(k=>els[k].value=c.settings[k]);document.getElementById('includeTerritories').checked=c.territories;
+          document.getElementById('scopeCount').textContent=c.territories?'245 countries & territories':'197 countries';
+          incomingChallenge=c;lockSettings(true);updateMapState();els.question.textContent='Friend challenge ready! Click Start to play the same '+c.questions.length+' questions.';
+        } catch { els.question.textContent='This challenge link is invalid or out of date. Start a new quiz instead.'; }
+      }
       // ===== Game logic =====
-      function setupQueue(){ const region=els.region.value; const pool=region==='All'?eligibleData():eligibleData().filter(d=>d.region===region); const want=els.count.value==='all'?pool.length:parseInt(els.count.value,10); queue=sample(pool,want); totalQ=queue.length; qIndex=0; score=0; streak=0; current=null; updateHUD(); els.summary.hidden=true; }
+      function setupQueue(){ const region=els.region.value; const pool=region==='All'?eligibleData():eligibleData().filter(d=>d.region===region); const want=els.count.value==='all'?pool.length:parseInt(els.count.value,10); queue=sample(pool,want); if(incomingChallenge) queue=incomingChallenge.questions.map(i=>DATA[i]); roundChallenge=incomingChallenge||captureChallenge(); lockSettings(true); totalQ=queue.length; qIndex=0; score=0; streak=0; current=null; updateHUD(); els.summary.hidden=true; }
       function updateHUD(){ els.score.textContent=String(score); els.qnum.textContent=String(Math.min(qIndex,totalQ)); els.qtotal.textContent=String(totalQ); els.streak.textContent=String(streak); els.bar.style.width=(totalQ?(qIndex/totalQ)*100:0)+'%'; }
       function startTimer(){ clearInterval(tick); if(timerPerQ<=0){ els.timeChip.style.display='none'; return; } els.timeChip.style.display='inline-flex'; timeLeft=timerPerQ; els.timeLeft.textContent=String(timeLeft); tick=setInterval(()=>{ timeLeft--; els.timeLeft.textContent=String(timeLeft); if(timeLeft<=0){ clearInterval(tick); reveal(false,"Time's up!"); } },1000); }
 
       function nextQuestion(){ answered=false; els.feedback.textContent=''; els.hintBtn.classList.remove('hint'); if(qIndex>=totalQ){ finish(); return; } current=queue[qIndex]; qIndex++; updateHUD(); els.question.textContent=countryQuiz()?'What is the country?':`What is the capital of ${current.country}?`; mode=els.mode.value; timerPerQ=parseInt(els.timer.value||'0',10)||0; startTimer(); els.easyUI.hidden = mode!=='easy'; els.typeUI.hidden = (mode==='easy'); if(countryQuiz()||els.mapMode.value==='always'){ showMap(current,false); } else { hideMap(); } if(mode==='easy'){ renderChoices(); } else { els.input.value=''; els.input.focus(); renderSuggestions(); } }
 
       function renderChoices(){
+        const random=challengeRandom();
         // Build a 4-option set: exactly 1 correct + 3 unique distractors (not any alias of current)
         const region=els.region.value;
         const same=(region==='All')?eligibleData():eligibleData().filter(d=>d.region===current.region);
@@ -346,7 +368,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
         const picked = new Set();
         const distractors=[];
         while(distractors.length<3 && distractPool.length){
-          const c = distractPool.splice(Math.floor(Math.random()*distractPool.length),1)[0];
+          const c = distractPool.splice(Math.floor(random()*distractPool.length),1)[0];
           const key = norm(c);
           if(!picked.has(key)) { picked.add(key); distractors.push(c); }
         }
@@ -356,7 +378,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
         }
         // Final options
         const options=[correct, ...distractors.slice(0,3)];
-        const shuffled = sample(options, options.length);
+        const shuffled=[...options]; for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
         els.easyUI.innerHTML='';
         shuffled.forEach(opt=>{
           const b=document.createElement('button'); b.className='answer'; b.textContent=opt;
@@ -370,8 +392,26 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
       function isCorrect(ans){ const a=norm(ans); return answersFor(current).some(c=>norm(c)===a); }
       function reveal(ok,msg){ if(answered||!current) return; answered=true; clearInterval(tick); const correct=answersFor(current)[0]; if(ok){ score++; streak++; els.feedback.innerHTML=`<span style="color:var(--ok);font-weight:600">Correct!</span>`;} else { streak=0; els.feedback.innerHTML=`<span style="color:var(--danger);font-weight:600">Wrong.</span> Correct is <b>${correct}</b>. ${msg?`<span style='color:var(--muted)'>${msg}</span>`:''}`;} pushRecent(current.country,countryQuiz()?'Country identification':correct,ok); if(els.mapMode.value==='reveal'){ showMap(current,true);} transition=setTimeout(()=>nextQuestion(),800); }
       function pushRecent(country,capital,ok){ const row=document.createElement('div'); row.className='row'; row.innerHTML=`<div><b>${country}</b><br><small>${capital}</small></div><div style="display:flex;align-items:center;gap:8px"><span class="chip" style="color:${ok?'#34d399':'#fb7185'}">${ok?'✓':'✕'}</span></div>`; els.recent.prepend(row); while(els.recent.children.length>20){ els.recent.lastChild.remove(); } }
-      function finish(){ current=null; clearInterval(tick); els.easyUI.hidden=true; els.typeUI.hidden=true; els.question.textContent='Great job!'; const pct=totalQ?Math.round((score/totalQ)*100):0; els.summary.hidden=false; els.summary.innerHTML=`<div class="panel" style="margin-top:8px"><h2 style="margin:6px 0 8px">Summary</h2><p>You answered <b>${score}</b> out of <b>${totalQ}</b> correctly (<b>${pct}%</b>).</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="playAgainBtn">Play Again</button><button class="btn-secondary" id="shareScoreBtn">Share</button></div></div>`; document.getElementById('playAgainBtn').addEventListener('click',startGame); document.getElementById('shareScoreBtn').addEventListener('click',()=>shareScore(score,totalQ)); }
-      function shareScore(s,t){ const text=`I scored ${s}/${t} on the ${countryQuiz()?'World Country Quiz':'World Capital Quiz'}! Can you beat me?`; if(navigator.share){ navigator.share({text}); } else { navigator.clipboard.writeText(text); alert('Copied to clipboard!'); } }
+      function finish(){ current=null; clearInterval(tick); els.easyUI.hidden=true; els.typeUI.hidden=true; els.question.textContent='Great job!'; const pct=totalQ?Math.round((score/totalQ)*100):0; els.summary.hidden=false; els.summary.innerHTML=`<div class="panel" style="margin-top:8px"><h2 style="margin:6px 0 8px">Summary</h2><p>Challenge a friend to these same questions, or use Reset to change your quiz settings.</p><p>You answered <b>${score}</b> out of <b>${totalQ}</b> correctly (<b>${pct}%</b>).</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="playAgainBtn">Play Again</button><button class="btn-secondary" id="shareScoreBtn">Challenge a friend</button><button class="btn-secondary" id="copyScoreBtn">Copy result</button><a class="btn-secondary" id="emailScoreLink">Email result</a></div><p id="shareStatus" role="status" aria-live="polite"></p><textarea id="shareFallback" aria-label="Result to copy" readonly hidden style="width:100%;min-height:100px"></textarea></div>`; document.getElementById('playAgainBtn').addEventListener('click',startGame); const result=scoreShareData(score,totalQ); document.getElementById('shareScoreBtn').addEventListener('click',()=>shareScore(result)); document.getElementById('copyScoreBtn').addEventListener('click',()=>copyScore(result)); document.getElementById('emailScoreLink').href='mailto:?subject='+encodeURIComponent(result.title)+'&body='+encodeURIComponent(result.text+'\n'+result.url); }
+      function scoreShareData(s,t){
+        const title=roundChallenge.quiz==='country'?'World Country Quiz':'World Capital Quiz';
+        const settings=roundChallenge.settings;
+        const difficulty={easy:'Multiple choice',medium:'Typing with suggestions',hard:'Typing without help'}[settings.mode];
+        const region=settings.region==='All'?'All regions':settings.region;
+        const scope=roundChallenge.territories?'Territories included':'Countries only';
+        return {title,text:`I scored ${s}/${t} (${t?Math.round(s/t*100):0}%) on the ${title}!\n${difficulty} · ${region} · ${scope}\nTry the same questions—can you beat my score?`,url:'https://brianbays.com/world-capitals-quiz/#challenge='+encodeURIComponent(JSON.stringify(roundChallenge))};
+      }
+      async function copyScore(result){
+        const text=result.text+'\n'+result.url;
+        const status=document.getElementById('shareStatus');
+        try { if(!navigator.clipboard?.writeText) throw Error('Clipboard unavailable'); await navigator.clipboard.writeText(text); status.textContent='Result and game link copied!'; }
+        catch { const field=document.getElementById('shareFallback'); field.hidden=false; field.value=text; field.focus(); field.select(); status.textContent='Select and copy your result below, or choose Email result.'; }
+      }
+      async function shareScore(result){
+        if(!navigator.share){ await copyScore(result); return; }
+        try { await navigator.share(result); }
+        catch(error){ if(error.name==='AbortError') return; document.getElementById('shareStatus').textContent='Sharing is unavailable. Choose Copy result or Email result.'; }
+      }
 
       // ===== Events =====
       els.mode.addEventListener('change',()=>{
@@ -413,7 +453,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
       function startGame(){ clearTimeout(transition); clearInterval(tick); answered=false; if(!DATA.length){ els.question.textContent='Country data is unavailable. Please reload the page.'; return; } setupQueue(); nextQuestion(); }
       els.startBtn.addEventListener('click',startGame);
       els.resetBtn.addEventListener('click',()=>{
-        clearTimeout(transition); answered=false;
+        clearTimeout(transition); answered=false; incomingChallenge=null; roundChallenge=null; lockSettings(false); if(location.hash.startsWith('#challenge=')) history.replaceState(null,'',location.pathname+location.search);
         // Soft reset: avoid full reload (prevents white screen in preview iframes)
         try{ localStorage.removeItem('wg_caps_v1'); }catch{}
         clearInterval(tick);
@@ -433,7 +473,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
 
       // ===== Kickoff =====
 
-      try { await loadData(); }
+      try { await loadData(); readChallenge(); }
       catch(error) {
         console.error('Country data could not load', error);
         els.question.textContent='Country data could not load. Please reload the page.';
