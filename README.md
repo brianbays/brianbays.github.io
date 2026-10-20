@@ -46,3 +46,8 @@ Awards, audience metrics, and unverified credits have been omitted. The work is 
 ## Domain
 
 The custom domain is **brianbays.com**, registered at Porkbun and connected to GitHub Pages. Domain ownership is verified in Brian's GitHub account. See [DOMAIN.md](DOMAIN.md) for the saved DNS configuration and maintenance instructions.
+
+## Playground and geography quiz
+
+The footer links to the games hub in site/playground/. The quiz and study key live in site/world-capitals-quiz/. These are maintained static files; the portfolio builder preserves them. See UPLOAD-README.txt for upload paths. The site checker includes both nested pages and verifies the quiz's 197-country / 245-entry configuration.
+
