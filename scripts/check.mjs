@@ -12,3 +12,4 @@ console.log(`Passed: ${files.length} HTML pages, ${links} internal links/assets,
 const states=JSON.parse(quiz.match(/US_DATA = (\[[^\n]+);/)[1]);const shapes=JSON.parse(quiz.match(/US_SHAPES = (\[[^\n]+);/)[1]);if(states.length!==50||new Set(states.map(s=>s.country)).size!==50||states.some(s=>!s.capitals.length||!shapes.find(p=>p.country===s.country)?.d)||shapes.length!==50)throw Error('U.S. data or map coverage changed');for(const type of ['capital','country','states','state-capitals'])if(!quiz.includes('value="'+type+'"'))throw Error('Missing quiz type '+type);console.log('Passed: 50 U.S. states, capitals, map shapes, and all four quiz options.');
 
 const {execFileSync}=await import('node:child_process');execFileSync(process.execPath,[resolve(root,'../scripts/check-quiz.cjs'),join(root,'world-capitals-quiz/index.html')],{stdio:'inherit'});
+execFileSync(process.execPath,[resolve(root,'../scripts/check-prayer.cjs')],{stdio:'inherit'});

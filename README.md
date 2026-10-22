@@ -56,3 +56,5 @@ The live /world-capitals-quiz/ URL is served by the separate brianbays/world-cap
 
 
 The quiz selector also includes U.S. States and U.S. State Capitals (50 states), with map outlines reused from the Where on Earth? prototype. Playground has direct mode links. State challenge links use a separate data fingerprint, preserving existing world challenges. The main check runs geography and challenge regression checks. Publish synchronized quiz files to the project-site repository as well, because it owns the live route.
+
+Prayer Pending submits only the request text to the public Formspree endpoint in site/prayer-pending/inbox.js. Read submissions privately in Formspree; disable its Email workflow action if only dashboard access is wanted. No Formspree credentials belong in the repository. The page discloses storage before submission and retains the comedy response if delivery fails. The free inbox has monthly submission and retention limits; review the Formspree plan before relying on it as a permanent archive.
