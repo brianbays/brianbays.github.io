@@ -1,0 +1,3 @@
+U.S. state outlines: PublicaMundi MappingAPI us-states.json (GeoJSON), retrieved October 21, 2026.
+https://github.com/PublicaMundi/MappingAPI/blob/master/data/geojson/us-states.json
+Alaska and Hawaii are displayed as scaled insets. Includes 50 states; excludes Washington, D.C. and territories.

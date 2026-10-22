@@ -54,3 +54,5 @@ The footer links to the games hub in site/playground/. The quiz and study key li
 
 The live /world-capitals-quiz/ URL is served by the separate brianbays/world-capitals-quiz project site. Update that repository when publishing quiz changes; its route takes precedence over the fallback files here.
 
+
+The quiz selector also includes U.S. States and U.S. State Capitals (50 states), with map outlines reused from the Where on Earth? prototype. Playground has direct mode links. State challenge links use a separate data fingerprint, preserving existing world challenges. The main check runs geography and challenge regression checks. Publish synchronized quiz files to the project-site repository as well, because it owns the live route.
