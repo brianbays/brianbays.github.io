@@ -13,3 +13,4 @@ const states=JSON.parse(quiz.match(/US_DATA = (\[[^\n]+);/)[1]);const shapes=JSO
 
 const {execFileSync}=await import('node:child_process');execFileSync(process.execPath,[resolve(root,'../scripts/check-quiz.cjs'),join(root,'world-capitals-quiz/index.html')],{stdio:'inherit'});
 execFileSync(process.execPath,[resolve(root,'../scripts/check-prayer.cjs')],{stdio:'inherit'});
+new Script(readFileSync(join(root,'prayer-pending/community.js'),'utf8'));
