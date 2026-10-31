@@ -349,8 +349,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
       function updateFindSettings(){
         const option=els.mode.querySelector('[value="find"]');option.hidden=option.disabled=!countryQuiz();
         if(!countryQuiz()&&els.mode.value==='find')els.mode.value='easy';
-        if(findMode())els.region.value='All';
-        els.region.closest('.control').hidden=isUS()||findMode();
+        els.region.closest('.control').hidden=isUS();
         els.mapZoom.closest('.control').hidden=isUS()||findMode();
         els.mapMode.closest('.control').hidden=findMode();
       }
@@ -407,7 +406,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
           if(c.v!==1||c.data!==dataVersion(c.quiz)||!['capital','country','states','state-capitals'].includes(c.quiz)||typeof c.territories!=='boolean'||!Number.isInteger(c.seed)||c.seed<0||c.seed>4294967295||!Array.isArray(c.questions)||!c.questions.length||c.questions.length>dataFor(c.quiz).length||new Set(c.questions).size!==c.questions.length) throw Error();
           for(const k of settingKeys){const val=c.settings[k];if(typeof val!=='string')throw Error();const el=els[k];if(el.tagName==='SELECT'&&![...el.options].some(o=>o.value===val))throw Error();}
           if(!/^\d+$/.test(c.settings.timer)||+c.settings.timer>120||!/^\d+$/.test(c.settings.mapZoom)||+c.settings.mapZoom<2||+c.settings.mapZoom>8)throw Error();
-          if(c.settings.mode==='find'&&(!['country','states'].includes(c.quiz)||c.settings.region!=='All'))throw Error();
+          if(c.settings.mode==='find'&&!['country','states'].includes(c.quiz))throw Error();
           const challengeData=dataFor(c.quiz);
           if(isUS(c.quiz)&&(c.territories||c.settings.region!=='All'))throw Error();
           if(c.questions.some(i=>!Number.isInteger(i)||!challengeData[i]||(!c.territories&&challengeData[i].isTerritory)||(c.settings.region!=='All'&&challengeData[i].region!==c.settings.region)))throw Error();
@@ -418,7 +417,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
         } catch { els.question.textContent='This challenge link is invalid or out of date. Start a new quiz instead.'; }
       }
       // ===== Game logic =====
-      function setupQueue(){ if(findMode())els.region.value='All';const region=els.region.value; const pool=region==='All'?eligibleData():eligibleData().filter(d=>d.region===region); const want=els.count.value==='all'?pool.length:parseInt(els.count.value,10); queue=sample(pool,want); if(incomingChallenge) queue=incomingChallenge.questions.map(i=>dataFor()[i]); roundChallenge=incomingChallenge||captureChallenge(); lockSettings(true); totalQ=queue.length; qIndex=0; score=0; streak=0; current=null; updateHUD(); els.summary.hidden=true; }
+      function setupQueue(){ const region=els.region.value; const pool=region==='All'?eligibleData():eligibleData().filter(d=>d.region===region); const want=els.count.value==='all'?pool.length:parseInt(els.count.value,10); queue=sample(pool,want); if(incomingChallenge) queue=incomingChallenge.questions.map(i=>dataFor()[i]); roundChallenge=incomingChallenge||captureChallenge(); lockSettings(true); totalQ=queue.length; qIndex=0; score=0; streak=0; current=null; updateHUD(); els.summary.hidden=true; }
       function updateHUD(){ els.score.textContent=String(score); els.qnum.textContent=String(Math.min(qIndex,totalQ)); els.qtotal.textContent=String(totalQ); els.streak.textContent=String(streak); els.bar.style.width=(totalQ?(qIndex/totalQ)*100:0)+'%'; }
       function startTimer(){ clearInterval(tick); if(timerPerQ<=0){ els.timeChip.style.display='none'; return; } els.timeChip.style.display='inline-flex'; timeLeft=timerPerQ; els.timeLeft.textContent=String(timeLeft); tick=setInterval(()=>{ timeLeft--; els.timeLeft.textContent=String(timeLeft); if(timeLeft<=0){ clearInterval(tick); reveal(false,"Time's up!"); } },1000); }
 

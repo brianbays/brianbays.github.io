@@ -29,10 +29,10 @@ console.log('PASS: U.S. challenge datasets, titles, replay and bounds');
 
 // Find it challenges replay the same places and cannot be used for capitals.
 for(const type of ['country','states']){
- ctx.quizType.value=type;els.mode.value='find';els.region.value='Europe';ctx.location.search='';ctx.location.hash='';ctx.eligibleData=()=>type==='states'?ctx.US_DATA:data.filter(d=>!d.isTerritory);
- vm.runInContext('incomingChallenge=null;setupQueue()',ctx);assert.equal(els.region.value,'All');
- const original=vm.runInContext('JSON.stringify(roundChallenge)',ctx),shared=vm.runInContext('scoreShareData(5,10)',ctx);assert(shared.text.includes('Find it on the map'));
+ ctx.quizType.value=type;els.mode.value='find';els.region.value=type==='states'?'All':'Europe';ctx.location.search='';ctx.location.hash='';ctx.eligibleData=()=>type==='states'?ctx.US_DATA:data.filter(d=>!d.isTerritory);
+ vm.runInContext('incomingChallenge=null;setupQueue()',ctx);assert.equal(els.region.value,type==='states'?'All':'Europe');if(type==='country')assert(vm.runInContext("queue.every(d=>d.region==='Europe')",ctx));
+ const original=vm.runInContext('JSON.stringify(roundChallenge)',ctx),shared=vm.runInContext('scoreShareData(5,10)',ctx);assert(shared.text.includes('Find it on the map'));if(type==='country')assert(shared.text.includes('Europe'));
  ctx.location.search=new URL(shared.url).search;vm.runInContext('incomingChallenge=null;readChallenge();setupQueue()',ctx);assert.equal(vm.runInContext('JSON.stringify(roundChallenge)',ctx),original);
  const bad=JSON.parse(original);bad.quiz=type==='states'?'state-capitals':'capital';ctx.location.search='';ctx.location.hash='#challenge='+encodeURIComponent(JSON.stringify(bad));vm.runInContext('incomingChallenge=null;readChallenge()',ctx);assert.equal(vm.runInContext('incomingChallenge',ctx),null);
 }
-console.log('PASS: Find it all-region scope, challenge replay and capital-mode rejection');
+console.log('PASS: Find it selected-region scope, challenge replay and capital-mode rejection');
