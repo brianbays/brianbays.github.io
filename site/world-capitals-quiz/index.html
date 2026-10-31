@@ -290,14 +290,15 @@ function mountInteractiveMap(host,shapes,center,defaultZoom,inset,onPick){
   if(inset){const detail=document.createElement('div');detail.className='island-inset';detail.innerHTML='<span>Location close-up</span><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Detailed close-up of the marked capital location" viewBox="'+inset.join(' ')+'"><use href="#map-land"/><circle cx="'+(center[1]+180)+'" cy="'+(90-center[0])+'" r="'+(inset[2]*.018)+'" fill="#171916" stroke="white" stroke-width="'+(inset[2]*.006)+'"/></svg>';host.appendChild(detail);}
   if(inset){const locator=document.createElement('div');locator.className='locator-map';locator.innerHTML='<span>World location</span><svg viewBox="0 0 360 180" aria-label="World overview showing the question location"><use href="#map-land"/><circle cx="'+(center[1]+180)+'" cy="'+(90-center[0])+'" r="6" fill="#ffe386" stroke="#171916" stroke-width="2"/></svg>';host.appendChild(locator);}
   const svg=host.querySelector('svg'),dot=svg.querySelector('.capital-marker');
+  const wrapWorld=!!onPick&&!host.classList.contains("us-map");
   const pointers=new Map();let view,disposed=false,tapStart=null,tapMoved=false;
   if(onPick){dot.style.display="none";svg.setAttribute("role","group");svg.setAttribute("aria-label","Choose a place on the map. Drag or pinch to explore. Use Tab and Enter to select an unlabelled place.");}
   const pick=el=>{if(onPick&&el?.dataset.pick)onPick(el.dataset.pick);};
   const size=()=>{const r=svg.getBoundingClientRect();return {width:Math.max(1,r.width),height:Math.max(1,r.height),left:r.left,top:r.top}};
-  const draw=v=>{view=v;svg.setAttribute('viewBox',[v.x,v.y,v.w,v.h].join(' ')); const unit=v.w/size().width;dot.setAttribute('r',6*unit);dot.setAttribute('stroke-width',2*unit)};
+  const draw=v=>{if(wrapWorld){const cx=((v.x+v.w/2)%360+360)%360;v={...v,x:cx-v.w/2};}view=v;svg.setAttribute('viewBox',[v.x,v.y,v.w,v.h].join(' ')); const unit=v.w/size().width;dot.setAttribute('r',6*unit);dot.setAttribute('stroke-width',2*unit);svg.querySelectorAll('.small-place-marker').forEach(p=>{p.setAttribute('r',7*unit);p.setAttribute('stroke-width',1.5*unit);});};
   const reset=()=>{const s=size();if(onPick){const w=Math.max(360,180*s.width/s.height),h=w*s.height/s.width;draw({x:(360-w)/2,y:(180-h)/2,w,h});return;}draw(mapView(center[1]+180,90-center[0],Math.pow(1.35,defaultZoom-2),s.width,s.height));};
-  const zoom=(factor,fx=.5,fy=.5)=>{const s=size();draw(zoomMapView(view,factor,fx,fy,s.width,s.height));};
-  const pan=(dx,dy)=>{const s=size();const scale=Math.min(360,180*s.width/s.height)/view.w;draw(mapView(view.x+view.w/2-dx*view.w/s.width,view.y+view.h/2-dy*view.h/s.height,scale,s.width,s.height));};
+  const zoom=(factor,fx=.5,fy=.5)=>{const s=size();if(wrapWorld){const maxW=Math.max(360,180*s.width/s.height),w=Math.max(.75,Math.min(maxW,view.w/factor)),h=w*s.height/s.width;draw({x:view.x+fx*(view.w-w),y:Math.max(-h/2,Math.min(180-h/2,view.y+fy*(view.h-h))),w,h});return;}draw(zoomMapView(view,factor,fx,fy,s.width,s.height));};
+  const pan=(dx,dy)=>{const s=size();if(wrapWorld){draw({...view,x:view.x-dx*view.w/s.width,y:Math.max(-view.h/2,Math.min(180-view.h/2,view.y-dy*view.h/s.height))});return;}const scale=Math.min(360,180*s.width/s.height)/view.w;draw(mapView(view.x+view.w/2-dx*view.w/s.width,view.y+view.h/2-dy*view.h/s.height,scale,s.width,s.height));};
   host.querySelector('[data-map="in"]').onclick=()=>zoom(1.4);
   host.querySelector('[data-map="out"]').onclick=()=>zoom(1/1.4);
   host.querySelector('[data-map="reset"]').onclick=reset;
@@ -305,12 +306,17 @@ function mountInteractiveMap(host,shapes,center,defaultZoom,inset,onPick){
   const gesture=()=>{const p=[...pointers.values()]; if(p.length<2)return {x:p[0].x,y:p[0].y,d:0}; return {x:(p[0].x+p[1].x)/2,y:(p[0].y+p[1].y)/2,d:Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)}};
   svg.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return; tapStart={x:e.clientX,y:e.clientY};tapMoved=pointers.size>0;if(pointers.size)tapStart=null;e.preventDefault();svg.focus({preventScroll:true});svg.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});svg.style.cursor='grabbing';});
   svg.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;if(tapStart&&Math.hypot(e.clientX-tapStart.x,e.clientY-tapStart.y)>7)tapMoved=true;const before=gesture();pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});const after=gesture();if(before.d>0&&after.d>0){const s=size();zoom(after.d/before.d,(before.x-s.left)/s.width,(before.y-s.top)/s.height);}pan(after.x-before.x,after.y-before.y);});
-  const release=e=>{if(e.type==='pointerup'&&tapStart&&!tapMoved&&pointers.size===1)pick(document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-pick]'));tapStart=null;pointers.delete(e.pointerId);if(!pointers.size)svg.style.cursor='grab';};
+  function pickAt(e){
+    const near=[...svg.querySelectorAll('.small-place-marker')].map(el=>{const b=el.getBoundingClientRect();return {el,d:Math.hypot(e.clientX-b.x-b.width/2,e.clientY-b.y-b.height/2)};}).filter(x=>x.d<=22).sort((a,b)=>a.d-b.d);
+    if(near.length){if(near[1]&&near[0].el.dataset.pick!==near[1].el.dataset.pick&&near[1].d-near[0].d<6){onPick(null);document.getElementById('findSelection').textContent='These places are close together. Zoom in, then tap again.';return;}pick(near[0].el);return;}
+    pick(document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-pick]'));
+  }
+  const release=e=>{if(e.type==='pointerup'&&tapStart&&!tapMoved&&pointers.size===1)pickAt(e);tapStart=null;pointers.delete(e.pointerId);if(!pointers.size)svg.style.cursor='grab';};
   ['pointerup','pointercancel','lostpointercapture'].forEach(n=>svg.addEventListener(n,release));
   svg.addEventListener('keydown',e=>{if(onPick&&['Enter',' '].includes(e.key)&&e.target.dataset.pick){e.preventDefault();pick(e.target);return;}const moves={ArrowLeft:[60,0],ArrowRight:[-60,0],ArrowUp:[0,60],ArrowDown:[0,-60]};if(moves[e.key]){e.preventDefault();pan(...moves[e.key]);}else if(['+','=','-','Home'].includes(e.key)){e.preventDefault();if(e.key==='Home')reset();else zoom(e.key==='-'?1/1.4:1.4);}});
   let last=size();reset();
   const observer=new ResizeObserver(()=>{if(disposed)return;const s=size();if(s.width===last.width&&s.height===last.height)return;if(onPick){const cx=view.x+view.w/2,cy=view.y+view.h/2,w=Math.max(view.w,view.h*s.width/s.height),h=w*s.height/s.width;draw({x:cx-w/2,y:cy-h/2,w,h});last=s;return;}const scale=Math.min(360,180*last.width/last.height)/view.w;draw(mapView(view.x+view.w/2,view.y+view.h/2,scale,s.width,s.height));last=s;});observer.observe(host);
-  return ()=>{disposed=true;observer.disconnect();pointers.clear();};
+  const dispose=()=>{disposed=true;observer.disconnect();pointers.clear();};dispose.refresh=()=>draw(view);return dispose;
 }
 if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
 
@@ -357,15 +363,21 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
         if(disposeMap)disposeMap();els.mapPanel.querySelectorAll('.map-caption').forEach(e=>e.remove());
         els.mapPanel.hidden=false;els.mapEl.style.height=isUS()?'auto':'';els.mapEl.classList.toggle('us-map',isUS());els.mapEl.classList.remove('answer-reveal');
         let shapes=isUS()?US_SHAPES.map(x=>'<path data-state="'+x.country+'" d="'+x.d+'" fill="#c3ce9d" stroke="#171916" stroke-width=".7" vector-effect="non-scaling-stroke"/>').join(''):WORLD_SHAPES;
-        const select=name=>{if(answered||!current)return;findSelection=name;els.mapEl.querySelectorAll('[data-pick]').forEach(p=>p.dataset.picked=String(p.dataset.pick===name));document.getElementById('findSelection').textContent='Selection marked. Change it or lock it in.';document.getElementById('lockFind').disabled=false;};
+        const select=name=>{if(answered||!current)return;findSelection=name;els.mapEl.querySelectorAll('[data-pick]').forEach(p=>p.dataset.picked=String(p.dataset.pick===name));document.getElementById('findSelection').textContent='Selection marked. Change it or lock it in.';document.getElementById('lockFind').disabled=!name;};
         disposeMap=mountInteractiveMap(els.mapEl,shapes,[0,0],2,null,select);
         const svg=els.mapEl.querySelector('svg');
         dataFor().forEach(d=>{
           const nodes=[...svg.querySelectorAll(isUS()?'path[data-state]':'path[data-country]')].filter(p=>isUS()?p.dataset.state===d.country:p.dataset.country===COUNTRY_CODES[d.country]);
-          // Tiny places without a polygon still get a neutral, selectable location.
-          if(!nodes.length&&d.capCenter){const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',d.capCenter[1]+180);dot.setAttribute('cy',90-d.capCenter[0]);dot.setAttribute('r','.18');dot.setAttribute('fill','#c3ce9d');svg.append(dot);nodes.push(dot);}
+          // Neutral screen-sized markers make every small place selectable, not only the answer.
+          if(!isUS()&&d.capCenter&&(!nodes.length||d.area<30000)){const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',d.capCenter[1]+180);dot.setAttribute('cy',90-d.capCenter[0]);dot.setAttribute('fill','#c3ce9d');dot.setAttribute('stroke','#171916');dot.setAttribute('class','small-place-marker');svg.querySelector('#map-land').append(dot);nodes.push(dot);}
           nodes.forEach(p=>{p.dataset.pick=d.country;p.setAttribute('tabindex','0');p.setAttribute('role','button');p.setAttribute('aria-label','Select this '+(isUS()?'state':'place'));});
         });
+        if(!isUS()){
+          const land=svg.querySelector('#map-land');
+          for(const shift of [-360,360]){const copy=land.cloneNode(true);copy.removeAttribute('id');copy.setAttribute('transform','translate('+shift+' 0)');land.before(copy);}
+        }
+        disposeMap.refresh();
+        const caption=document.createElement('div');caption.className='map-caption';caption.textContent=isUS()?'Tap a state, then lock it in.':'Small-place circles have larger touch targets. Zoom in where circles are crowded. Pan across the Pacific in either direction.';els.mapPanel.append(caption);
       }
       document.getElementById('lockFind').onclick=()=>{if(!findMode()||!findSelection||answered||!current)return;reveal(findSelection===current.country);};
       function updateScope(){
