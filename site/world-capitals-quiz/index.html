@@ -70,7 +70,9 @@
     .island-inset{position:absolute;left:10px;bottom:10px;width:210px;background:#20231e;border:2px solid #f1eee5;border-radius:8px;overflow:hidden;pointer-events:none;box-shadow:0 3px 18px #0006}
     .island-inset span{display:block;font-size:11px;color:#f1eee5;padding:5px 8px}.island-inset svg{display:block;width:100%;aspect-ratio:1/.68;background:#638f92}
     @media(max-width:600px){.island-inset{width:140px}.map-tools{right:6px;top:6px;gap:4px}.map-tools button{padding:6px 9px}}
-  [hidden]{display:none!important}details{margin:16px 0}summary{cursor:pointer;color:var(--accent);padding:12px 0}.answer-reveal path[data-correct="true"]{fill:#ffe386;stroke:#171916;stroke-width:2}.answer-reveal .capital-marker{fill:#ffe386;animation:location-pulse .7s ease-in-out 3}@keyframes location-pulse{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){.answer-reveal .capital-marker{animation:none}}.map-caption{padding:10px 4px;font-weight:600}.locator-map{position:absolute;right:10px;bottom:10px;width:140px;max-width:32%;background:#638f92;border:2px solid white;border-radius:8px;pointer-events:none}.locator-map span{display:block;background:#171916;color:white;font-size:11px;text-align:center}.locator-map svg{display:block;width:100%}#nextQuestionBtn{margin:10px 0}#emailScoreLink{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none}.us-map .map-tools{position:static;display:flex;justify-content:flex-end;padding:6px}.us-map>svg{aspect-ratio:2 / 1;height:auto!important}</style>
+  [hidden]{display:none!important}details{margin:16px 0}summary{cursor:pointer;color:var(--accent);padding:12px 0}.answer-reveal path[data-correct="true"]{fill:#ffe386;stroke:#171916;stroke-width:2}.answer-reveal .capital-marker{fill:#ffe386;animation:location-pulse .7s ease-in-out 3}@keyframes location-pulse{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){.answer-reveal .capital-marker{animation:none}}.map-caption{padding:10px 4px;font-weight:600}.locator-map{position:absolute;right:10px;bottom:10px;width:140px;max-width:32%;background:#638f92;border:2px solid white;border-radius:8px;pointer-events:none}.locator-map span{display:block;background:#171916;color:white;font-size:11px;text-align:center}.locator-map svg{display:block;width:100%}#nextQuestionBtn{margin:10px 0}#emailScoreLink{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none}.us-map .map-tools{position:static;display:flex;justify-content:flex-end;padding:6px}.us-map>svg{aspect-ratio:2 / 1;height:auto!important}
+#map [data-pick]{cursor:pointer}#map [data-picked="true"]{fill:#d8a06d!important;stroke:#171916;stroke-width:2;vector-effect:non-scaling-stroke}#map [data-pick]:focus-visible{stroke:#fff;stroke-width:3;outline:none}#findUI{margin:12px 0}
+</style>
 </head>
 <body>
   <div class="wrap"><a class="playground-back" href="/playground/">← Brian Bays / Playground</a>
@@ -91,6 +93,7 @@
           <option value="easy">Easy – Multiple Choice</option>
           <option value="medium">Medium – Type with Suggestions</option>
           <option value="hard">Hard – Type with No Help</option>
+          <option value="find" hidden disabled>Find it – Tap the map</option>
         </select>
       </div>
       <div class="control">
@@ -144,6 +147,7 @@
         <div class="progress" aria-hidden="true"><div class="bar" id="bar"></div></div>
         <div class="question" id="question">Click Start to begin!</div>
 
+        <div id="findUI" hidden><p id="findSelection" aria-live="polite">Tap a place on the map, then lock it in.</p><button id="lockFind" disabled>Lock it in</button></div>
         <div id="easyUI" class="answers" hidden></div>
 
         <div id="typeUI" hidden>
@@ -171,7 +175,7 @@
           <h3 style="margin:4px 0 10px">Recent Results</h3>
           <div class="list" id="recent"></div>
           <footer>
-            Built with bundled country data from <a href="https://github.com/mledoze/countries">mledoze/countries</a> (ODbL). Case &amp; accent-insensitive matching. No tracking. Dots mark the primary capital or administrative center listed in the study key. Drag to move; pinch or scroll to zoom. Reset view returns to the dot. In World Country Quiz, identify the country or territory containing the dot. Capital coordinates: <a href="https://www.geonames.org/">GeoNames</a> (<a href="./CAPITAL-COORDINATES-LICENSE.txt">CC BY 4.0</a>). U.S. modes cover 50 states; Alaska and Hawaii are scaled insets. <a href="./STATES-MAP-SOURCE.txt">U.S. map source</a>. Map boundaries: Natural Earth (public domain), via <a href="https://github.com/datasets/geo-countries">geo-countries</a>.
+            Built with bundled country data from <a href="https://github.com/mledoze/countries">mledoze/countries</a> (ODbL). Case &amp; accent-insensitive matching. No tracking. Dots mark the primary capital or administrative center listed in the study key. Drag to move; pinch or scroll to zoom. Reset view returns to the dot. In World Country Quiz, identify the country or territory containing the dot. In Find it, locate the named place on an unmarked map, tap to select, then Lock it in. You can change your selection before confirming. Capital coordinates: <a href="https://www.geonames.org/">GeoNames</a> (<a href="./CAPITAL-COORDINATES-LICENSE.txt">CC BY 4.0</a>). U.S. modes cover 50 states; Alaska and Hawaii are scaled insets. <a href="./STATES-MAP-SOURCE.txt">U.S. map source</a>. Map boundaries: Natural Earth (public domain), via <a href="https://github.com/datasets/geo-countries">geo-countries</a>.
           </footer>
         </div>
       </aside>
@@ -280,16 +284,18 @@ function zoomMapView(view,factor,fx,fy,width,height){
   const next=mapView(180,90,scale,width,height);
   return mapView(view.x+fx*view.w+(0.5-fx)*next.w,view.y+fy*view.h+(0.5-fy)*next.h,scale,width,height);
 }
-function mountInteractiveMap(host,shapes,center,defaultZoom,inset){
+function mountInteractiveMap(host,shapes,center,defaultZoom,inset,onPick){
   host.innerHTML='<div class="map-tools" role="group" aria-label="Map controls"><button type="button" data-map="in" aria-label="Zoom in">+</button><button type="button" data-map="out" aria-label="Zoom out">−</button><button type="button" data-map="reset">Reset view</button></div><svg xmlns="http://www.w3.org/2000/svg" tabindex="0" role="img" aria-label="Map with capital location marker. Drag to pan, pinch or scroll to zoom. Arrow keys move; plus and minus zoom; Home resets." style="display:block;width:100%;height:100%;background:#638f92;touch-action:none;cursor:grab">'+'<g id="map-land">'+shapes+'</g><circle class="capital-marker" cx="'+(center[1]+180)+'" cy="'+(90-center[0])+'" fill="#171916" stroke="white"/></svg>';
 
   if(inset){const detail=document.createElement('div');detail.className='island-inset';detail.innerHTML='<span>Location close-up</span><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Detailed close-up of the marked capital location" viewBox="'+inset.join(' ')+'"><use href="#map-land"/><circle cx="'+(center[1]+180)+'" cy="'+(90-center[0])+'" r="'+(inset[2]*.018)+'" fill="#171916" stroke="white" stroke-width="'+(inset[2]*.006)+'"/></svg>';host.appendChild(detail);}
   if(inset){const locator=document.createElement('div');locator.className='locator-map';locator.innerHTML='<span>World location</span><svg viewBox="0 0 360 180" aria-label="World overview showing the question location"><use href="#map-land"/><circle cx="'+(center[1]+180)+'" cy="'+(90-center[0])+'" r="6" fill="#ffe386" stroke="#171916" stroke-width="2"/></svg>';host.appendChild(locator);}
   const svg=host.querySelector('svg'),dot=svg.querySelector('.capital-marker');
-  const pointers=new Map();let view,disposed=false;
+  const pointers=new Map();let view,disposed=false,tapStart=null,tapMoved=false;
+  if(onPick){dot.style.display="none";svg.setAttribute("role","group");svg.setAttribute("aria-label","Choose a place on the map. Drag or pinch to explore. Use Tab and Enter to select an unlabelled place.");}
+  const pick=el=>{if(onPick&&el?.dataset.pick)onPick(el.dataset.pick);};
   const size=()=>{const r=svg.getBoundingClientRect();return {width:Math.max(1,r.width),height:Math.max(1,r.height),left:r.left,top:r.top}};
   const draw=v=>{view=v;svg.setAttribute('viewBox',[v.x,v.y,v.w,v.h].join(' ')); const unit=v.w/size().width;dot.setAttribute('r',6*unit);dot.setAttribute('stroke-width',2*unit)};
-  const reset=()=>{const s=size();draw(mapView(center[1]+180,90-center[0],Math.pow(1.35,defaultZoom-2),s.width,s.height));};
+  const reset=()=>{const s=size();if(onPick){const w=Math.max(360,180*s.width/s.height),h=w*s.height/s.width;draw({x:(360-w)/2,y:(180-h)/2,w,h});return;}draw(mapView(center[1]+180,90-center[0],Math.pow(1.35,defaultZoom-2),s.width,s.height));};
   const zoom=(factor,fx=.5,fy=.5)=>{const s=size();draw(zoomMapView(view,factor,fx,fy,s.width,s.height));};
   const pan=(dx,dy)=>{const s=size();const scale=Math.min(360,180*s.width/s.height)/view.w;draw(mapView(view.x+view.w/2-dx*view.w/s.width,view.y+view.h/2-dy*view.h/s.height,scale,s.width,s.height));};
   host.querySelector('[data-map="in"]').onclick=()=>zoom(1.4);
@@ -297,13 +303,13 @@ function mountInteractiveMap(host,shapes,center,defaultZoom,inset){
   host.querySelector('[data-map="reset"]').onclick=reset;
   svg.addEventListener('wheel',e=>{e.preventDefault();const s=size();const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?s.height:1);zoom(Math.exp(-Math.max(-300,Math.min(300,delta))*.003),(e.clientX-s.left)/s.width,(e.clientY-s.top)/s.height);},{passive:false});
   const gesture=()=>{const p=[...pointers.values()]; if(p.length<2)return {x:p[0].x,y:p[0].y,d:0}; return {x:(p[0].x+p[1].x)/2,y:(p[0].y+p[1].y)/2,d:Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)}};
-  svg.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return; e.preventDefault();svg.focus({preventScroll:true});svg.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});svg.style.cursor='grabbing';});
-  svg.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;const before=gesture();pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});const after=gesture();if(before.d>0&&after.d>0){const s=size();zoom(after.d/before.d,(before.x-s.left)/s.width,(before.y-s.top)/s.height);}pan(after.x-before.x,after.y-before.y);});
-  const release=e=>{pointers.delete(e.pointerId);if(!pointers.size)svg.style.cursor='grab';};
+  svg.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return; tapStart={x:e.clientX,y:e.clientY};tapMoved=pointers.size>0;if(pointers.size)tapStart=null;e.preventDefault();svg.focus({preventScroll:true});svg.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});svg.style.cursor='grabbing';});
+  svg.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;if(tapStart&&Math.hypot(e.clientX-tapStart.x,e.clientY-tapStart.y)>7)tapMoved=true;const before=gesture();pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});const after=gesture();if(before.d>0&&after.d>0){const s=size();zoom(after.d/before.d,(before.x-s.left)/s.width,(before.y-s.top)/s.height);}pan(after.x-before.x,after.y-before.y);});
+  const release=e=>{if(e.type==='pointerup'&&tapStart&&!tapMoved&&pointers.size===1)pick(document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-pick]'));tapStart=null;pointers.delete(e.pointerId);if(!pointers.size)svg.style.cursor='grab';};
   ['pointerup','pointercancel','lostpointercapture'].forEach(n=>svg.addEventListener(n,release));
-  svg.addEventListener('keydown',e=>{const moves={ArrowLeft:[60,0],ArrowRight:[-60,0],ArrowUp:[0,60],ArrowDown:[0,-60]};if(moves[e.key]){e.preventDefault();pan(...moves[e.key]);}else if(['+','=','-','Home'].includes(e.key)){e.preventDefault();if(e.key==='Home')reset();else zoom(e.key==='-'?1/1.4:1.4);}});
+  svg.addEventListener('keydown',e=>{if(onPick&&['Enter',' '].includes(e.key)&&e.target.dataset.pick){e.preventDefault();pick(e.target);return;}const moves={ArrowLeft:[60,0],ArrowRight:[-60,0],ArrowUp:[0,60],ArrowDown:[0,-60]};if(moves[e.key]){e.preventDefault();pan(...moves[e.key]);}else if(['+','=','-','Home'].includes(e.key)){e.preventDefault();if(e.key==='Home')reset();else zoom(e.key==='-'?1/1.4:1.4);}});
   let last=size();reset();
-  const observer=new ResizeObserver(()=>{if(disposed)return;const s=size();if(s.width===last.width&&s.height===last.height)return;const scale=Math.min(360,180*last.width/last.height)/view.w;draw(mapView(view.x+view.w/2,view.y+view.h/2,scale,s.width,s.height));last=s;});observer.observe(host);
+  const observer=new ResizeObserver(()=>{if(disposed)return;const s=size();if(s.width===last.width&&s.height===last.height)return;if(onPick){const cx=view.x+view.w/2,cy=view.y+view.h/2,w=Math.max(view.w,view.h*s.width/s.height),h=w*s.height/s.width;draw({x:cx-w/2,y:cy-h/2,w,h});last=s;return;}const scale=Math.min(360,180*last.width/last.height)/view.w;draw(mapView(view.x+view.w/2,view.y+view.h/2,scale,s.width,s.height));last=s;});observer.observe(host);
   return ()=>{disposed=true;observer.disconnect();pointers.clear();};
 }
 if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
@@ -338,6 +344,31 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
       const dataFor=(type=quizType.value)=>isUS(type)?US_DATA:DATA;
       const quizTitle=(type=quizType.value)=>({'capital':'World Capital Quiz','country':'World Country Quiz','states':'U.S. States Quiz','state-capitals':'U.S. State Capitals Quiz'}[type]);
       const countryQuiz=()=>['country','states'].includes(quizType.value);
+      let findSelection=null;
+      const findMode=()=>countryQuiz()&&els.mode.value==='find';
+      function updateFindSettings(){
+        const option=els.mode.querySelector('[value="find"]');option.hidden=option.disabled=!countryQuiz();
+        if(!countryQuiz()&&els.mode.value==='find')els.mode.value='easy';
+        if(findMode())els.region.value='All';
+        els.region.closest('.control').hidden=isUS()||findMode();
+        els.mapZoom.closest('.control').hidden=isUS()||findMode();
+        els.mapMode.closest('.control').hidden=findMode();
+      }
+      function showFindMap(){
+        if(disposeMap)disposeMap();els.mapPanel.querySelectorAll('.map-caption').forEach(e=>e.remove());
+        els.mapPanel.hidden=false;els.mapEl.style.height=isUS()?'auto':'';els.mapEl.classList.toggle('us-map',isUS());els.mapEl.classList.remove('answer-reveal');
+        let shapes=isUS()?US_SHAPES.map(x=>'<path data-state="'+x.country+'" d="'+x.d+'" fill="#c3ce9d" stroke="#171916" stroke-width=".7" vector-effect="non-scaling-stroke"/>').join(''):WORLD_SHAPES;
+        const select=name=>{if(answered||!current)return;findSelection=name;els.mapEl.querySelectorAll('[data-pick]').forEach(p=>p.dataset.picked=String(p.dataset.pick===name));document.getElementById('findSelection').textContent='Selection marked. Change it or lock it in.';document.getElementById('lockFind').disabled=false;};
+        disposeMap=mountInteractiveMap(els.mapEl,shapes,[0,0],2,null,select);
+        const svg=els.mapEl.querySelector('svg');
+        dataFor().forEach(d=>{
+          const nodes=[...svg.querySelectorAll(isUS()?'path[data-state]':'path[data-country]')].filter(p=>isUS()?p.dataset.state===d.country:p.dataset.country===COUNTRY_CODES[d.country]);
+          // Tiny places without a polygon still get a neutral, selectable location.
+          if(!nodes.length&&d.capCenter){const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',d.capCenter[1]+180);dot.setAttribute('cy',90-d.capCenter[0]);dot.setAttribute('r','.18');dot.setAttribute('fill','#c3ce9d');svg.append(dot);nodes.push(dot);}
+          nodes.forEach(p=>{p.dataset.pick=d.country;p.setAttribute('tabindex','0');p.setAttribute('role','button');p.setAttribute('aria-label','Select this '+(isUS()?'state':'place'));});
+        });
+      }
+      document.getElementById('lockFind').onclick=()=>{if(!findMode()||!findSelection||answered||!current)return;reveal(findSelection===current.country);};
       function updateScope(){
         document.title=quizTitle();
         document.getElementById('studyKey').href='./answer-key.html'+(isUS()?'#us-states':'');
@@ -346,6 +377,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
         els.region.closest('.control').hidden=isUS();
         els.mapZoom.closest('.control').hidden=isUS();
         els.count.querySelector('[value="all"]').textContent=isUS()?'All 50 states':'All countries';
+        updateFindSettings();
         els.input.placeholder=countryQuiz()?(isUS()?'Type the state…':'Type the country or territory…'):'Type the capital…';
       }
       const answersFor=item=>countryQuiz()?[item.country]:item.capitals;
@@ -375,21 +407,22 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
           if(c.v!==1||c.data!==dataVersion(c.quiz)||!['capital','country','states','state-capitals'].includes(c.quiz)||typeof c.territories!=='boolean'||!Number.isInteger(c.seed)||c.seed<0||c.seed>4294967295||!Array.isArray(c.questions)||!c.questions.length||c.questions.length>dataFor(c.quiz).length||new Set(c.questions).size!==c.questions.length) throw Error();
           for(const k of settingKeys){const val=c.settings[k];if(typeof val!=='string')throw Error();const el=els[k];if(el.tagName==='SELECT'&&![...el.options].some(o=>o.value===val))throw Error();}
           if(!/^\d+$/.test(c.settings.timer)||+c.settings.timer>120||!/^\d+$/.test(c.settings.mapZoom)||+c.settings.mapZoom<2||+c.settings.mapZoom>8)throw Error();
+          if(c.settings.mode==='find'&&(!['country','states'].includes(c.quiz)||c.settings.region!=='All'))throw Error();
           const challengeData=dataFor(c.quiz);
           if(isUS(c.quiz)&&(c.territories||c.settings.region!=='All'))throw Error();
           if(c.questions.some(i=>!Number.isInteger(i)||!challengeData[i]||(!c.territories&&challengeData[i].isTerritory)||(c.settings.region!=='All'&&challengeData[i].region!==c.settings.region)))throw Error();
           quizType.value=c.quiz;
           settingKeys.forEach(k=>els[k].value=c.settings[k]);document.getElementById('includeTerritories').checked=c.territories;
           updateScope();
-          incomingChallenge=c;lockSettings(true);updateMapState();document.getElementById('settingsLabel').textContent='View challenge details';document.getElementById('quizSettings').open=false;els.startBtn.textContent='Start challenge';els.question.textContent='You’ve been challenged! '+c.questions.length+' questions · '+({easy:'Multiple choice',medium:'Typing with suggestions',hard:'Typing without help'}[c.settings.mode])+'. Press Start challenge when you’re ready.';
+          incomingChallenge=c;lockSettings(true);updateMapState();document.getElementById('settingsLabel').textContent='View challenge details';document.getElementById('quizSettings').open=false;els.startBtn.textContent='Start challenge';els.question.textContent='You’ve been challenged! '+c.questions.length+' questions · '+({easy:'Multiple choice',medium:'Typing with suggestions',hard:'Typing without help',find:'Find it on the map'}[c.settings.mode])+'. Press Start challenge when you’re ready.';
         } catch { els.question.textContent='This challenge link is invalid or out of date. Start a new quiz instead.'; }
       }
       // ===== Game logic =====
-      function setupQueue(){ const region=els.region.value; const pool=region==='All'?eligibleData():eligibleData().filter(d=>d.region===region); const want=els.count.value==='all'?pool.length:parseInt(els.count.value,10); queue=sample(pool,want); if(incomingChallenge) queue=incomingChallenge.questions.map(i=>dataFor()[i]); roundChallenge=incomingChallenge||captureChallenge(); lockSettings(true); totalQ=queue.length; qIndex=0; score=0; streak=0; current=null; updateHUD(); els.summary.hidden=true; }
+      function setupQueue(){ if(findMode())els.region.value='All';const region=els.region.value; const pool=region==='All'?eligibleData():eligibleData().filter(d=>d.region===region); const want=els.count.value==='all'?pool.length:parseInt(els.count.value,10); queue=sample(pool,want); if(incomingChallenge) queue=incomingChallenge.questions.map(i=>dataFor()[i]); roundChallenge=incomingChallenge||captureChallenge(); lockSettings(true); totalQ=queue.length; qIndex=0; score=0; streak=0; current=null; updateHUD(); els.summary.hidden=true; }
       function updateHUD(){ els.score.textContent=String(score); els.qnum.textContent=String(Math.min(qIndex,totalQ)); els.qtotal.textContent=String(totalQ); els.streak.textContent=String(streak); els.bar.style.width=(totalQ?(qIndex/totalQ)*100:0)+'%'; }
       function startTimer(){ clearInterval(tick); if(timerPerQ<=0){ els.timeChip.style.display='none'; return; } els.timeChip.style.display='inline-flex'; timeLeft=timerPerQ; els.timeLeft.textContent=String(timeLeft); tick=setInterval(()=>{ timeLeft--; els.timeLeft.textContent=String(timeLeft); if(timeLeft<=0){ clearInterval(tick); reveal(false,"Time's up!"); } },1000); }
 
-      function nextQuestion(){ document.getElementById('nextQuestionBtn').hidden=true; answered=false; els.feedback.textContent=''; els.hintBtn.classList.remove('hint'); if(qIndex>=totalQ){ finish(); return; } current=queue[qIndex]; qIndex++; updateHUD(); els.question.textContent=countryQuiz()?(isUS()?'What is the highlighted state?':'What is the country?'):`What is the capital of ${current.country}?`; mode=els.mode.value; timerPerQ=parseInt(els.timer.value||'0',10)||0; startTimer(); els.easyUI.hidden = mode!=='easy'; els.typeUI.hidden = (mode==='easy'); if(countryQuiz()||els.mapMode.value==='always'){ showMap(current,false); } else { hideMap(); } if(mode==='easy'){ renderChoices(); } else { els.input.value=''; els.input.focus(); renderSuggestions(); } }
+      function nextQuestion(){ findSelection=null;document.getElementById('findUI').hidden=true;document.getElementById('lockFind').disabled=true;document.getElementById('findSelection').textContent='Tap a place on the map, then lock it in.';document.getElementById('nextQuestionBtn').hidden=true; answered=false; els.feedback.textContent=''; els.hintBtn.classList.remove('hint'); if(qIndex>=totalQ){ finish(); return; } current=queue[qIndex]; qIndex++; updateHUD(); els.question.textContent=countryQuiz()?(isUS()?'What is the highlighted state?':'What is the country?'):`What is the capital of ${current.country}?`; mode=els.mode.value; timerPerQ=parseInt(els.timer.value||'0',10)||0; startTimer(); if(findMode()){els.question.textContent='Find '+current.country+'.';els.easyUI.hidden=true;els.typeUI.hidden=true;els.suggestions.hidden=true;document.getElementById('findUI').hidden=false;showFindMap();return;}els.easyUI.hidden = mode!=='easy'; els.typeUI.hidden = (mode==='easy'); if(countryQuiz()||els.mapMode.value==='always'){ showMap(current,false); } else { hideMap(); } if(mode==='easy'){ renderChoices(); } else { els.input.value=''; els.input.focus(); renderSuggestions(); } }
 
       function renderChoices(){
         const random=challengeRandom();
@@ -427,20 +460,21 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
       function renderSuggestions(){ const box=els.suggestions; const val=norm(els.input.value); if(els.mode.value!=='medium'||!val){ box.hidden=true; box.innerHTML=''; return;} const list=answerPool().filter(c=>norm(c).startsWith(val)).slice(0,50); if(list.length===0){ box.hidden=true; box.innerHTML=''; return;} box.hidden=false; box.innerHTML=''; list.forEach(c=>{ const d=document.createElement('div'); d.textContent=c; d.addEventListener('click',()=>{ els.input.value=c; box.hidden=true;}); box.appendChild(d);}); }
       function isCorrect(ans){ const a=norm(ans); return answersFor(current).some(c=>norm(c)===a); }
       function reveal(ok,msg){
-        if(answered||!current)return;answered=true;clearInterval(tick);
+        if(answered||!current)return;answered=true;clearInterval(tick);document.getElementById('lockFind').disabled=true;
         const correct=answersFor(current)[0];
         els.easyUI.querySelectorAll('button').forEach(b=>{b.disabled=true;if(isCorrect(b.textContent))b.classList.add('correct');});els.suggestions.hidden=true;
-        if(ok){score++;streak++;els.feedback.textContent='Correct!';if(els.mapMode.value==='reveal')showMap(current);transition=setTimeout(()=>nextQuestion(),800);}
+        if(findMode())document.getElementById('findSelection').textContent=findSelection?'Your choice: '+findSelection:'No selection locked in.';
+        if(ok){if(findMode())showMap(current,true);score++;streak++;els.feedback.textContent='Correct!';if(els.mapMode.value==='reveal')showMap(current);transition=setTimeout(()=>nextQuestion(),800);}
         else{streak=0;els.feedback.textContent=(msg?msg+' ':'')+'Not quite. '+current.country+' — capital: '+current.capitals[0]+'. Take a look at the highlighted location, then continue.';showMap(current,true);document.getElementById('nextQuestionBtn').hidden=false;}
         pushRecent(current.country,countryQuiz()?(isUS()?'State identification':'Country identification'):correct,ok);updateHUD();
       }
       document.getElementById('nextQuestionBtn').addEventListener('click',()=>{if(answered)nextQuestion();});
       function pushRecent(country,capital,ok){ const row=document.createElement('div'); row.className='row'; row.innerHTML=`<div><b>${country}</b><br><small>${capital}</small></div><div style="display:flex;align-items:center;gap:8px"><span class="chip" style="color:${ok?'#34d399':'#fb7185'}">${ok?'✓':'✕'}</span></div>`; els.recent.prepend(row); while(els.recent.children.length>20){ els.recent.lastChild.remove(); } }
-      function finish(){ current=null; clearInterval(tick); els.easyUI.hidden=true; els.typeUI.hidden=true; els.question.textContent='Great job!'; const pct=totalQ?Math.round((score/totalQ)*100):0; els.summary.hidden=false; els.summary.innerHTML=`<div class="panel" style="margin-top:8px"><h2 style="margin:6px 0 8px">Summary</h2><p>Challenge a friend to these same questions, or use Reset to change your quiz settings.</p><p>You answered <b>${score}</b> out of <b>${totalQ}</b> correctly (<b>${pct}%</b>).</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="playAgainBtn">Play Again</button><a class="btn-secondary" id="shareScoreBtn" style="display:inline-flex;align-items:center;padding:10px 16px;border-radius:10px;text-decoration:none">Challenge a friend</a><button class="btn-secondary" id="copyChallengeLink">Copy puzzle link</button></div><p id="shareStatus" role="status" aria-live="polite"></p><textarea id="shareFallback" aria-label="Result to copy" readonly hidden style="width:100%;min-height:100px"></textarea></div>`; document.getElementById('playAgainBtn').addEventListener('click',startGame); const result=scoreShareData(score,totalQ); document.getElementById('shareScoreBtn').href=challengeEmailURL(result);document.getElementById('copyChallengeLink').addEventListener('click',()=>copyChallengeLink(result)); }
+      function finish(){ document.getElementById('findUI').hidden=true;current=null; clearInterval(tick); els.easyUI.hidden=true; els.typeUI.hidden=true; els.question.textContent='Great job!'; const pct=totalQ?Math.round((score/totalQ)*100):0; els.summary.hidden=false; els.summary.innerHTML=`<div class="panel" style="margin-top:8px"><h2 style="margin:6px 0 8px">Summary</h2><p>Challenge a friend to these same questions, or use Reset to change your quiz settings.</p><p>You answered <b>${score}</b> out of <b>${totalQ}</b> correctly (<b>${pct}%</b>).</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="playAgainBtn">Play Again</button><a class="btn-secondary" id="shareScoreBtn" style="display:inline-flex;align-items:center;padding:10px 16px;border-radius:10px;text-decoration:none">Challenge a friend</a><button class="btn-secondary" id="copyChallengeLink">Copy puzzle link</button></div><p id="shareStatus" role="status" aria-live="polite"></p><textarea id="shareFallback" aria-label="Result to copy" readonly hidden style="width:100%;min-height:100px"></textarea></div>`; document.getElementById('playAgainBtn').addEventListener('click',startGame); const result=scoreShareData(score,totalQ); document.getElementById('shareScoreBtn').href=challengeEmailURL(result);document.getElementById('copyChallengeLink').addEventListener('click',()=>copyChallengeLink(result)); }
       function scoreShareData(s,t){
         const title=quizTitle(roundChallenge.quiz);
         const settings=roundChallenge.settings;
-        const difficulty={easy:'Multiple choice',medium:'Typing with suggestions',hard:'Typing without help'}[settings.mode];
+        const difficulty={easy:'Multiple choice',medium:'Typing with suggestions',hard:'Typing without help',find:'Find it on the map'}[settings.mode];
         const region=settings.region==='All'?'All regions':settings.region;
         const scope=isUS(roundChallenge.quiz)?'50 U.S. states':roundChallenge.territories?'Territories included':'Countries only';
         return {title,text:`I scored ${s}/${t} (${t?Math.round(s/t*100):0}%) on the ${title}!\n${difficulty} · ${region} · ${scope}\nTry the same questions—can you beat my score?`,url:challengeURL(roundChallenge)};
@@ -456,7 +490,8 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
 
       // ===== Events =====
       els.mode.addEventListener('change',()=>{
-        const m = els.mode.value;
+        updateFindSettings();document.getElementById('findUI').hidden=true;
+        const m = els.mode.value;if(m==='find'){els.easyUI.hidden=true;els.typeUI.hidden=true;els.suggestions.hidden=true;return;}
         // Toggle UI immediately when switching modes mid-question
         if(m==='easy'){
           // Show MCQ, hide typing UI
@@ -490,11 +525,11 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
       els.hintBtn.addEventListener('click',()=>{ if(!current) return; const letter=answersFor(current)[0].charAt(0); els.feedback.innerHTML=`<span class="hint">Hint:</span> starts with <b>${letter}</b>`; els.hintBtn.classList.add('hint'); if(els.mapMode.value!=='off'){ showMap(current,true);} });
       document.addEventListener('click',(e)=>{ if(!els.suggestions.contains(e.target)&&e.target!==els.input){ els.suggestions.hidden=true; } });
 
-      function submitAnswer(){ if(!current) return; const val=els.input.value.trim(); if(!val){ els.feedback.innerHTML=`<span style=\"color:var(--warn)\">Type an answer.</span>`; return;} const ok=isCorrect(val); reveal(ok); }
+      function submitAnswer(){ if(!current||findMode()) return; const val=els.input.value.trim(); if(!val){ els.feedback.innerHTML=`<span style=\"color:var(--warn)\">Type an answer.</span>`; return;} const ok=isCorrect(val); reveal(ok); }
       function startGame(){ clearTimeout(transition); clearInterval(tick); answered=false; if(!DATA.length){ els.question.textContent='Country data is unavailable. Please reload the page.'; return; } setupQueue(); nextQuestion(); }
       els.startBtn.addEventListener('click',startGame);
       els.resetBtn.addEventListener('click',()=>{
-        clearTimeout(transition); answered=false; incomingChallenge=null; roundChallenge=null; lockSettings(false); const clean=new URL(location.href);clean.searchParams.delete('c');clean.hash='';history.replaceState(null,'',clean.pathname+clean.search);document.getElementById('settingsLabel').textContent='Customize your quiz';els.startBtn.textContent='Start';document.getElementById('nextQuestionBtn').hidden=true;
+        clearTimeout(transition);document.getElementById('findUI').hidden=true;findSelection=null;answered=false; incomingChallenge=null; roundChallenge=null; lockSettings(false); const clean=new URL(location.href);clean.searchParams.delete('c');clean.hash='';history.replaceState(null,'',clean.pathname+clean.search);document.getElementById('settingsLabel').textContent='Customize your quiz';els.startBtn.textContent='Start';document.getElementById('nextQuestionBtn').hidden=true;
         // Soft reset: avoid full reload (prevents white screen in preview iframes)
         try{ localStorage.removeItem('wg_caps_v1'); }catch{}
         clearInterval(tick);

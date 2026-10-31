@@ -1,8 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');const html=fs.readFileSync(process.argv[2]||'index.html','utf8');new vm.Script(html.match(/<script>([\s\S]*?)<\/script>/)[1]);
 const data=JSON.parse(html.match(/\bDATA = (\[[^\n]+);/)[1]);
-const els={};for(const [k,values] of Object.entries({mode:['easy','medium','hard'],region:['All','Africa','Americas','Asia','Europe','Oceania'],count:['10','20','50','all'],mapMode:['off','reveal','always']}))els[k]={tagName:'SELECT',options:values.map(value=>({value})),value:values[0]};
+const els={};for(const [k,values] of Object.entries({mode:['easy','medium','hard','find'],region:['All','Africa','Americas','Asia','Europe','Oceania'],count:['10','20','50','all'],mapMode:['off','reveal','always']}))els[k]={tagName:'SELECT',options:values.map(value=>({value})),value:values[0]};
 Object.assign(els,{timer:{value:'0'},mapZoom:{value:'8'},question:{},startBtn:{},input:{},summary:{},easyUI:{appendChild(b){this.buttons.push(b)},buttons:[]}});
-const nodes={studyKey:{},settingsLabel:{},quizSettings:{},nextQuestionBtn:{addEventListener(){}},includeTerritories:{checked:false},scopeCount:{},shareStatus:{},shareFallback:{focus(){},select(){}}};
+const nodes={lockFind:{},findSelection:{},findUI:{},studyKey:{},settingsLabel:{},quizSettings:{},nextQuestionBtn:{addEventListener(){}},includeTerritories:{checked:false},scopeCount:{},shareStatus:{},shareFallback:{focus(){},select(){}}};
 for(const node of Object.values(nodes))node.closest=()=>({});for(const node of Object.values(els)){node.closest=()=>({});node.querySelector=()=>({});}
 const ctx=vm.createContext({DATA:data,els,document:{getElementById:id=>nodes[id],createElement:()=>({addEventListener(){}})},quizType:{value:'capital'},location:{hash:'',search:''},URLSearchParams,btoa,atob,console,navigator:{},history:{replaceState(){}},updateMapState(){},updateHUD(){},sample:(a,n)=>a.slice(0,n),countryQuiz:()=>false,norm:s=>s.toLowerCase(),isCorrect:()=>true,eligibleData:()=>data.filter(d=>!d.isTerritory),answersFor:d=>d.capitals,answerPool:()=>data.flatMap(d=>d.capitals)});
 ctx.US_DATA=JSON.parse(html.match(/US_DATA = (\[[^\n]+);/)[1]);
@@ -26,3 +26,13 @@ for(const type of ['states','state-capitals']){
  const bad=JSON.parse(challenge);bad.questions=[50];ctx.location.search='';ctx.location.hash='#challenge='+encodeURIComponent(JSON.stringify(bad));vm.runInContext('incomingChallenge=null;readChallenge()',ctx);assert.equal(vm.runInContext('incomingChallenge',ctx),null);
 }
 console.log('PASS: U.S. challenge datasets, titles, replay and bounds');
+
+// Find it challenges replay the same places and cannot be used for capitals.
+for(const type of ['country','states']){
+ ctx.quizType.value=type;els.mode.value='find';els.region.value='Europe';ctx.location.search='';ctx.location.hash='';ctx.eligibleData=()=>type==='states'?ctx.US_DATA:data.filter(d=>!d.isTerritory);
+ vm.runInContext('incomingChallenge=null;setupQueue()',ctx);assert.equal(els.region.value,'All');
+ const original=vm.runInContext('JSON.stringify(roundChallenge)',ctx),shared=vm.runInContext('scoreShareData(5,10)',ctx);assert(shared.text.includes('Find it on the map'));
+ ctx.location.search=new URL(shared.url).search;vm.runInContext('incomingChallenge=null;readChallenge();setupQueue()',ctx);assert.equal(vm.runInContext('JSON.stringify(roundChallenge)',ctx),original);
+ const bad=JSON.parse(original);bad.quiz=type==='states'?'state-capitals':'capital';ctx.location.search='';ctx.location.hash='#challenge='+encodeURIComponent(JSON.stringify(bad));vm.runInContext('incomingChallenge=null;readChallenge()',ctx);assert.equal(vm.runInContext('incomingChallenge',ctx),null);
+}
+console.log('PASS: Find it all-region scope, challenge replay and capital-mode rejection');
