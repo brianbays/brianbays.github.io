@@ -72,6 +72,8 @@
     @media(max-width:600px){.island-inset{width:140px}.map-tools{right:6px;top:6px;gap:4px}.map-tools button{padding:6px 9px}}
   [hidden]{display:none!important}details{margin:16px 0}summary{cursor:pointer;color:var(--accent);padding:12px 0}.answer-reveal path[data-correct="true"]{fill:#ffe386;stroke:#171916;stroke-width:2}.answer-reveal .capital-marker{fill:#ffe386;animation:location-pulse .7s ease-in-out 3}@keyframes location-pulse{50%{opacity:.25}}@media(prefers-reduced-motion:reduce){.answer-reveal .capital-marker{animation:none}}.map-caption{padding:10px 4px;font-weight:600}.locator-map{position:absolute;right:10px;bottom:10px;width:140px;max-width:32%;background:#638f92;border:2px solid white;border-radius:8px;pointer-events:none}.locator-map span{display:block;background:#171916;color:white;font-size:11px;text-align:center}.locator-map svg{display:block;width:100%}#nextQuestionBtn{margin:10px 0}#emailScoreLink{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none}.us-map .map-tools{position:static;display:flex;justify-content:flex-end;padding:6px}.us-map>svg{aspect-ratio:2 / 1;height:auto!important}
 #map [data-pick]{cursor:pointer}#map [data-picked="true"]{fill:#d8a06d!important;stroke:#171916;stroke-width:2;vector-effect:non-scaling-stroke}#map [data-pick]:focus-visible{stroke:#fff;stroke-width:3;outline:none}#findUI{margin:12px 0}
+
+#map [data-answer="true"]{fill:#55b88a!important;stroke:#163d2d;stroke-width:2;vector-effect:non-scaling-stroke}#map svg[data-review="true"] [data-pick]{cursor:grab}.review-caption{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.correct-label{color:#71d5a6}.wrong-label{color:#e5ad79}
 </style>
 </head>
 <body>
@@ -284,6 +286,13 @@ function zoomMapView(view,factor,fx,fy,width,height){
   const next=mapView(180,90,scale,width,height);
   return mapView(view.x+fx*view.w+(0.5-fx)*next.w,view.y+fy*view.h+(0.5-fy)*next.h,scale,width,height);
 }
+function fitMapBounds(boxes,width,height,wrap=false){
+  const anchor=boxes[0].x+boxes[0].w/2,aspect=width/Math.max(1,height);
+  const aligned=boxes.map(b=>{const cx=b.x+b.w/2;return {...b,x:b.x+(wrap?Math.round((anchor-cx)/360)*360:0)};});
+  const left=Math.min(...aligned.map(b=>b.x)),right=Math.max(...aligned.map(b=>b.x+b.w)),top=Math.min(...aligned.map(b=>b.y)),bottom=Math.max(...aligned.map(b=>b.y+b.h));
+  const w=Math.max(8,(right-left)*1.5,(bottom-top)*aspect*1.5),h=w/aspect;
+  return {x:(left+right-w)/2,y:(top+bottom-h)/2,w,h};
+}
 function mountInteractiveMap(host,shapes,center,defaultZoom,inset,onPick){
   host.innerHTML='<div class="map-tools" role="group" aria-label="Map controls"><button type="button" data-map="in" aria-label="Zoom in">+</button><button type="button" data-map="out" aria-label="Zoom out">−</button><button type="button" data-map="reset">Reset view</button></div><svg xmlns="http://www.w3.org/2000/svg" tabindex="0" role="img" aria-label="Map with capital location marker. Drag to pan, pinch or scroll to zoom. Arrow keys move; plus and minus zoom; Home resets." style="display:block;width:100%;height:100%;background:#638f92;touch-action:none;cursor:grab">'+'<g id="map-land">'+shapes+'</g><circle class="capital-marker" cx="'+(center[1]+180)+'" cy="'+(90-center[0])+'" fill="#171916" stroke="white"/></svg>';
 
@@ -309,6 +318,7 @@ function mountInteractiveMap(host,shapes,center,defaultZoom,inset,onPick){
   svg.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return; tapStart={x:e.clientX,y:e.clientY};tapMoved=pointers.size>0;if(pointers.size)tapStart=null;e.preventDefault();svg.focus({preventScroll:true});svg.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});svg.style.cursor='grabbing';});
   svg.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;if(tapStart&&Math.hypot(e.clientX-tapStart.x,e.clientY-tapStart.y)>7)tapMoved=true;const before=gesture();pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});const after=gesture();if(before.d>0&&after.d>0){const s=size();zoom(after.d/before.d,(before.x-s.left)/s.width,(before.y-s.top)/s.height);}pan(after.x-before.x,after.y-before.y);});
   function pickAt(e){
+    if(!onPick||svg.dataset.review==='true')return;
     const near=[...svg.querySelectorAll('.small-place-marker')].map(el=>{const b=el.getBoundingClientRect();return {el,d:Math.hypot(e.clientX-b.x-b.width/2,e.clientY-b.y-b.height/2)};}).filter(x=>x.d<=22).sort((a,b)=>a.d-b.d);
     if(near.length){if(near[1]&&near[0].el.dataset.pick!==near[1].el.dataset.pick&&near[1].d-near[0].d<6){onPick(null);document.getElementById('findSelection').textContent='These places are close together. Zoom in, then tap again.';return;}pick(near[0].el);return;}
     pick(document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-pick]'));
@@ -318,7 +328,7 @@ function mountInteractiveMap(host,shapes,center,defaultZoom,inset,onPick){
   svg.addEventListener('keydown',e=>{if(onPick&&['Enter',' '].includes(e.key)&&e.target.dataset.pick){e.preventDefault();pick(e.target);return;}const moves={ArrowLeft:[60,0],ArrowRight:[-60,0],ArrowUp:[0,60],ArrowDown:[0,-60]};if(moves[e.key]){e.preventDefault();pan(...moves[e.key]);}else if(['+','=','-','Home'].includes(e.key)){e.preventDefault();if(e.key==='Home')reset();else zoom(e.key==='-'?1/1.4:1.4);}});
   let last=size();reset();
   const observer=new ResizeObserver(()=>{if(disposed)return;const s=size();if(s.width===last.width&&s.height===last.height)return;if(onPick||wrapWorld){const cx=view.x+view.w/2,cy=view.y+view.h/2,w=Math.max(view.w,view.h*s.width/s.height),h=w*s.height/s.width;draw({x:cx-w/2,y:cy-h/2,w,h});last=s;return;}const scale=Math.min(360,180*last.width/last.height)/view.w;draw(mapView(view.x+view.w/2,view.y+view.h/2,scale,s.width,s.height));last=s;});observer.observe(host);
-  const dispose=()=>{disposed=true;observer.disconnect();pointers.clear();};dispose.refresh=()=>draw(view);return dispose;
+  const dispose=()=>{disposed=true;observer.disconnect();pointers.clear();};dispose.refresh=()=>draw(view);dispose.frame=boxes=>{if(boxes.length){const s=size();draw(fitMapBounds(boxes,s.width,s.height,wrapWorld));}};return dispose;
 }
 if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
 
@@ -361,14 +371,33 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
         els.mapZoom.closest('.control').hidden=isUS()||findMode();
         els.mapMode.closest('.control').hidden=findMode();
       }
-      function showFindMap(){
+      function showFindReview(){
+          els.mapPanel.querySelectorAll('.map-caption').forEach(e=>e.remove());
+          const svg=els.mapEl.querySelector('svg');
+          svg.dataset.review='true';svg.setAttribute('aria-label','Answer review map. Drag or pinch to explore; use Show both to compare your choice with the correct answer.');
+          const wrong=findSelection&&findSelection!==current.country?findSelection:null;
+          svg.querySelectorAll('[data-pick]').forEach(p=>{p.dataset.picked=String(p.dataset.pick===wrong);p.dataset.answer=String(p.dataset.pick===current.country);p.removeAttribute('tabindex');p.removeAttribute('role');p.removeAttribute('aria-label');});
+          const boundsFor=name=>{
+            const d=dataFor().find(d=>d.country===name),paths=[...svg.querySelectorAll('#map-land path[data-pick]')].filter(p=>p.dataset.pick===name);
+            const boxes=paths.map(p=>{const b=p.getBBox();return {x:b.x,y:b.y,w:b.width,h:b.height};});
+            if(!isUS()&&d?.capCenter)boxes.unshift({x:d.capCenter[1]+179,y:89-d.capCenter[0],w:2,h:2});
+            return boxes;
+          };
+          disposeMap.frame(boundsFor(current.country));
+          const caption=document.createElement('div');caption.className='map-caption review-caption';
+          const correct=document.createElement('span');correct.className='correct-label';correct.textContent='Correct: '+current.country+' — '+current.capitals[0];caption.append(correct);
+          if(wrong){const chosen=document.createElement('span');chosen.className='wrong-label';chosen.textContent='Your choice: '+wrong;caption.append(chosen);const both=document.createElement('button');both.type='button';both.textContent='Show both';both.onclick=()=>disposeMap.frame([...boundsFor(current.country),...boundsFor(wrong)]);caption.append(both);}
+          els.mapPanel.append(caption);return;
+        }
+      function showFindMap(review=false){
+        if(review&&els.mapEl.querySelector('#map-land [data-pick]')){showFindReview();return;}
         if(disposeMap)disposeMap();els.mapPanel.querySelectorAll('.map-caption').forEach(e=>e.remove());
         els.mapPanel.hidden=false;els.mapEl.style.height=isUS()?'auto':'';els.mapEl.classList.toggle('us-map',isUS());els.mapEl.classList.remove('answer-reveal');
         let shapes=isUS()?US_SHAPES.map(x=>'<path data-state="'+x.country+'" d="'+x.d+'" fill="#c3ce9d" stroke="#171916" stroke-width=".7" vector-effect="non-scaling-stroke"/>').join(''):WORLD_SHAPES;
         const select=name=>{if(answered||!current)return;findSelection=name;els.mapEl.querySelectorAll('[data-pick]').forEach(p=>p.dataset.picked=String(p.dataset.pick===name));document.getElementById('findSelection').textContent='Selection marked. Change it or lock it in.';document.getElementById('lockFind').disabled=!name;};
         disposeMap=mountInteractiveMap(els.mapEl,shapes,[0,0],2,null,select);
         const svg=els.mapEl.querySelector('svg');
-        dataFor().forEach(d=>{
+        eligibleData().forEach(d=>{
           const nodes=[...svg.querySelectorAll(isUS()?'path[data-state]':'path[data-country]')].filter(p=>isUS()?p.dataset.state===d.country:p.dataset.country===COUNTRY_CODES[d.country]);
           // Neutral screen-sized markers make every small place selectable, not only the answer.
           if(!isUS()&&d.capCenter&&(!nodes.length||d.area<30000)){const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',d.capCenter[1]+180);dot.setAttribute('cy',90-d.capCenter[0]);dot.setAttribute('fill','#c3ce9d');dot.setAttribute('stroke','#171916');dot.setAttribute('class','small-place-marker');svg.querySelector('#map-land').append(dot);nodes.push(dot);}
@@ -379,6 +408,7 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
           for(const shift of [-360,360]){const copy=land.cloneNode(true);copy.removeAttribute('id');copy.setAttribute('transform','translate('+shift+' 0)');land.before(copy);}
         }
         disposeMap.refresh();
+        if(review){showFindReview();return;}
         const caption=document.createElement('div');caption.className='map-caption';caption.textContent=isUS()?'Tap a state, then lock it in.':'Small-place circles have larger touch targets. Zoom in where circles are crowded. Pan across the Pacific in either direction.';els.mapPanel.append(caption);
       }
       document.getElementById('lockFind').onclick=()=>{if(!findMode()||!findSelection||answered||!current)return;reveal(findSelection===current.country);};
@@ -477,8 +507,8 @@ if(typeof module!=='undefined')module.exports={mapView,zoomMapView};
         const correct=answersFor(current)[0];
         els.easyUI.querySelectorAll('button').forEach(b=>{b.disabled=true;if(isCorrect(b.textContent))b.classList.add('correct');});els.suggestions.hidden=true;
         if(findMode())document.getElementById('findSelection').textContent=findSelection?'Your choice: '+findSelection:'No selection locked in.';
-        if(ok){if(findMode())showMap(current,true);score++;streak++;els.feedback.textContent='Correct!';if(els.mapMode.value==='reveal')showMap(current);transition=setTimeout(()=>nextQuestion(),800);}
-        else{streak=0;els.feedback.textContent=(msg?msg+' ':'')+'Not quite. '+current.country+' — capital: '+current.capitals[0]+'. Take a look at the highlighted location, then continue.';showMap(current,true);document.getElementById('nextQuestionBtn').hidden=false;}
+        if(ok){if(findMode())showFindMap(true);score++;streak++;els.feedback.textContent='Correct!';if(!findMode()&&els.mapMode.value==='reveal')showMap(current);transition=setTimeout(()=>nextQuestion(),800);}
+        else{streak=0;els.feedback.textContent=(msg?msg+' ':'')+'Not quite. '+current.country+' — capital: '+current.capitals[0]+'. Take a look at the highlighted location, then continue.';if(findMode())showFindMap(true);else showMap(current,true);document.getElementById('nextQuestionBtn').hidden=false;}
         pushRecent(current.country,countryQuiz()?(isUS()?'State identification':'Country identification'):correct,ok);updateHUD();
       }
       document.getElementById('nextQuestionBtn').addEventListener('click',()=>{if(answered)nextQuestion();});

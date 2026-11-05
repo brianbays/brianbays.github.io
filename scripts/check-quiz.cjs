@@ -36,3 +36,17 @@ for(const type of ['country','states']){
  const bad=JSON.parse(original);bad.quiz=type==='states'?'state-capitals':'capital';ctx.location.search='';ctx.location.hash='#challenge='+encodeURIComponent(JSON.stringify(bad));vm.runInContext('incomingChallenge=null;readChallenge()',ctx);assert.equal(vm.runInContext('incomingChallenge',ctx),null);
 }
 console.log('PASS: Find it selected-region scope, challenge replay and capital-mode rejection');
+
+// The map target roster follows the same territory switch as the questions.
+const rosterCtx=vm.createContext({dataFor:()=>data,document:{getElementById:()=>({checked:false})}});
+vm.runInContext(html.match(/const eligibleData=\(\)=>[^;]+;/)[0],rosterCtx);
+assert.equal(vm.runInContext('eligibleData().length',rosterCtx),197);
+for(const name of ['Pitcairn Islands','Tokelau','Cook Islands'])assert(!vm.runInContext('eligibleData()',rosterCtx).some(d=>d.country===name));
+rosterCtx.document.getElementById=()=>({checked:true});assert.equal(vm.runInContext('eligibleData().length',rosterCtx),245);
+vm.runInContext(html.slice(html.indexOf('function fitMapBounds('),html.indexOf('function mountInteractiveMap(')),ctx);
+// Tonga and Vanuatu should share a short Pacific view, including on a portrait screen.
+for(const [w,h] of [[850,440],[390,520]]){
+ const view=vm.runInContext('fitMapBounds([{x:4,y:110,w:2,h:2},{x:347,y:106,w:2,h:2}],'+w+','+h+',true)',ctx);
+ assert(view.w<60);assert(view.x<=-13);assert(view.x+view.w>=6);assert(view.y<=106);assert(view.y+view.h>=112);
+}
+console.log('PASS: 197-country target roster, optional territories and Pacific Show both framing');
